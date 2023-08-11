@@ -1,0 +1,1 @@
+vim.cmd [[source /nix/store/yjblg5y2c643qnhafn3q67dk5jbdvsbl-nvim-init-home-manager.vim]]

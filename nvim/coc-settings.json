@@ -1,0 +1,19 @@
+{
+  "languageserver": {
+    "haskell": {
+      "args": [
+        "--lsp"
+      ],
+      "command": "haskell-language-server-wrapper",
+      "filetypes": [
+        "haskell",
+        "lhaskell"
+      ],
+      "rootPatterns": [
+        "*.cabal",
+        "cabal.project",
+        "hie.yaml"
+      ]
+    }
+  }
+}
