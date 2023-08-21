@@ -15,14 +15,20 @@ This repository contains basic setup and configurations for various tools and ap
 To use these configurations, follow these steps:
 
 1. Create the necessary directory for Home Manager configurations:
+   
    ```mkdir ~/.config/home-manager```
+   
    ```cd ~/.config/home-manager```
 2. Clone the repository and move the downloaded configurations into the correct directory: : 
+   
    ```git clone https://github.com/gupta-ujjwal/hm-configurations.git```
+   
    ```mv -r ./hm-configurations ./```
 3. Update the `username` and `homeDirectory` settings in the `home.nix` file to match your system.
 4. Update the `systemConfiguration` in the `flake.nix` file as needed.
 5. Activate the new Home Manager configuration:
+   
    ```nix run nixpkgs#home-manager -- switch```
 6. For the Neovim configuration, copy the Lua files:
+   
    ```cp -r ./nvim/lua ../../nvim```
