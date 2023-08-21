@@ -17,7 +17,7 @@
       homeConfigurations."Ujjwal.gupta" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         
-        modules = [ ./home.nix ./neovim.nix];
+        modules = [ ./home.nix ./neovim.nix ./tmux.nix];
 
       };
     };
