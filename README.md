@@ -19,7 +19,7 @@ This repository contains Home Manager configurations using Nix flakes. It provid
 ### Development Environments
 - **Haskell**: Stack build tool
 - **Python**: Python 3.13 with uv package manager
-- **Node.js**: Node.js 24
+- **Node.js**: Node.js 24 with xyne-cli (AI coding assistant)
 - **Database**: MariaDB, PostgreSQL, Redis
 
 ### Container & System Tools
