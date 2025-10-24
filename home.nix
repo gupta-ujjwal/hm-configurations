@@ -77,6 +77,7 @@
     docker   # docker client
     colima   # docker daemon via VM
     ripgrep
+    nodejs_24
   ];
 
   # Optional: ensure Colima is on PATH
