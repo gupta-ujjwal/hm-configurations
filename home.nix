@@ -42,6 +42,9 @@
       export VERTEX_MODEL="claude-sonnet-4@20250514"
       export VERTEX=1
       export VERTEX_REGION="us-east5"
+
+      # Start HTTP server for home-manager documentation on port 9999
+      (cd ~/.config/home-manager && python3 -m http.server 9999 > /dev/null 2>&1 &)
     '';
 
     shellAliases = {
