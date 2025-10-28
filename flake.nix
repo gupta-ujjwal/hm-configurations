@@ -12,7 +12,7 @@
   outputs = { self, nixpkgs, home-manager, ... }:
     let
       system = "aarch64-darwin"; 
-      username = "Ujjwal.gupta@identity.juspay.net";
+      username = "Ujjwal.gupta";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       packages.${system}.hm = home-manager.packages.${system}.default;
@@ -22,7 +22,7 @@
           inherit pkgs;
           extraSpecialArgs = { inherit system username; };
      
-          modules = [ ./home.nix ./neovim.nix ./tmux.nix];
+          modules = [ ./home.nix ./neovim.nix ./tmux.nix ./tmate.nix ];
         };        
         default = self.homeConfigurations.${username};  
       };
