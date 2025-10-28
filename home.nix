@@ -44,7 +44,12 @@
       export VERTEX_REGION="us-east5"
 
       # Start HTTP server for home-manager documentation on port 9999
+      # Kill any existing server on port 9999 first
+      pkill -f "python3 -m http.server 9999" > /dev/null 2>&1
+      # Start new server
       (cd ~/.config/home-manager && python3 -m http.server 9999 > /dev/null 2>&1 &)
+      # Display message to user
+      echo "📚 Home Manager Help Guide running at http://localhost:9999"
     '';
 
     shellAliases = {
