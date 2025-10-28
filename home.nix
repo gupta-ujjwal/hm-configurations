@@ -35,8 +35,12 @@
       export PATH="/Users/Ujjwal.gupta/Downloads/google-cloud-sdk/bin:/Users/Ujjwal.gupta/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/TeX/texbin:/etc/profiles/per-user/Ujjwal.gupta/bin:/nix/var/nix/profiles/system/sw/bin"
 
       export ANTHROPIC_BASE_URL="https://grid.ai.juspay.net/"
-      export ANTHROPIC_AUTH_TOKEN="sk-9JZFkFqdTJwyNnntpGqFRA"
       export ANTHROPIC_MODEL="glm-latest"
+      
+      # Load ANTHROPIC_AUTH_TOKEN from local file if it exists
+      if [[ -f ~/.config/secrets/anthropic_token ]]; then
+        export ANTHROPIC_AUTH_TOKEN=$(cat ~/.config/secrets/anthropic_token)
+      fi
 
       export VERTEX_PROJECT_ID="dev-ai-gamma"
       export VERTEX_MODEL="claude-sonnet-4@20250514"
