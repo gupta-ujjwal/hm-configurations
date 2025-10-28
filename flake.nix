@@ -22,7 +22,7 @@
           inherit pkgs;
           extraSpecialArgs = { inherit system username; };
      
-          modules = [ ./home.nix ./neovim.nix ./tmux.nix ./tmate.nix ];
+          modules = [ ./home.nix ./neovim.nix ./tmux.nix ./tmate.nix ./redis.nix ];
         };        
         default = self.homeConfigurations.${username};  
       };
