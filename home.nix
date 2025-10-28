@@ -35,13 +35,25 @@
       export PATH="/Users/Ujjwal.gupta/Downloads/google-cloud-sdk/bin:/Users/Ujjwal.gupta/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/TeX/texbin:/etc/profiles/per-user/Ujjwal.gupta/bin:/nix/var/nix/profiles/system/sw/bin"
 
       export ANTHROPIC_BASE_URL="https://grid.ai.juspay.net/"
-      export ANTHROPIC_AUTH_TOKEN="sk-gorDbRpog1eh2wcICukcbg"
       export ANTHROPIC_MODEL="glm-latest"
+      
+      # Load ANTHROPIC_AUTH_TOKEN from local file if it exists
+      if [[ -f ~/.config/secrets/anthropic_token ]]; then
+        export ANTHROPIC_AUTH_TOKEN=$(cat ~/.config/secrets/anthropic_token)
+      fi
 
       export VERTEX_PROJECT_ID="dev-ai-gamma"
       export VERTEX_MODEL="claude-sonnet-4@20250514"
       export VERTEX=1
       export VERTEX_REGION="us-east5"
+
+      # Start HTTP server for home-manager documentation on port 9999
+      # Kill any existing server on port 9999 first
+      pkill -f "python3 -m http.server 9999" > /dev/null 2>&1
+      # Start new server
+      (cd ~/.config/home-manager && python3 -m http.server 9999 > /dev/null 2>&1 &)
+      # Display message to user
+      echo "📚 Home Manager Help Guide running at http://localhost:9999"
     '';
 
     shellAliases = {
@@ -51,6 +63,11 @@
       dc = "docker compose";
       col = "colima";
       xyne = "npx @xyne/xyne-cli";
+      redis-cli = "${pkgs.redis}/bin/redis-cli";
+      redis-server = "${pkgs.redis}/bin/redis-server";
+      redis-start = "launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist";
+      redis-stop = "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist";
+      redis-restart = "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist";
     };
   };
 
@@ -72,6 +89,7 @@
     stack
     redis
     tmux
+    tmate
     python313
     postgresql
     uv
@@ -83,6 +101,10 @@
 
   # Optional: ensure Colima is on PATH
   home.sessionPath = [ "${pkgs.colima}/bin" ];
+
+
+
+
 
 
 }
