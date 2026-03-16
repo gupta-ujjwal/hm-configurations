@@ -1,9 +1,13 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, username, AI, ... }:
 
 {
+  imports = [
+    AI.homeManagerModules.opencode
+  ];
+
   home = {
     username = username;
-    homeDirectory = "/Users/Ujjwal.gupta";
+    homeDirectory = "/home/vishal";
     stateVersion = "22.11";
   };
 
@@ -30,9 +34,9 @@
       share = true;
     };
 
-    initExtra = ''
+    initContent = ''
       # Add Claude Code to PATH
-      export PATH="/Users/Ujjwal.gupta/Downloads/google-cloud-sdk/bin:/Users/Ujjwal.gupta/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/TeX/texbin:/etc/profiles/per-user/Ujjwal.gupta/bin:/nix/var/nix/profiles/system/sw/bin"
+      export PATH="/home/vishal/Downloads/google-cloud-sdk/bin:/home/vishal/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/TeX/texbin:/etc/profiles/per-user/Ujjwal.gupta/bin:/nix/var/nix/profiles/system/sw/bin"
 
       export ANTHROPIC_BASE_URL="https://grid.ai.juspay.net/"
       export ANTHROPIC_MODEL="glm-latest"
@@ -97,15 +101,17 @@
     colima   # docker daemon via VM
     ripgrep
     nodejs_24  # includes xyne-cli
+    opencode
   ];
 
   # Optional: ensure Colima is on PATH
   home.sessionPath = [ "${pkgs.colima}/bin" ];
 
-
-
-
-
+  programs.opencode = {
+    enable = true;
+    autoWire.dir = AI;
+    settings = import ./opencode-config.nix;
+  };
 
 }
 

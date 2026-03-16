@@ -4,15 +4,16 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    AI.url = "github:srid/AI";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, AI, ... }:
     let
-      system = "aarch64-darwin"; 
-      username = "Ujjwal.gupta";
+      system = "x86_64-linux"; 
+      username = "vishal";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       packages.${system}.hm = home-manager.packages.${system}.default;
@@ -20,7 +21,7 @@
       homeConfigurations = {
         ${username} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit system username; };
+          extraSpecialArgs = { inherit system username AI; };
      
           modules = [ ./home.nix ./neovim.nix ./tmux.nix ./tmate.nix ./redis.nix ];
         };        
