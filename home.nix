@@ -46,10 +46,10 @@
         export ANTHROPIC_AUTH_TOKEN=$(cat ~/.config/secrets/anthropic_token)
       fi
 
-      export VERTEX_PROJECT_ID="dev-ai-gamma"
-      export VERTEX_MODEL="claude-sonnet-4@20250514"
-      export VERTEX=1
-      export VERTEX_REGION="us-east5"
+      # Load JUSPAY_API_KEY from local file if it exists
+      if [[ -f ~/.config/secrets/juspay_api_key ]]; then
+        export JUSPAY_API_KEY=$(cat ~/.config/secrets/juspay_api_key)
+      fi
 
       # Start HTTP server for home-manager documentation on port 9999
       # Kill any existing server on port 9999 first
@@ -102,6 +102,7 @@
     ripgrep
     nodejs_24  # includes xyne-cli
     opencode
+    netbird
   ];
 
   # Optional: ensure Colima is on PATH
@@ -111,6 +112,21 @@
     enable = true;
     autoWire.dir = AI;
     settings = import ./opencode-config.nix;
+  };
+
+  systemd.user.services.netbird = {
+    Unit = {
+      Description = "Netbird VPN daemon";
+      After = [ "network.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.netbird}/bin/netbird service run";
+      Restart = "on-failure";
+      RestartSec = 5;
+    };
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
   };
 
 }
