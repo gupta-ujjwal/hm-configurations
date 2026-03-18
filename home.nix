@@ -39,6 +39,11 @@
       share = true;
     };
 
+    envExtra = ''
+      export LANG="en_IN.UTF-8"
+      export LC_ALL="en_IN.UTF-8"
+    '';
+
     initContent = ''
       # Add Claude Code to PATH
       export PATH="/home/vishal/Downloads/google-cloud-sdk/bin:/home/vishal/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/TeX/texbin:/etc/profiles/per-user/Ujjwal.gupta/bin:/nix/var/nix/profiles/system/sw/bin"
@@ -123,6 +128,7 @@
   programs.claude-code = {
     enable = true;
     autoWire.dirs = [ AI ];
+    settings.permissions.defaultMode = "default";
   };
 
   systemd.user.services.netbird = {
