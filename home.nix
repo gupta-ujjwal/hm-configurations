@@ -1,8 +1,11 @@
-{ config, pkgs, username, AI, ... }:
+{ config, pkgs, username, AI, nix-agent-wire, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     AI.homeManagerModules.opencode
+    nix-agent-wire.homeModules.claude-code
   ];
 
   home = {
@@ -112,6 +115,11 @@
     enable = true;
     autoWire.dir = AI;
     settings = import ./opencode-config.nix;
+  };
+
+  programs.claude-code = {
+    enable = true;
+    autoWire.dirs = [ AI ];
   };
 
   systemd.user.services.netbird = {

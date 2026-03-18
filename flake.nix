@@ -8,9 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     AI.url = "github:srid/AI";
+    nix-agent-wire.url = "github:srid/nix-agent-wire";
   };
 
-  outputs = { self, nixpkgs, home-manager, AI, ... }:
+  outputs = { self, nixpkgs, home-manager, AI, nix-agent-wire, ... }:
     let
       system = "x86_64-linux"; 
       username = "vishal";
@@ -21,7 +22,7 @@
       homeConfigurations = {
         ${username} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit system username AI; };
+          extraSpecialArgs = { inherit system username AI nix-agent-wire; };
      
           modules = [ ./home.nix ./neovim.nix ./tmux.nix ./tmate.nix ./redis.nix ];
         };        
