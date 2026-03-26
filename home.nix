@@ -79,9 +79,15 @@
       xyne = "npx @xyne/xyne-cli";
       redis-cli = "${pkgs.redis}/bin/redis-cli";
       redis-server = "${pkgs.redis}/bin/redis-server";
-      redis-start = "launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist";
-      redis-stop = "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist";
-      redis-restart = "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist";
+      redis-start = if pkgs.stdenv.isDarwin
+        then "launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
+        else "systemctl --user start redis";
+      redis-stop = if pkgs.stdenv.isDarwin
+        then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist"
+        else "systemctl --user stop redis";
+      redis-restart = if pkgs.stdenv.isDarwin
+        then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
+        else "systemctl --user restart redis";
     };
   };
 
@@ -128,7 +134,6 @@
   programs.claude-code = {
     enable = true;
     autoWire.dirs = [ AI ];
-    settings.permissions.defaultMode = "default";
   };
 
   systemd.user.services.netbird = {

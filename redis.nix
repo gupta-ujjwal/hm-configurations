@@ -1,8 +1,30 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
+let
+  isDarwin = pkgs.stdenv.isDarwin;
+  isLinux = pkgs.stdenv.isLinux;
+in
 {
-  # Redis service configuration for macOS using launchd
-  launchd.agents.redis = {
+  # Linux: systemd service
+  systemd.user.services.redis = lib.mkIf isLinux {
+    Unit = {
+      Description = "Redis in-memory data store";
+      After = [ "network.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.redis}/bin/redis-server ${config.home.homeDirectory}/.config/redis/redis.conf";
+      Restart = "on-failure";
+      StandardOutput = "append:${config.home.homeDirectory}/.local/share/redis/redis.log";
+      StandardError = "append:${config.home.homeDirectory}/.local/share/redis/redis.log";
+      WorkingDirectory = "${config.home.homeDirectory}/.local/share/redis";
+    };
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+  };
+
+  # macOS: launchd agent
+  launchd.agents.redis = lib.mkIf isDarwin {
     enable = true;
     config = {
       ProgramArguments = [
@@ -20,7 +42,6 @@
 
   # Redis configuration file
   home.file.".config/redis/redis.conf".text = ''
-    # Redis configuration for home manager on macOS
     port 6379
     bind 127.0.0.1
     timeout 0
@@ -49,7 +70,7 @@
   '';
 
   # Create Redis data directory
-  home.activation.createRedisDir = ''
+  home.activation.createRedisDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     mkdir -p ${config.home.homeDirectory}/.local/share/redis
     chmod 755 ${config.home.homeDirectory}/.local/share/redis
   '';
