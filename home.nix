@@ -12,10 +12,6 @@
     username = username;
     homeDirectory = "/home/vishal";
     stateVersion = "22.11";
-
-    sessionVariables = {
-      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.zlib}/lib";
-    };
   };
 
   programs.home-manager.enable = true;
