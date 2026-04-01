@@ -42,6 +42,7 @@
     envExtra = ''
       export LANG="en_IN.UTF-8"
       export LC_ALL="en_IN.UTF-8"
+      export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.zlib}/lib''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
     '';
 
     initContent = ''
@@ -115,6 +116,7 @@
     uv
     docker   # docker client
     colima   # docker daemon via VM
+    lazygit
     ripgrep
     nodejs_24  # includes xyne-cli
     opencode
@@ -124,6 +126,7 @@
 
   # Optional: ensure Colima is on PATH
   home.sessionPath = [ "${pkgs.colima}/bin" ];
+
 
   programs.opencode = {
     enable = true;
