@@ -130,13 +130,13 @@
 
   programs.opencode = {
     enable = true;
-    autoWire.dirs = [ (juspay-AI + "/.agents") ];
-    settings = import ./opencode-config.nix;
+    autoWire.dirs = [ (juspay-AI + "/.agents") ./agents ];
+    settings = import ./modules/opencode-config.nix;
   };
 
   programs.claude-code = {
     enable = true;
-    autoWire.dirs = [ (juspay-AI + "/.agents") ];
+    autoWire.dirs = [ (juspay-AI + "/.agents") ./agents ];
   };
 
   systemd.user.services.netbird = {

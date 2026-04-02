@@ -1,132 +1,112 @@
 # hm-configurations
 
-This repository contains Home Manager configurations using Nix flakes. It provides a declarative setup for development tools and shell environment that can be used across different systems (Linux, macOS) and architectures.
+Declarative Home Manager setup using Nix flakes. Manages development tools, shell environment, AI coding agents, and services — reproducible across machines.
 
-## 🛠️ Configured Tools
+## Configured Tools
 
-### Core Development Tools
-- **Neovim**: Text editor with CoC (Conquer of Completion) and Haskell LSP support
-- **Tmux**: Terminal multiplexer with vi-mode keybindings
-- **Git**: Version control (via git package)
-- **Zsh**: Shell with completions, syntax highlighting, and autosuggestions
+### Core Development
+- **Neovim** — CoC + Haskell LSP, telescope, fugitive, dracula theme
+- **Tmux** — vi-mode, `Ctrl-a` prefix, mouse support
+- **Tmate** — instant terminal sharing
+- **Git** + **Lazygit** — version control
+- **Zsh** — completions, syntax highlighting, autosuggestions, starship prompt
 
-### Shell Enhancements
-- **Starship**: Modern shell prompt
-- **fzf**: Fuzzy finder with Zsh integration
-- **direnv**: Directory-based environment management with nix-direnv
-- **nix-index**: Nix package search
+### Languages & Runtimes
+- **Haskell** — Stack
+- **Python 3.13** — uv package manager
+- **Node.js 24** — includes xyne-cli
 
-### Development Environments
-- **Haskell**: Stack build tool
-- **Python**: Python 3.13 with uv package manager
-- **Node.js**: Node.js 24 with xyne-cli (AI coding assistant)
-- **Database**: MariaDB, PostgreSQL, Redis
+### Databases
+- **Redis** — systemd service (Linux) / launchd (macOS) with persistent config
+- **MariaDB**, **PostgreSQL**
 
-### Container & System Tools
-- **Docker**: Docker client
-- **Colima**: Docker daemon via VM (macOS)
-- **htop/btop**: Interactive system monitors
-- **ripgrep**: Fast text search
+### AI Coding Agents
+- **Claude Code** — Anthropic's CLI agent, configured via [nix-agent-wire](https://github.com/srid/nix-agent-wire)
+- **OpenCode** — configured via [juspay/AI](https://github.com/juspay/AI) with Juspay LiteLLM provider
+- **Shared skills** — 9 skills from juspay/AI + custom skills in `agents/`, wired into both tools via `autoWire.dirs`
+- **OpenCode plugins** — superpowers, playwright MCP server
 
-## 📦 Installation
+### Infrastructure
+- **Docker** + **Colima** — container runtime
+- **Netbird** — VPN daemon (systemd service)
+- **direnv** + **nix-direnv** — per-project environments
+- **fzf**, **ripgrep**, **htop**, **btop**, **nix-index**
+
+### Fonts
+- JetBrains Mono Nerd Font
+
+## Installation
 
 ### Prerequisites
-- Nix package manager with flakes enabled
-- Supported systems: Linux (x86_64-linux, aarch64-linux) or macOS (x86_64-darwin, aarch64-darwin)
+- Nix with flakes enabled
+- System: `x86_64-linux` (currently configured)
 
-### Setup Steps
+### Setup
 
-1. **Create Home Manager directory:**
-   ```bash
-   mkdir -p ~/.config/home-manager
-   cd ~/.config/home-manager
-   ```
+```bash
+git clone https://github.com/gupta-ujjwal/hm-configurations.git ~/.config/home-manager
+cd ~/.config/home-manager
+```
 
-2. **Clone this repository:**
-   ```bash
-   git clone https://github.com/gupta-ujjwal/hm-configurations.git .
-   ```
+Edit `flake.nix` — update `system` and `username`.
+Edit `home.nix` — update `homeDirectory`.
 
-3. **Update configuration:**
-   - Edit `flake.nix`: Update `system` (e.g., `x86_64-linux`, `aarch64-darwin`, `x86_64-darwin`) and `username`
-   - Edit `home.nix`: Set your `homeDirectory` (e.g., `/home/username` for Linux, `/Users/username` for macOS)
+```bash
+nix run nixpkgs#home-manager -- switch --flake .
+```
 
-4. **Apply configuration:**
-   ```bash
-   nix run nixpkgs#home-manager -- switch --flake .
-   ```
-
-5. **Neovim Lua files:**
-   The Neovim configuration uses Lua files from the `nvim/lua/` directory. These are automatically loaded via the `extraConfig` in `neovim.nix`.
-
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 .
-├── flake.nix           # Nix flake configuration
-├── flake.lock          # Locked dependencies
-├── home.nix            # Main Home Manager configuration
-├── neovim.nix          # Neovim-specific configuration
-├── tmux.nix            # Tmux-specific configuration
+├── flake.nix              # Flake inputs: nixpkgs, home-manager, nix-agent-wire, juspay/AI
+├── flake.lock
+├── home.nix               # Main config: packages, zsh, aliases, agent wiring
+├── modules/
+│   ├── neovim.nix         # Neovim + CoC + plugins
+│   ├── tmux.nix           # Tmux config
+│   ├── tmate.nix          # Tmate config
+│   ├── redis.nix          # Redis service (systemd/launchd) + config
+│   └── opencode-config.nix # OpenCode settings: providers, models, MCP, plugins
+├── agents/
+│   └── skills/
+│       └── hm-install/    # Custom skill: install packages via home-manager
+│           └── SKILL.md
 ├── nvim/
-│   ├── init.lua        # Neovim initialization
-│   ├── coc-settings.json
-│   └── lua/
-│       ├── opts.lua    # Neovim options
-│       ├── vars.lua    # Neovim variables
-│       ├── keys.lua    # Keybindings
-│       └── plugins.lua # Plugin configurations
+│   └── lua/               # Neovim lua configs (opts, vars, keys, plugins)
 ├── README.md
 └── LICENSE
 ```
 
-## ⚙️ Configuration Details
+## AI Agent Setup
 
-### Zsh Configuration
-- **History**: 10,000 entries with deduplication
-- **Aliases**: 
-  - `g` → git
-  - `lg` → lazygit
-  - `d` → docker
-  - `dc` → docker compose
-  - `col` → colima
+Both Claude Code and OpenCode are configured via the [nix-agent-wire](https://github.com/srid/nix-agent-wire) convention:
 
-### Neovim Plugins
-- vim-airline (status line)
-- papercolor-theme & dracula-nvim (themes)
-- nerdtree (file explorer)
-- telescope.nvim (fuzzy finder)
-- vim-fugitive & gv-vim (Git integration)
-- vim-commentary (commenting)
-- indentLine (indentation guides)
-- CoC with Haskell Language Server
+- **`nix-agent-wire`** — provides `programs.claude-code` home-manager module
+- **`juspay/AI`** — provides `programs.opencode` module + shared skills in `.agents/`
+- **`./agents/`** — local custom skills, wired into both tools
 
-### Tmux Settings
-- Prefix: `Ctrl-a`
-- Base index: 1
-- Vi-mode keybindings
-- Mouse support enabled
-- Custom pane navigation
+Skills from `juspay/AI`: cargo-watch, code-review, nix-ci, nix-flake, nix-haskell, nix-health, nix-justfile, nix-rust-leptos, vhs.
 
-## 🔄 Updating
+Custom skills: hm-install (ensures all packages are installed via home-manager).
 
-To update your configuration after making changes:
+To add a new skill for both tools, create `agents/skills/<name>/SKILL.md` and run `home-manager switch`.
+
+## Updating
 
 ```bash
-home-manager switch --flake ~/.config/home-manager
-```
-
-To update flake inputs (nixpkgs, home-manager):
-
-```bash
+# Update flake inputs
 nix flake update
+
+# Apply changes
 home-manager switch --flake ~/.config/home-manager
 ```
 
-## 📝 License
+To update only AI-related inputs:
+```bash
+nix flake update nix-agent-wire juspay-AI
+```
 
-See [LICENSE](LICENSE) file for details.
+## License
 
-## 🤝 Contributing
-
-Feel free to open issues or submit pull requests for improvements!
+See [LICENSE](LICENSE) file.
