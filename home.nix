@@ -1,10 +1,10 @@
-{ config, pkgs, username, AI, nix-agent-wire, ... }:
+{ config, pkgs, username, nix-agent-wire, juspay-AI, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    AI.homeManagerModules.opencode
+    juspay-AI.homeModules.opencode
     nix-agent-wire.homeModules.claude-code
   ];
 
@@ -130,13 +130,13 @@
 
   programs.opencode = {
     enable = true;
-    autoWire.dir = AI;
+    autoWire.dirs = [ (juspay-AI + "/.agents") ];
     settings = import ./opencode-config.nix;
   };
 
   programs.claude-code = {
     enable = true;
-    autoWire.dirs = [ AI ];
+    autoWire.dirs = [ (juspay-AI + "/.agents") ];
   };
 
   systemd.user.services.netbird = {

@@ -171,6 +171,13 @@
       url = "https://mcp.deepwiki.com/mcp";
       enabled = true;
     };
+    playwright = {
+      type = "local";
+      command = [ "npx" "-y" "@playwright/mcp@latest" ];
+      enabled = true;
+    };
   };
-  plugin = [];
+  plugin = [
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ];
 }
