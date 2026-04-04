@@ -89,6 +89,10 @@
       redis-restart = if pkgs.stdenv.isDarwin
         then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
         else "systemctl --user restart redis";
+      # Obsidian
+      os = "obs sync";
+      on = "obs new";
+      od = "obs daily";
     };
   };
 

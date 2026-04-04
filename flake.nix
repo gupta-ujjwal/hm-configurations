@@ -24,7 +24,7 @@
           inherit pkgs;
           extraSpecialArgs = { inherit system username nix-agent-wire juspay-AI; };
      
-          modules = [ ./home.nix ./modules/neovim.nix ./modules/tmux.nix ./modules/tmate.nix ./modules/redis.nix ];
+          modules = [ ./home.nix ./modules/neovim.nix ./modules/tmux.nix ./modules/tmate.nix ./modules/redis.nix ./modules/obsidian.nix ];
         };        
         default = self.homeConfigurations.${username};  
       };
