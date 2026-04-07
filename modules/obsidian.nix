@@ -36,6 +36,9 @@ let
       ${pkgs.git}/bin/git commit -m "vault: auto-sync $(date '+%Y-%m-%d %H:%M:%S') from $(hostname -s)" || true
     fi
 
+    # Detect current branch name
+    BRANCH=$(${pkgs.git}/bin/git rev-parse --abbrev-ref HEAD)
+
     # Pull with rebase to keep history clean
     echo "Pulling remote changes..."
     ${pkgs.git}/bin/git pull --rebase --autostash origin main || {
@@ -50,7 +53,7 @@ let
     # Push local commits
     if ${pkgs.git}/bin/git log --oneline origin/main..HEAD | grep -q .; then
       echo "Pushing local changes..."
-      ${pkgs.git}/bin/git push origin main
+      ${pkgs.git}/bin/git push origin "$BRANCH":main
     fi
 
     echo "Sync complete."

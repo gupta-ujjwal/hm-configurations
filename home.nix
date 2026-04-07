@@ -116,7 +116,8 @@
     tmux
     tmate
     python313
-    postgresql
+    postgresql_17
+    pnpm_9
     uv
     docker   # docker client
     colima   # docker daemon via VM
