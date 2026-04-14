@@ -1,4 +1,4 @@
-{ config, pkgs, username, nix-agent-wire, juspay-AI, ... }:
+{ config, pkgs, system, username, nix-agent-wire, juspay-AI, kolu, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -124,7 +124,9 @@
     nodejs_24  # includes xyne-cli
     opencode
     netbird
+    gh
     nerd-fonts.jetbrains-mono
+    kolu.packages.${system}.default
   ];
 
   # Optional: ensure Colima is on PATH

@@ -9,9 +9,10 @@
     };
     nix-agent-wire.url = "github:srid/nix-agent-wire";
     juspay-AI.url = "github:juspay/AI";
+    kolu.url = "github:juspay/kolu";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-agent-wire, juspay-AI, ... }:
+  outputs = { self, nixpkgs, home-manager, nix-agent-wire, juspay-AI, kolu, ... }:
     let
       supportedSystems = [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" "aarch64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems f;
@@ -26,7 +27,7 @@
         in
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit system username nix-agent-wire juspay-AI; };
+          extraSpecialArgs = { inherit system username nix-agent-wire juspay-AI kolu; };
           modules = [ ./home.nix ./modules/neovim.nix ./modules/tmux.nix ./modules/tmate.nix ./modules/redis.nix ./modules/obsidian.nix ];
         };
     in {
