@@ -10,7 +10,7 @@
 
   home = {
     username = username;
-    homeDirectory = "/home/vishal";
+    homeDirectory = if pkgs.stdenv.isDarwin then "/Users/${username}" else "/home/${username}";
     stateVersion = "22.11";
   };
 
@@ -46,9 +46,6 @@
     '';
 
     initContent = ''
-      # Add Claude Code to PATH
-      export PATH="/home/vishal/Downloads/google-cloud-sdk/bin:/home/vishal/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/TeX/texbin:/etc/profiles/per-user/Ujjwal.gupta/bin:/nix/var/nix/profiles/system/sw/bin"
-
       # export ANTHROPIC_BASE_URL="https://grid.ai.juspay.net/"
       # export ANTHROPIC_MODEL="glm-latest"
       
@@ -89,6 +86,7 @@
       redis-restart = if pkgs.stdenv.isDarwin
         then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
         else "systemctl --user restart redis";
+      hms = "home-manager switch --flake ~/.config/home-manager --impure";
       # Obsidian
       os = "obs sync";
       on = "obs new";
@@ -130,7 +128,10 @@
   ];
 
   # Optional: ensure Colima is on PATH
-  home.sessionPath = [ "${pkgs.colima}/bin" ];
+  home.sessionPath = [
+    "${pkgs.colima}/bin"
+    "${config.home.homeDirectory}/Downloads/google-cloud-sdk/bin"
+  ];
 
 
   programs.opencode = {
