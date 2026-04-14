@@ -2,6 +2,19 @@
 
 Declarative Home Manager setup using Nix flakes. Manages development tools, shell environment, AI coding agents, and services — reproducible across machines.
 
+## Quick Install
+
+```bash
+nix run github:gupta-ujjwal/hm-configurations
+```
+
+This single command will:
+1. Auto-detect your system, username, and home directory
+2. Clone the repo to `~/.config/home-manager`
+3. Apply the full home-manager configuration
+
+**Prerequisites:** [Nix with flakes enabled](https://install.determinate.systems/nix)
+
 ## Configured Tools
 
 ### Core Development
@@ -35,25 +48,17 @@ Declarative Home Manager setup using Nix flakes. Manages development tools, shel
 ### Fonts
 - JetBrains Mono Nerd Font
 
-## Installation
+## Manual Setup
 
-### Prerequisites
-- Nix with flakes enabled
-- System: `x86_64-linux` (currently configured)
-
-### Setup
+If you prefer not to use the bootstrap script:
 
 ```bash
 git clone https://github.com/gupta-ujjwal/hm-configurations.git ~/.config/home-manager
 cd ~/.config/home-manager
+home-manager switch --flake . --impure
 ```
 
-Edit `flake.nix` — update `system` and `username`.
-Edit `home.nix` — update `homeDirectory`.
-
-```bash
-nix run nixpkgs#home-manager -- switch --flake .
-```
+The `--impure` flag allows auto-detection of your `$USER` and `$HOME`. No manual editing of `flake.nix` or `home.nix` is needed.
 
 ## Repository Structure
 
@@ -62,6 +67,7 @@ nix run nixpkgs#home-manager -- switch --flake .
 ├── flake.nix              # Flake inputs: nixpkgs, home-manager, nix-agent-wire, juspay/AI
 ├── flake.lock
 ├── home.nix               # Main config: packages, zsh, aliases, agent wiring
+├── bootstrap.sh           # Bootstrap script for single-command setup
 ├── modules/
 │   ├── neovim.nix         # Neovim + CoC + plugins
 │   ├── tmux.nix           # Tmux config
@@ -90,7 +96,7 @@ Skills from `juspay/AI`: cargo-watch, code-review, nix-ci, nix-flake, nix-haskel
 
 Custom skills: hm-install (ensures all packages are installed via home-manager).
 
-To add a new skill for both tools, create `agents/skills/<name>/SKILL.md` and run `home-manager switch`.
+To add a new skill for both tools, create `agents/skills/<name>/SKILL.md` and run `hms` (alias for `home-manager switch --flake ~/.config/home-manager --impure`).
 
 ## Updating
 
@@ -99,13 +105,20 @@ To add a new skill for both tools, create `agents/skills/<name>/SKILL.md` and ru
 nix flake update
 
 # Apply changes
-home-manager switch --flake ~/.config/home-manager
+hms
 ```
 
 To update only AI-related inputs:
 ```bash
 nix flake update nix-agent-wire juspay-AI
 ```
+
+## Supported Platforms
+
+- `aarch64-darwin` (Apple Silicon Mac)
+- `x86_64-darwin` (Intel Mac)
+- `x86_64-linux`
+- `aarch64-linux`
 
 ## License
 
