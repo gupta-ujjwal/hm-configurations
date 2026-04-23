@@ -6,6 +6,8 @@ in
   programs.neovim = {
     enable = true;
     # package = neovim-nightl;
+    withRuby = false;
+    withPython3 = false;
     extraPackages = [
     ];
 

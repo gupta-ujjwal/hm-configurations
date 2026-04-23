@@ -4,7 +4,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    juspay-AI.homeModules.opencode
+    nix-agent-wire.homeModules.opencode
     nix-agent-wire.homeModules.claude-code
   ];
 
@@ -86,7 +86,7 @@
       redis-restart = if pkgs.stdenv.isDarwin
         then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
         else "systemctl --user restart redis";
-      hms = "home-manager switch --flake ~/.config/home-manager --impure";
+      hms = "home-manager switch --flake ${config.home.homeDirectory}/.config/home-manager --impure";
       # Obsidian
       os = "obs sync";
       on = "obs new";
@@ -138,13 +138,13 @@
 
   programs.opencode = {
     enable = true;
-    autoWire.dirs = [ (juspay-AI + "/.agents") ./agents ];
+    autoWire.dirs = [ (juspay-AI + "/.opencode") ./agents ];
     settings = import ./modules/opencode-config.nix;
   };
 
   programs.claude-code = {
     enable = true;
-    autoWire.dirs = [ (juspay-AI + "/.agents") ./agents ];
+    autoWire.dirs = [ (juspay-AI + "/.claude") ./agents ];
   };
 
   systemd.user.services.netbird = {
