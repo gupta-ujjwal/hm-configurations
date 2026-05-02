@@ -66,6 +66,22 @@
         "type": "github"
       }
     },
+    "euler-workspace": {
+      "locked": {
+        "lastModified": 1777669257,
+        "narHash": "sha256-C09641YsxYY/ezaRhgG87oiuxfmJecp6AW34ghoU588=",
+        "ref": "euler-skills",
+        "rev": "795d57fcd3b39e9dd0f45740f9e47a0d061727ac",
+        "revCount": 6,
+        "type": "git",
+        "url": "ssh://git@ssh.bitbucket.juspay.net/~ujjwal.gupta_juspay.in/euler-workspace.git"
+      },
+      "original": {
+        "ref": "euler-skills",
+        "type": "git",
+        "url": "ssh://git@ssh.bitbucket.juspay.net/~ujjwal.gupta_juspay.in/euler-workspace.git"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -234,6 +250,7 @@
     },
     "root": {
       "inputs": {
+        "euler-workspace": "euler-workspace",
         "home-manager": "home-manager",
         "juspay-AI": "juspay-AI",
         "kolu": "kolu",
