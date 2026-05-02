@@ -7,7 +7,6 @@
       model = "litellm/open-fast";
     };
   };
-  theme = "one-dark";
   autoupdate = true;
   provider = {
     litellm = {

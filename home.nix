@@ -140,6 +140,7 @@
     enable = true;
     autoWire.dirs = [ (juspay-AI + "/.opencode") (euler-workspace + "/skills") ./agents ];
     settings = import ./modules/opencode-config.nix;
+    tui.theme = "one-dark";
   };
 
   programs.claude-code = {
