@@ -3,6 +3,13 @@ let
   # neovim-nightly = inputs.neovim-nightly-overlay.packages.${system}.neovim;
 in
 {
+  home.file = {
+    ".config/nvim/lua/opts.lua".source = ../nvim/lua/opts.lua;
+    ".config/nvim/lua/vars.lua".source = ../nvim/lua/vars.lua;
+    ".config/nvim/lua/keys.lua".source = ../nvim/lua/keys.lua;
+    ".config/nvim/lua/plugins.lua".source = ../nvim/lua/plugins.lua;
+  };
+
   programs.neovim = {
     enable = true;
     # package = neovim-nightl;
@@ -25,6 +32,12 @@ in
       gv-vim
       indentLine
       vim-commentary
+      markdown-preview-nvim
+      (nvim-treesitter.withPlugins (p: [
+        p.html
+        p.markdown
+        p.markdown_inline
+      ]))
     ];
     
     coc = {

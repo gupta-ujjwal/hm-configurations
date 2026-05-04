@@ -152,11 +152,34 @@
 
         <h2>📝 Neovim Configuration</h2>
         <div class="config-section">
-            <p><span class="file-path">Configured in: neovim.nix</span></p>
+            <p><span class="file-path">Configured in: neovim.nix, nvim/lua/*.lua</span></p>
             <p>Custom Neovim setup with plugins and configurations.</p>
-            
+
             <div class="command">nvim</div>
             <p>Launch Neovim with custom configuration</p>
+
+            <h3>Key Bindings:</h3>
+            <div class="key-binding">Ctrl-p</div> - Find files (telescope find_files)
+            <div class="key-binding">Ctrl-f</div> - Search in current file (telescope current_buffer_fuzzy_find)
+            <div class="key-binding">Ctrl-g</div> - Search text across all files (telescope live_grep) — terminal-friendly stand-in for VSCode's Ctrl+Shift+F
+            <div class="key-binding">Ctrl-b</div> - Toggle NERDTree
+            <div class="key-binding">Ctrl-/</div> - Toggle comment (normal & visual)
+
+            <h3>Preview Command:</h3>
+            <div class="command">:Preview</div>
+            <p>Preview the current file based on its filetype:</p>
+            <ul>
+                <li><strong>markdown</strong> → opens a live-reloading browser preview via <code>markdown-preview-nvim</code></li>
+                <li><strong>html</strong> → opens the file in your default browser via <code>vim.ui.open</code></li>
+            </ul>
+
+            <h3>Tree-sitter Parsers:</h3>
+            <p>Syntax-aware highlighting and indentation enabled for:</p>
+            <ul>
+                <li><code>html</code></li>
+                <li><code>markdown</code></li>
+                <li><code>markdown_inline</code></li>
+            </ul>
         </div>
 
         <h2>🐚 Shell Aliases</h2>
