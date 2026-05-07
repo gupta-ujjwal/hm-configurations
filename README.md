@@ -113,6 +113,9 @@ To update only AI-related inputs:
 nix flake update nix-agent-wire juspay-AI
 ```
 
+Detailed setup guide with AI agent configuration walkthrough
+https://pub.towardsai.net/the-dev-environment-setup-every-ai-engineer-should-have-cab1f23a29db
+
 ## Supported Platforms
 
 - `aarch64-darwin` (Apple Silicon Mac)
