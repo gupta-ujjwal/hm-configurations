@@ -41,8 +41,6 @@
 
     envExtra = ''
       export LANG="en_IN.UTF-8"
-      export LC_ALL="en_IN.UTF-8"
-      export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.zlib}/lib''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
     '';
 
     initContent = ''
