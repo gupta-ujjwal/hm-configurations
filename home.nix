@@ -103,6 +103,7 @@
   };
 
   home.packages = with pkgs; [
+    ngrok
     mariadb
     htop
     btop
