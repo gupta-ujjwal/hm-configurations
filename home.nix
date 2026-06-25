@@ -125,7 +125,6 @@
     netbird
     gh
     nerd-fonts.jetbrains-mono
-    kolu.packages.${system}.default
   ];
 
   # Optional: ensure Colima is on PATH
