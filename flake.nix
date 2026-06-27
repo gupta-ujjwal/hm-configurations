@@ -29,7 +29,7 @@
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = { inherit system username nix-agent-wire juspay-AI kolu euler-workspace; };
-          modules = [ ./home.nix ./modules/neovim.nix ./modules/tmux.nix ./modules/tmate.nix ./modules/redis.nix ./modules/obsidian.nix ./modules/apm.nix ./modules/kolu.nix ];
+          modules = [ ./home.nix ./modules/neovim.nix ./modules/tmux.nix ./modules/tmate.nix ./modules/redis.nix ./modules/obsidian.nix ./modules/apm.nix ./modules/kolu.nix ./modules/daily-brief.nix ];
         };
     in {
       packages = forAllSystems (system:
