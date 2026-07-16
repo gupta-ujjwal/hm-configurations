@@ -114,7 +114,7 @@
     tmate
     python313
     postgresql_17
-    pnpm_9
+    pnpm
     uv
     docker   # docker client
     colima   # docker daemon via VM
@@ -125,6 +125,7 @@
     netbird
     gh
     nerd-fonts.jetbrains-mono
+    kolu.packages.${system}.default  # kolu CLI on PATH (service is wired separately in modules/kolu.nix)
   ];
 
   # Optional: ensure Colima is on PATH
@@ -144,6 +145,16 @@
   programs.claude-code = {
     enable = true;
     autoWire.dirs = [ (juspay-AI + "/.claude") (euler-workspace + "/skills") ./agents ];
+    # The nixpkgs claude-code wrapper prepends a Nix alsa-lib to LD_LIBRARY_PATH
+    # (for the voice feature's audio-capture.node). That var is exported, so every
+    # child of `claude` — the Bash tool, MCP servers, and ultimately system Chrome
+    # launched by the Playwright MCP — inherits it. That alsa-lib needs GLIBC_2.38
+    # while the system glibc is 2.35, so system Chrome crashes on launch.
+    # Swapping the alsa-lib input for an empty dir makes the wrapper point
+    # LD_LIBRARY_PATH at a nonexistent path (ld.so ignores it), so nothing leaks.
+    # Voice still works: audio-capture.node falls back to the system libasound.so.2
+    # (this is a non-NixOS host, so /lib/x86_64-linux-gnu/libasound.so.2 exists).
+    package = pkgs.claude-code.override { alsa-lib = pkgs.emptyDirectory; };
   };
 
   systemd.user.services.netbird = {
