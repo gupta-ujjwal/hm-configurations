@@ -9,7 +9,7 @@
     };
     nix-agent-wire.url = "github:srid/nix-agent-wire";
     juspay-AI.url = "github:juspay/AI";
-    kolu.url = "github:juspay/kolu";
+    kolu.url = "github:juspay/kolu";  # pinned to stable; master is switching to effect-ts
     euler-workspace.url = "git+ssh://git@ssh.bitbucket.juspay.net/~ujjwal.gupta_juspay.in/euler-workspace.git?ref=euler-skills";
   };
 
