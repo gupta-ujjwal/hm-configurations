@@ -102,6 +102,8 @@
     enableZshIntegration = true;
   };
 
+  programs.bash.enable = true;
+
   home.packages = with pkgs; [
     ngrok
     mariadb
@@ -120,7 +122,8 @@
     colima   # docker daemon via VM
     lazygit
     ripgrep
-    nodejs_24  # includes xyne-cli
+    nodejs_24
+    netlify-cli
     opencode
     netbird
     gh
