@@ -1,0 +1,256 @@
+- generic [ref=f29e1]:
+  - generic [ref=f29e2]:
+    - generic [ref=f29e4]:
+      - navigation [ref=f29e5]:
+        - generic [ref=f29e6]:
+          - img "Logo" [ref=f29e7]
+          - link "SKIPER-UI" [ref=f29e8] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f29e9]:
+          - link "Pricing" [ref=f29e10] [cursor=pointer]:
+            - /url: /pricing
+          - link "Components" [ref=f29e11] [cursor=pointer]:
+            - /url: /components
+          - generic [ref=f29e12]:
+            - generic [ref=f29e13]:
+              - button "Command + K" [ref=f29e14] [cursor=pointer]
+              - generic [ref=f29e19]:
+                - heading "Command Palette" [level=2] [ref=f29e20]
+                - paragraph [ref=f29e21]: Search for a command to run...
+            - button "Show Menu" [ref=f29e23] [cursor=pointer]
+      - list [ref=f29e31]:
+        - listitem [ref=f29e32] [cursor=pointer]:
+          - link "How to use [Use docs]" [ref=f29e33]:
+            - /url: /docs/quick-start
+            - generic [ref=f29e34]: How to use
+            - generic [ref=f29e35]: "[Use docs]"
+        - listitem [ref=f29e36] [cursor=pointer]:
+          - link "Pricing [free pro]" [ref=f29e37]:
+            - /url: /pricing
+            - generic [ref=f29e38]: Pricing
+            - generic [ref=f29e39]: "[free pro]"
+        - listitem [ref=f29e40] [cursor=pointer]:
+          - link "Components [All components]" [ref=f29e41]:
+            - /url: /components
+            - generic [ref=f29e42]: Components
+            - generic [ref=f29e43]: "[All components]"
+        - listitem [ref=f29e44] [cursor=pointer]:
+          - link "Get Support [hello@skiper-ui.com]" [ref=f29e45]:
+            - /url: mailto:hello@skiper-ui.com
+            - generic [ref=f29e46]: Get Support
+            - generic [ref=f29e47]: "[hello@skiper-ui.com]"
+        - listitem [ref=f29e48] [cursor=pointer]:
+          - link "Founder [gxuri]" [ref=f29e49]:
+            - /url: https://x.com/Gur__vi
+            - generic [ref=f29e50]: Founder
+            - generic [ref=f29e51]: "[gxuri]"
+        - listitem [ref=f29e52] [cursor=pointer]:
+          - link "Account [pro]" [ref=f29e53]:
+            - /url: /user
+            - generic [ref=f29e54]: Account
+            - generic [ref=f29e55]: "[pro]"
+        - listitem [ref=f29e56] [cursor=pointer]:
+          - button "Login Login" [ref=f29e57]:
+            - generic [ref=f29e58]: Login
+            - generic [ref=f29e59]: Login
+      - generic [ref=f29e60]:
+        - link "Privacy Policy" [ref=f29e61] [cursor=pointer]:
+          - /url: /docs/privacy-policy
+        - link "Terms of Service" [ref=f29e62] [cursor=pointer]:
+          - /url: /docs/terms-of-service
+      - generic [ref=f29e63]:
+        - generic [ref=f29e64]: FREE
+        - generic [ref=f29e65]: Not logged in
+    - main [ref=f29e66]:
+      - generic [ref=f29e69]:
+        - generic [ref=f29e70]:
+          - heading "Quick Start Guide" [level=3] [ref=f29e71]
+          - paragraph [ref=f29e72]: skiper-UI is part of trusted shadcn registries. It's pretty simple to use - just copy the command and paste it in your terminal, and the component is all yours. Build amazing things - the sky is the limit!
+        - generic [ref=f29e73]:
+          - heading "CLI of any component you want" [level=3] [ref=f29e74]
+          - generic [ref=f29e75]:
+            - code [ref=f29e77]:
+              - text: npx shadcn add
+              - generic [ref=f29e78]: "@skiper"
+              - text: "-ui/skiper40"
+            - generic [ref=f29e79] [cursor=pointer]
+          - heading "after the cli you'll see this output" [level=3] [ref=f29e84]
+          - code [ref=f29e87]:
+            - text: "-> npx shadcn add"
+            - generic [ref=f29e88]: "@skiper"
+            - text: "-ui/skiper40 ✔ Checking registry. ✔ Created 1 file: - src/components/ui/skiper-ui/skiper40.tsx"
+        - generic [ref=f29e89]:
+          - heading "Now you can use the component" [level=3] [ref=f29e90]
+          - generic [ref=f29e91]:
+            - code [ref=f29e93]: "import { Skiper40 } from '@/components/v1/skiper40';"
+            - generic [ref=f29e94] [cursor=pointer]
+        - generic [ref=f29e99]:
+          - heading "Using the Pro Components" [level=3] [ref=f29e100]
+          - generic [ref=f29e101]:
+            - text: Buy the pro membership and click on the
+            - button "Component Collections" [ref=f29e103] [cursor=pointer]
+            - text: source code button on top right of every component. copy the code and paste it in your project or download the .tsx file
+        - generic [ref=f29e110]:
+          - heading "Pro CLI Authentication" [level=3] [ref=f29e111]
+          - paragraph [ref=f29e112]:
+            - text: Prefer the terminal? Pro members can install any Pro component straight from the shadcn CLI using their license key — no copy / paste needed. After purchasing, grab your license key from your
+            - link "account page" [ref=f29e113] [cursor=pointer]:
+              - /url: /user
+            - text: (it's also emailed with your Polar receipt).
+          - heading "1. Add your license key to .env.local" [level=3] [ref=f29e114]
+          - generic [ref=f29e115]:
+            - code [ref=f29e117]: SKIPER_LICENSE_KEY=your_license_key_here
+            - generic [ref=f29e118] [cursor=pointer]
+          - heading "2. Add the registry to components.json" [level=3] [ref=f29e123]
+          - generic [ref=f29e124]:
+            - code [ref=f29e126]: "{ \"registries\": { \"@skiper-ui\": { \"url\": \"https://skiper-ui.com/r/{name}.json\", \"headers\": { \"Authorization\": \"Bearer ${SKIPER_LICENSE_KEY}\" } } } }"
+            - generic [ref=f29e127] [cursor=pointer]
+          - heading "3. Install any component" [level=3] [ref=f29e132]
+          - generic [ref=f29e133]:
+            - code [ref=f29e135]:
+              - text: npx shadcn add
+              - generic [ref=f29e136]: "@skiper"
+              - text: "-ui/skiper20"
+            - generic [ref=f29e137] [cursor=pointer]
+          - paragraph [ref=f29e142]: Keep your license key private — treat it like a password. It's tied to your purchase and validated on every install. If it stops working after a refund or chargeback, that's expected.
+        - generic [ref=f29e143]:
+          - heading "Walk through the website" [level=3] [ref=f29e144]
+          - paragraph [ref=f29e145]: When you visit skiper-ui.com, you will see various symbols throughout the interface. To be crystal clear, below are the meanings of each symbol
+        - table [ref=f29e146]:
+          - rowgroup [ref=f29e147]:
+            - row [ref=f29e148]:
+              - columnheader "Symbol" [ref=f29e149]
+              - columnheader "Meaning" [ref=f29e151]
+          - rowgroup [ref=f29e153]:
+            - row [ref=f29e154]:
+              - cell [ref=f29e155]
+              - cell "Scroll trigger" [ref=f29e158]
+            - row [ref=f29e159]:
+              - cell [ref=f29e160]
+              - cell "Source code" [ref=f29e165]
+            - row [ref=f29e166]:
+              - cell [ref=f29e167]
+              - cell "Minimize view" [ref=f29e173]
+            - row [ref=f29e174]:
+              - cell [ref=f29e175]
+              - cell "Maximize view" [ref=f29e181]
+            - row [ref=f29e182]:
+              - cell [ref=f29e183]
+              - cell "Open in new tab" [ref=f29e188]
+            - row [ref=f29e189]:
+              - cell [ref=f29e190]
+              - cell "Premium Component" [ref=f29e194]
+            - row [ref=f29e195]:
+              - cell [ref=f29e196]
+              - cell "Copy" [ref=f29e200]
+            - row [ref=f29e201]:
+              - cell [ref=f29e202]
+              - cell "Theme Toggle" [ref=f29e209]
+            - row [ref=f29e210]:
+              - cell [ref=f29e211]
+              - cell "Mail" [ref=f29e215]
+        - generic [ref=f29e216]:
+          - heading "free paid components" [level=3] [ref=f29e217]
+          - paragraph [ref=f29e218]:
+            - text: Now some of the components are free and some are paid. you can see the premium symbol next to the paid components
+            - link "/components" [ref=f29e219] [cursor=pointer]:
+              - /url: /components
+            - text: in this page
+        - generic [ref=f29e220]:
+          - heading "Manually install" [level=3] [ref=f29e221]
+          - list [ref=f29e222]:
+            - listitem [ref=f29e223]: Install dependencies using pnpm, npm, or yarn
+            - listitem [ref=f29e224]: Set up clsx and tailwind-merge in lib/utils.ts
+            - listitem [ref=f29e225]: Import components from our registry
+        - generic [ref=f29e226]:
+          - heading [level=3] [ref=f29e227]:
+            - text: Prerequisites
+            - generic [ref=f29e228] [cursor=pointer]
+          - generic [ref=f29e232]:
+            - link "framer-motion" [ref=f29e233] [cursor=pointer]:
+              - /url: https://motion.dev/
+            - link "tailwindcss" [ref=f29e236] [cursor=pointer]:
+              - /url: https://tailwindcss.com/
+            - link "react" [ref=f29e240] [cursor=pointer]:
+              - /url: https://react.dev/
+            - link "clsx" [ref=f29e247] [cursor=pointer]:
+              - /url: https://www.npmjs.com/package/clsx
+            - link "lucide-react" [ref=f29e251] [cursor=pointer]:
+              - /url: https://lucide.dev/
+            - link "react-use-measure" [ref=f29e255] [cursor=pointer]:
+              - /url: https://www.npmjs.com/package/react-use-measure
+            - link "gsap" [ref=f29e259] [cursor=pointer]:
+              - /url: https://www.npmjs.com/package/gsap
+        - generic [ref=f29e265]:
+          - heading "install dependencies" [level=3] [ref=f29e266]
+          - generic [ref=f29e267]:
+            - code [ref=f29e269]: pnpm add clsx framer-motion lucide-react tailwind-merge
+            - generic [ref=f29e270] [cursor=pointer]
+        - generic [ref=f29e275]:
+          - heading "Setup lib" [level=3] [ref=f29e276]
+          - generic [ref=f29e277]:
+            - code [ref=f29e279]: "// lib/utils.ts import clsx, { ClassValue } from \"clsx\" import { twMerge } from \"tailwind-merge\" export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)) }"
+            - generic [ref=f29e280] [cursor=pointer]
+        - heading "Keep in mind" [level=3] [ref=f29e285]
+        - paragraph [ref=f29e286]: Most components here are recreations of the best out there. I don't claim to be the original creator. This is my attempt to reverse-engineer, replicate, and often add a few extra features. I've tried to credit everyone, but if I missed something, let me know.
+        - heading "Contact" [level=3] [ref=f29e287]
+        - generic [ref=f29e288]:
+          - text: Additionlly, if you find any bug or issue, feel free to
+          - button "mailto:hello@skiper-ui.com" [ref=f29e290] [cursor=pointer]:
+            - link [ref=f29e291]:
+              - /url: mailto:hello@skiper-ui.com
+          - text: Drop a dm.
+        - heading "License & Usage:" [level=3] [ref=f29e296]
+        - list [ref=f29e297]:
+          - listitem [ref=f29e298]: Free to use and modify in both personal and commercial projects.
+          - listitem [ref=f29e299]: Attribution to Skiper UI is required when using the free version.
+          - listitem [ref=f29e300]: No attribution required with Skiper UI Pro.
+        - heading "Enjoy building!" [level=3] [ref=f29e301]
+        - paragraph [ref=f29e302]:
+          - text: Build crazy projects and tag us on
+          - link "x.com/skiperUi" [ref=f29e303] [cursor=pointer]:
+            - /url: https://x.com/skiperUi
+          - text: peace out
+      - generic [ref=f29e305]:
+        - generic [ref=f29e306]:
+          - generic [ref=f29e307]:
+            - img "Logo" [ref=f29e308]
+            - link "SKIPER-UI PRO" [ref=f29e309] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=f29e310]: ©2025 skiper-ui.com
+        - generic [ref=f29e311]:
+          - list [ref=f29e312]:
+            - listitem [ref=f29e313]: Site
+            - listitem [ref=f29e314] [cursor=pointer]:
+              - link "Components" [ref=f29e315]:
+                - /url: /components
+            - listitem [ref=f29e316] [cursor=pointer]:
+              - link "Quick-start" [ref=f29e317]:
+                - /url: /docs/quick-start
+            - listitem [ref=f29e318] [cursor=pointer]:
+              - link "Pricing" [ref=f29e319]:
+                - /url: /pricing
+          - list [ref=f29e320]:
+            - listitem [ref=f29e321]: Socials
+            - listitem [ref=f29e322] [cursor=pointer]:
+              - link "Twitter" [ref=f29e323]:
+                - /url: https://x.com/Gur__vi
+            - listitem [ref=f29e324] [cursor=pointer]:
+              - link "LinkedIn" [ref=f29e325]:
+                - /url: https://www.linkedin.com/in/gurvindersingh02/
+            - listitem [ref=f29e326] [cursor=pointer]:
+              - link "GitHub" [ref=f29e327]:
+                - /url: https://github.com/Gurvinder-Singh02
+          - list [ref=f29e328]:
+            - listitem [ref=f29e329]: Privacy
+            - listitem [ref=f29e330] [cursor=pointer]:
+              - link "Privacy Policy" [ref=f29e331]:
+                - /url: /docs/privacy-policy
+            - listitem [ref=f29e332] [cursor=pointer]:
+              - link "Terms of Service" [ref=f29e333]:
+                - /url: /docs/terms-of-service
+            - listitem [ref=f29e334] [cursor=pointer]:
+              - link "Support" [ref=f29e335]:
+                - /url: /docs/support
+  - region "Notifications alt+T"
+  - alert [ref=f29e336]

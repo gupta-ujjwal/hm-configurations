@@ -1,0 +1,29 @@
+[    1930ms] [INFO] Successfully set dark color mode. @ https://reactbits.dev/assets/index-CJUNuZWO.js:207
+[    1976ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-pixel/GeistPixel-Line.woff2 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1976ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-pixel/GeistPixel-Line.woff2 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-pixel/GeistPixel-Line.woff2 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-pixel/GeistPixel-Line.woff2 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-sans/Geist-Variable.woff2 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-sans/Geist-Variable.woff2 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-sans/Geist-Variable.woff2 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] Failed to decode downloaded font: https://reactbits.dev/assets/css/geist/dist/fonts/geist-sans/Geist-Variable.woff2 @ https://reactbits.dev/:0
+[    1977ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ https://reactbits.dev/:0
+[    4064ms] [WARNING] [.WebGL-0x154402952300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://reactbits.dev/:0
+[    4082ms] [WARNING] [.WebGL-0x154402956200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://reactbits.dev/:0
+[    4103ms] [WARNING] [.WebGL-0x154402952300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://reactbits.dev/:0
+[    4121ms] [WARNING] [.WebGL-0x154402952300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat) @ https://reactbits.dev/:0

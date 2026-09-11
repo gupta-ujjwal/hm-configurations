@@ -1,0 +1,964 @@
+- generic [ref=f28e1]:
+  - generic [ref=f28e2]:
+    - generic [ref=f28e4]:
+      - navigation [ref=f28e5]:
+        - generic [ref=f28e6]:
+          - img "Logo" [ref=f28e7]
+          - link "SKIPER-UI" [ref=f28e8] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f28e9]:
+          - link "Pricing" [ref=f28e10] [cursor=pointer]:
+            - /url: /pricing
+          - link "Components" [ref=f28e11] [cursor=pointer]:
+            - /url: /components
+          - generic [ref=f28e12]:
+            - generic [ref=f28e13]:
+              - button "Command + K" [ref=f28e14] [cursor=pointer]
+              - generic [ref=f28e19]:
+                - heading "Command Palette" [level=2] [ref=f28e20]
+                - paragraph [ref=f28e21]: Search for a command to run...
+            - button "Show Menu" [ref=f28e23] [cursor=pointer]
+      - list [ref=f28e31]:
+        - listitem [ref=f28e32] [cursor=pointer]:
+          - link "How to use [Use docs]" [ref=f28e33]:
+            - /url: /docs/quick-start
+            - generic [ref=f28e34]: How to use
+            - generic [ref=f28e35]: "[Use docs]"
+        - listitem [ref=f28e36] [cursor=pointer]:
+          - link "Pricing [free pro]" [ref=f28e37]:
+            - /url: /pricing
+            - generic [ref=f28e38]: Pricing
+            - generic [ref=f28e39]: "[free pro]"
+        - listitem [ref=f28e40] [cursor=pointer]:
+          - link "Components [All components]" [ref=f28e41]:
+            - /url: /components
+            - generic [ref=f28e42]: Components
+            - generic [ref=f28e43]: "[All components]"
+        - listitem [ref=f28e44] [cursor=pointer]:
+          - link "Get Support [hello@skiper-ui.com]" [ref=f28e45]:
+            - /url: mailto:hello@skiper-ui.com
+            - generic [ref=f28e46]: Get Support
+            - generic [ref=f28e47]: "[hello@skiper-ui.com]"
+        - listitem [ref=f28e48] [cursor=pointer]:
+          - link "Founder [gxuri]" [ref=f28e49]:
+            - /url: https://x.com/Gur__vi
+            - generic [ref=f28e50]: Founder
+            - generic [ref=f28e51]: "[gxuri]"
+        - listitem [ref=f28e52] [cursor=pointer]:
+          - link "Account [pro]" [ref=f28e53]:
+            - /url: /user
+            - generic [ref=f28e54]: Account
+            - generic [ref=f28e55]: "[pro]"
+        - listitem [ref=f28e56] [cursor=pointer]:
+          - button "Login Login" [ref=f28e57]:
+            - generic [ref=f28e58]: Login
+            - generic [ref=f28e59]: Login
+      - generic [ref=f28e60]:
+        - link "Privacy Policy" [ref=f28e61] [cursor=pointer]:
+          - /url: /docs/privacy-policy
+        - link "Terms of Service" [ref=f28e62] [cursor=pointer]:
+          - /url: /docs/terms-of-service
+      - generic [ref=f28e63]:
+        - generic [ref=f28e64]: FREE
+        - generic [ref=f28e65]: Not logged in
+    - main [ref=f28e66]:
+      - generic [ref=f28e68]:
+        - textbox "Search" [ref=f28e73]
+        - generic [ref=f28e74]:
+          - generic [ref=f28e75]:
+            - paragraph [ref=f28e80]: Sort
+            - button [ref=f28e81] [cursor=pointer]
+            - button [ref=f28e85] [cursor=pointer]
+          - generic [ref=f28e89]:
+            - paragraph [ref=f28e95]: Source
+            - button [ref=f28e96] [cursor=pointer]:
+              - paragraph [ref=f28e97]: Free
+            - button [ref=f28e98] [cursor=pointer]:
+              - paragraph [ref=f28e99]: Pro
+        - button [ref=f28e100] [cursor=pointer]:
+          - paragraph [ref=f28e104]: Clear Filters
+      - generic [ref=f28e105]:
+        - generic [ref=f28e106]:
+          - generic [ref=f28e107]:
+            - heading "New Releases [3]" [level=2] [ref=f28e108]:
+              - generic [ref=f28e109]: New
+              - generic [ref=f28e110]: Releases
+              - generic [ref=f28e111]: "[3]"
+            - paragraph [ref=f28e112]:
+              - generic [ref=f28e113]: Latest components [Hover to play video]
+          - generic [ref=f28e114]:
+            - generic [ref=f28e115] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e118]
+              - link "Auto Scale input" [ref=f28e123]:
+                - /url: /v1/skiper105
+              - generic [ref=f28e125]:
+                - paragraph [ref=f28e126]: Auto Scale input
+                - generic [ref=f28e127]:
+                  - generic [ref=f28e128]: skiper105
+                  - generic [ref=f28e129]: new
+            - generic [ref=f28e133] [cursor=pointer]:
+              - button "Free Component" [ref=f28e136]
+              - link "Smooth caret input" [ref=f28e147]:
+                - /url: /v1/skiper106
+              - generic [ref=f28e149]:
+                - paragraph [ref=f28e150]: Smooth caret input
+                - generic [ref=f28e151]:
+                  - generic [ref=f28e152]: skiper106
+                  - generic [ref=f28e153]: new
+            - generic [ref=f28e157] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e160]
+              - link "Knockout bracket" [ref=f28e165]:
+                - /url: /v1/skiper107
+              - generic [ref=f28e167]:
+                - paragraph [ref=f28e168]: Knockout bracket
+                - generic [ref=f28e169]:
+                  - generic [ref=f28e170]: skiper107
+                  - generic [ref=f28e171]: new
+        - generic [ref=f28e175]:
+          - generic [ref=f28e176]:
+            - heading "Out of the box [10]" [level=2] [ref=f28e177]:
+              - generic [ref=f28e178]: Out
+              - generic [ref=f28e179]: of
+              - generic [ref=f28e180]: the
+              - generic [ref=f28e181]: box
+              - generic [ref=f28e182]: "[10]"
+            - paragraph [ref=f28e183]:
+              - generic [ref=f28e184]: Collection of out of the box components [Hover to play video]
+          - generic [ref=f28e185]:
+            - generic [ref=f28e186] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e189]
+              - link "Anime js scrollbar" [ref=f28e194]:
+                - /url: /v1/skiper1
+              - generic [ref=f28e196]:
+                - paragraph [ref=f28e197]: Anime js scrollbar
+                - generic [ref=f28e198]: skiper1
+            - generic [ref=f28e200] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e203]
+              - link "Dynamic island" [ref=f28e208]:
+                - /url: /v1/skiper2
+              - generic [ref=f28e210]:
+                - paragraph [ref=f28e211]: Dynamic island
+                - generic [ref=f28e212]: skiper2
+            - generic [ref=f28e214] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e217]
+              - link "Things drag and scroll" [ref=f28e222]:
+                - /url: /v1/skiper5
+              - generic [ref=f28e224]:
+                - paragraph [ref=f28e225]: Things drag and scroll
+                - generic [ref=f28e226]: skiper5
+            - generic [ref=f28e228] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e231]
+              - link "Tik tik color list" [ref=f28e236]:
+                - /url: /v1/skiper24
+              - generic [ref=f28e238]:
+                - paragraph [ref=f28e239]: Tik tik color list
+                - generic [ref=f28e240]: skiper24
+            - generic [ref=f28e242] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e245]
+              - link "Siena parallax" [ref=f28e250]:
+                - /url: /v1/skiper29
+              - generic [ref=f28e252]:
+                - paragraph [ref=f28e253]: Siena parallax
+                - generic [ref=f28e254]: skiper29
+            - generic [ref=f28e256] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e259]
+              - link "Infinite canvas" [ref=f28e264]:
+                - /url: /v1/skiper73
+              - generic [ref=f28e266]:
+                - paragraph [ref=f28e267]: Infinite canvas
+                - generic [ref=f28e268]: skiper73
+            - generic [ref=f28e270] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e273]
+              - link "Apple Feature Block" [ref=f28e278]:
+                - /url: /v1/skiper76
+              - generic [ref=f28e280]:
+                - paragraph [ref=f28e281]: Apple Feature Block
+                - generic [ref=f28e282]: skiper76
+            - generic [ref=f28e284] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e287]
+              - link "Projects Showcase" [ref=f28e292]:
+                - /url: /v1/skiper80
+              - generic [ref=f28e294]:
+                - paragraph [ref=f28e295]: Projects Showcase
+                - generic [ref=f28e296]: skiper80
+            - generic [ref=f28e298] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e301]
+              - link "Expandable tabs navigation" [ref=f28e306]:
+                - /url: /v1/skiper96
+              - generic [ref=f28e308]:
+                - paragraph [ref=f28e309]: Expandable tabs navigation
+                - generic [ref=f28e310]: skiper96
+            - generic [ref=f28e312] [cursor=pointer]:
+              - button "Free Component" [ref=f28e315]
+              - link "Custom tooltip" [ref=f28e326]:
+                - /url: /v1/skiper101
+              - generic [ref=f28e328]:
+                - paragraph [ref=f28e329]: Custom tooltip
+                - generic [ref=f28e330]: skiper101
+        - generic [ref=f28e332]:
+          - generic [ref=f28e333]:
+            - heading "Minimal interactions [21]" [level=2] [ref=f28e334]:
+              - generic [ref=f28e335]: Minimal
+              - generic [ref=f28e336]: interactions
+              - generic [ref=f28e337]: "[21]"
+            - paragraph [ref=f28e338]:
+              - generic [ref=f28e339]: Collection of minimal interactions components [Hover to play video]
+          - generic [ref=f28e340]:
+            - generic [ref=f28e341] [cursor=pointer]:
+              - button "Free Component" [ref=f28e344]
+              - link "Apple play button" [ref=f28e355]:
+                - /url: /v1/skiper3
+              - generic [ref=f28e357]:
+                - paragraph [ref=f28e358]: Apple play button
+                - generic [ref=f28e359]: skiper3
+            - generic [ref=f28e361] [cursor=pointer]:
+              - button "Free Component" [ref=f28e364]
+              - link "Theme toggle buttons" [ref=f28e375]:
+                - /url: /v1/skiper4
+              - generic [ref=f28e377]:
+                - paragraph [ref=f28e378]: Theme toggle buttons
+                - generic [ref=f28e379]: skiper4
+            - generic [ref=f28e381] [cursor=pointer]:
+              - button "Free Component" [ref=f28e384]
+              - link "Music toggle btn" [ref=f28e395]:
+                - /url: /v1/skiper25
+              - generic [ref=f28e397]:
+                - paragraph [ref=f28e398]: Music toggle btn
+                - generic [ref=f28e399]: skiper25
+            - generic [ref=f28e401] [cursor=pointer]:
+              - button "Free Component" [ref=f28e404]
+              - link "Theme toggle btn" [ref=f28e415]:
+                - /url: /v1/skiper26
+              - generic [ref=f28e417]:
+                - paragraph [ref=f28e418]: Theme toggle btn
+                - generic [ref=f28e419]: skiper26
+            - generic [ref=f28e421] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e424]
+              - link "Rolling text" [ref=f28e429]:
+                - /url: /v1/skiper27
+              - generic [ref=f28e431]:
+                - paragraph [ref=f28e432]: Rolling text
+                - generic [ref=f28e433]: skiper27
+            - generic [ref=f28e435] [cursor=pointer]:
+              - button "Free Component" [ref=f28e438]
+              - link "Animated number" [ref=f28e449]:
+                - /url: /v1/skiper37
+              - generic [ref=f28e451]:
+                - paragraph [ref=f28e452]: Animated number
+                - generic [ref=f28e453]: skiper37
+            - generic [ref=f28e455] [cursor=pointer]:
+              - button "Free Component" [ref=f28e458]
+              - link "CssLink" [ref=f28e469]:
+                - /url: /v1/skiper40
+              - generic [ref=f28e471]:
+                - paragraph [ref=f28e472]: CssLink
+                - generic [ref=f28e473]: skiper40
+            - generic [ref=f28e475] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e478]
+              - link "Animated icons 001" [ref=f28e483]:
+                - /url: /v1/skiper42
+              - generic [ref=f28e485]:
+                - paragraph [ref=f28e486]: Animated icons 001
+                - generic [ref=f28e487]: skiper42
+            - generic [ref=f28e489] [cursor=pointer]:
+              - button "Free Component" [ref=f28e492]
+              - link "Text roll navigation" [ref=f28e503]:
+                - /url: /v1/skiper58
+              - generic [ref=f28e505]:
+                - paragraph [ref=f28e506]: Text roll navigation
+                - generic [ref=f28e507]: skiper58
+            - generic [ref=f28e509] [cursor=pointer]:
+              - button "Free Component" [ref=f28e512]
+              - link "Mouse follow animations" [ref=f28e523]:
+                - /url: /v1/skiper61
+              - generic [ref=f28e525]:
+                - paragraph [ref=f28e526]: Mouse follow animations
+                - generic [ref=f28e527]: skiper61
+            - generic [ref=f28e529] [cursor=pointer]:
+              - button "Free Component" [ref=f28e532]
+              - link "Apple squicircle effect" [ref=f28e543]:
+                - /url: /v1/skiper63
+              - generic [ref=f28e545]:
+                - paragraph [ref=f28e546]: Apple squicircle effect
+                - generic [ref=f28e547]: skiper63
+            - generic [ref=f28e549] [cursor=pointer]:
+              - button "Free Component" [ref=f28e552]
+              - link "Gooey Effect" [ref=f28e563]:
+                - /url: /v1/skiper64
+              - generic [ref=f28e565]:
+                - paragraph [ref=f28e566]: Gooey Effect
+                - generic [ref=f28e567]: skiper64
+            - generic [ref=f28e569] [cursor=pointer]:
+              - button "Free Component" [ref=f28e572]
+              - link "SVG clip path mask" [ref=f28e583]:
+                - /url: /v1/skiper66
+              - generic [ref=f28e585]:
+                - paragraph [ref=f28e586]: SVG clip path mask
+                - generic [ref=f28e587]: skiper66
+            - generic [ref=f28e589] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e592]
+              - link "Animated number input" [ref=f28e597]:
+                - /url: /v1/skiper68
+              - generic [ref=f28e599]:
+                - paragraph [ref=f28e600]: Animated number input
+                - generic [ref=f28e601]: skiper68
+            - generic [ref=f28e603] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e606]
+              - link "Skiper Number flow" [ref=f28e611]:
+                - /url: /v1/skiper69
+              - generic [ref=f28e613]:
+                - paragraph [ref=f28e614]: Skiper Number flow
+                - generic [ref=f28e615]: skiper69
+            - generic [ref=f28e617] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e620]
+              - link "Text reveal box" [ref=f28e625]:
+                - /url: /v1/skiper70
+              - generic [ref=f28e627]:
+                - paragraph [ref=f28e628]: Text reveal box
+                - generic [ref=f28e629]: skiper70
+            - generic [ref=f28e631] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e634]
+              - link "Horizontal Text reveal" [ref=f28e639]:
+                - /url: /v1/skiper72
+              - generic [ref=f28e641]:
+                - paragraph [ref=f28e642]: Horizontal Text reveal
+                - generic [ref=f28e643]: skiper72
+            - generic [ref=f28e645] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e648]
+              - link "Apple Ai gradient" [ref=f28e653]:
+                - /url: /v1/skiper86
+              - generic [ref=f28e655]:
+                - paragraph [ref=f28e656]: Apple Ai gradient
+                - generic [ref=f28e657]: skiper86
+            - generic [ref=f28e659] [cursor=pointer]:
+              - button "Free Component" [ref=f28e662]
+              - link "Scroll with fade effect" [ref=f28e673]:
+                - /url: /v1/skiper87
+              - generic [ref=f28e675]:
+                - paragraph [ref=f28e676]: Scroll with fade effect
+                - generic [ref=f28e677]: skiper87
+            - generic [ref=f28e679] [cursor=pointer]:
+              - button "Free Component" [ref=f28e682]
+              - link "Animated icons 002" [ref=f28e693]:
+                - /url: /v1/skiper99
+              - generic [ref=f28e695]:
+                - paragraph [ref=f28e696]: Animated icons 002
+                - generic [ref=f28e697]: skiper99
+            - generic [ref=f28e699] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e702]
+              - link "Bouncy accordion" [ref=f28e707]:
+                - /url: /v1/skiper103
+              - generic [ref=f28e709]:
+                - paragraph [ref=f28e710]: Bouncy accordion
+                - generic [ref=f28e711]: skiper103
+        - generic [ref=f28e713]:
+          - generic [ref=f28e714]:
+            - heading "Crazy Hover [7]" [level=2] [ref=f28e715]:
+              - generic [ref=f28e716]: Crazy
+              - generic [ref=f28e717]: Hover
+              - generic [ref=f28e718]: "[7]"
+            - paragraph [ref=f28e719]:
+              - generic [ref=f28e720]: Collection of crazy hover components [Hover to play video]
+          - generic [ref=f28e721]:
+            - generic [ref=f28e722] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e725]
+              - link "Hover members" [ref=f28e730]:
+                - /url: /v1/skiper6
+              - generic [ref=f28e732]:
+                - paragraph [ref=f28e733]: Hover members
+                - generic [ref=f28e734]: skiper6
+            - generic [ref=f28e736] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e739]
+              - link "Image cursor trail" [ref=f28e744]:
+                - /url: /v1/skiper18
+              - generic [ref=f28e746]:
+                - paragraph [ref=f28e747]: Image cursor trail
+                - generic [ref=f28e748]: skiper18
+            - generic [ref=f28e750] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e753]
+              - link "Hover expand" [ref=f28e758]:
+                - /url: /v1/skiper35
+              - generic [ref=f28e760]:
+                - paragraph [ref=f28e761]: Hover expand
+                - generic [ref=f28e762]: skiper35
+            - generic [ref=f28e764] [cursor=pointer]:
+              - button "Free Component" [ref=f28e767]
+              - link "ExpandOnHover" [ref=f28e778]:
+                - /url: /v1/skiper52
+              - generic [ref=f28e780]:
+                - paragraph [ref=f28e781]: ExpandOnHover
+                - generic [ref=f28e782]: skiper52
+            - generic [ref=f28e784] [cursor=pointer]:
+              - button "Free Component" [ref=f28e787]
+              - link "ExpandOnHover vertical" [ref=f28e798]:
+                - /url: /v1/skiper53
+              - generic [ref=f28e800]:
+                - paragraph [ref=f28e801]: ExpandOnHover vertical
+                - generic [ref=f28e802]: skiper53
+            - generic [ref=f28e804] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e807]
+              - link "Drawing cursor effect" [ref=f28e812]:
+                - /url: /v1/skiper59
+              - generic [ref=f28e814]:
+                - paragraph [ref=f28e815]: Drawing cursor effect
+                - generic [ref=f28e816]: skiper59
+            - generic [ref=f28e818] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e821]
+              - link "Gradient hover cards" [ref=f28e826]:
+                - /url: /v1/skiper90
+              - generic [ref=f28e828]:
+                - paragraph [ref=f28e829]: Gradient hover cards
+                - generic [ref=f28e830]: skiper90
+        - generic [ref=f28e832]:
+          - generic [ref=f28e833]:
+            - heading "preloaders [6]" [level=2] [ref=f28e834]:
+              - generic [ref=f28e835]: preloaders
+              - generic [ref=f28e836]: "[6]"
+            - paragraph [ref=f28e837]:
+              - generic [ref=f28e838]: Collection of preloaders components [Hover to play video]
+          - generic [ref=f28e839]:
+            - generic [ref=f28e840] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e843]
+              - link "Nike preloader" [ref=f28e848]:
+                - /url: /v1/skiper7
+              - generic [ref=f28e850]:
+                - paragraph [ref=f28e851]: Nike preloader
+                - generic [ref=f28e852]: skiper7
+            - generic [ref=f28e854] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e857]
+              - link "Words preloader" [ref=f28e862]:
+                - /url: /v1/skiper8
+              - generic [ref=f28e864]:
+                - paragraph [ref=f28e865]: Words preloader
+                - generic [ref=f28e866]: skiper8
+            - generic [ref=f28e868] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e871]
+              - link "Stairs preloader" [ref=f28e876]:
+                - /url: /v1/skiper9
+              - generic [ref=f28e878]:
+                - paragraph [ref=f28e879]: Stairs preloader
+                - generic [ref=f28e880]: skiper9
+            - generic [ref=f28e882] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e885]
+              - link "Double stairs preloader" [ref=f28e890]:
+                - /url: /v1/skiper10
+              - generic [ref=f28e892]:
+                - paragraph [ref=f28e893]: Double stairs preloader
+                - generic [ref=f28e894]: skiper10
+            - generic [ref=f28e896] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e899]
+              - link "Pixel preloader" [ref=f28e904]:
+                - /url: /v1/skiper11
+              - generic [ref=f28e906]:
+                - paragraph [ref=f28e907]: Pixel preloader
+                - generic [ref=f28e908]: skiper11
+            - generic [ref=f28e910] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e913]
+              - link "Box loading preloader" [ref=f28e918]:
+                - /url: /v1/skiper15
+              - generic [ref=f28e920]:
+                - paragraph [ref=f28e921]: Box loading preloader
+                - generic [ref=f28e922]: skiper15
+        - generic [ref=f28e924]:
+          - generic [ref=f28e925]:
+            - heading "Crazy Hero [4]" [level=2] [ref=f28e926]:
+              - generic [ref=f28e927]: Crazy
+              - generic [ref=f28e928]: Hero
+              - generic [ref=f28e929]: "[4]"
+            - paragraph [ref=f28e930]:
+              - generic [ref=f28e931]: Collection of crazy hero components [Hover to play video]
+          - generic [ref=f28e932]:
+            - generic [ref=f28e933] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e936]
+              - link "Vercel Liquid simulation" [ref=f28e941]:
+                - /url: /v1/skiper12
+              - generic [ref=f28e943]:
+                - paragraph [ref=f28e944]: Vercel Liquid simulation
+                - generic [ref=f28e945]: skiper12
+            - generic [ref=f28e947] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e950]
+              - link "Ascii Simulation" [ref=f28e955]:
+                - /url: /v1/skiper14
+              - generic [ref=f28e957]:
+                - paragraph [ref=f28e958]: Ascii Simulation
+                - generic [ref=f28e959]: skiper14
+            - generic [ref=f28e961] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e964]
+              - link "Interactive3d Hero" [ref=f28e969]:
+                - /url: /v1/skiper36
+              - generic [ref=f28e971]:
+                - paragraph [ref=f28e972]: Interactive3d Hero
+                - generic [ref=f28e973]: skiper36
+            - generic [ref=f28e975] [cursor=pointer]:
+              - button "Free Component" [ref=f28e978]
+              - link "Canvas crowd" [ref=f28e989]:
+                - /url: /v1/skiper39
+              - generic [ref=f28e991]:
+                - paragraph [ref=f28e992]: Canvas crowd
+                - generic [ref=f28e993]: skiper39
+        - generic [ref=f28e995]:
+          - generic [ref=f28e996]:
+            - heading "OG NavBars [4]" [level=2] [ref=f28e997]:
+              - generic [ref=f28e998]: OG
+              - generic [ref=f28e999]: NavBars
+              - generic [ref=f28e1000]: "[4]"
+            - paragraph [ref=f28e1001]:
+              - generic [ref=f28e1002]: Collection of og navbars components [Hover to play video]
+          - generic [ref=f28e1003]:
+            - generic [ref=f28e1004] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1007]
+              - link "Nike menu" [ref=f28e1012]:
+                - /url: /v1/skiper13
+              - generic [ref=f28e1014]:
+                - paragraph [ref=f28e1015]: Nike menu
+                - generic [ref=f28e1016]: skiper13
+            - generic [ref=f28e1018] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1021]
+              - link "Apple Navbar V001" [ref=f28e1026]:
+                - /url: /v1/skiper38
+              - generic [ref=f28e1028]:
+                - paragraph [ref=f28e1029]: Apple Navbar V001
+                - generic [ref=f28e1030]: skiper38
+            - generic [ref=f28e1032] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1035]
+              - link "Vercel navigation bar" [ref=f28e1040]:
+                - /url: /v1/skiper57
+              - generic [ref=f28e1042]:
+                - paragraph [ref=f28e1043]: Vercel navigation bar
+                - generic [ref=f28e1044]: skiper57
+            - generic [ref=f28e1046] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1049]
+              - link "Apple Navbar V002" [ref=f28e1054]:
+                - /url: /v1/skiper75
+              - generic [ref=f28e1056]:
+                - paragraph [ref=f28e1057]: Apple Navbar V002
+                - generic [ref=f28e1058]: skiper75
+        - generic [ref=f28e1060]:
+          - generic [ref=f28e1061]:
+            - heading "Scroll Effects [19]" [level=2] [ref=f28e1062]:
+              - generic [ref=f28e1063]: Scroll
+              - generic [ref=f28e1064]: Effects
+              - generic [ref=f28e1065]: "[19]"
+            - paragraph [ref=f28e1066]:
+              - generic [ref=f28e1067]: Collection of scroll effects components [Hover to play video]
+          - generic [ref=f28e1068]:
+            - generic [ref=f28e1069] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1072]
+              - link "Card stack scroll" [ref=f28e1083]:
+                - /url: /v1/skiper16
+              - generic [ref=f28e1085]:
+                - paragraph [ref=f28e1086]: Card stack scroll
+                - generic [ref=f28e1087]: skiper16
+            - generic [ref=f28e1089] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1092]
+              - link "Card stack with gsap and rotate" [ref=f28e1103]:
+                - /url: /v1/skiper17
+              - generic [ref=f28e1105]:
+                - paragraph [ref=f28e1106]: Card stack with gsap and rotate
+                - generic [ref=f28e1107]: skiper17
+            - generic [ref=f28e1109] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1112]
+              - link "Svg follow scroll" [ref=f28e1123]:
+                - /url: /v1/skiper19
+              - generic [ref=f28e1125]:
+                - paragraph [ref=f28e1126]: Svg follow scroll
+                - generic [ref=f28e1127]: skiper19
+            - generic [ref=f28e1129] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1132]
+              - link "3D perspective text" [ref=f28e1143]:
+                - /url: /v1/skiper28
+              - generic [ref=f28e1145]:
+                - paragraph [ref=f28e1146]: 3D perspective text
+                - generic [ref=f28e1147]: skiper28
+            - generic [ref=f28e1149] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1152]
+              - link "Oliver parallax" [ref=f28e1163]:
+                - /url: /v1/skiper30
+              - generic [ref=f28e1165]:
+                - paragraph [ref=f28e1166]: Oliver parallax
+                - generic [ref=f28e1167]: skiper30
+            - generic [ref=f28e1169] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1172]
+              - link "Text Scroll animation" [ref=f28e1183]:
+                - /url: /v1/skiper31
+              - generic [ref=f28e1185]:
+                - paragraph [ref=f28e1186]: Text Scroll animation
+                - generic [ref=f28e1187]: skiper31
+            - generic [ref=f28e1189] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1192]
+              - link "Scroll images reveal 001" [ref=f28e1197]:
+                - /url: /v1/skiper32
+              - generic [ref=f28e1199]:
+                - paragraph [ref=f28e1200]: Scroll images reveal 001
+                - generic [ref=f28e1201]: skiper32
+            - generic [ref=f28e1203] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1206]
+              - link "Scroll images reveal 002" [ref=f28e1211]:
+                - /url: /v1/skiper33
+              - generic [ref=f28e1213]:
+                - paragraph [ref=f28e1214]: Scroll images reveal 002
+                - generic [ref=f28e1215]: skiper33
+            - generic [ref=f28e1217] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1220]
+              - link "Scroll images reveal 003" [ref=f28e1231]:
+                - /url: /v1/skiper34
+              - generic [ref=f28e1233]:
+                - paragraph [ref=f28e1234]: Scroll images reveal 003
+                - generic [ref=f28e1235]: skiper34
+            - generic [ref=f28e1237] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1240]
+              - link "Parallax Image" [ref=f28e1245]:
+                - /url: /v1/skiper55
+              - generic [ref=f28e1247]:
+                - paragraph [ref=f28e1248]: Parallax Image
+                - generic [ref=f28e1249]: skiper55
+            - generic [ref=f28e1251] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1254]
+              - link "Side Scroll Navigation" [ref=f28e1259]:
+                - /url: /v1/skiper60
+              - generic [ref=f28e1261]:
+                - paragraph [ref=f28e1262]: Side Scroll Navigation
+                - generic [ref=f28e1263]: skiper60
+            - generic [ref=f28e1265] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1268]
+              - link "Image reveal" [ref=f28e1273]:
+                - /url: /v1/skiper71
+              - generic [ref=f28e1275]:
+                - paragraph [ref=f28e1276]: Image reveal
+                - generic [ref=f28e1277]: skiper71
+            - generic [ref=f28e1279] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1282]
+              - link "Timeline calendar" [ref=f28e1287]:
+                - /url: /v1/skiper74
+              - generic [ref=f28e1289]:
+                - paragraph [ref=f28e1290]: Timeline calendar
+                - generic [ref=f28e1291]: skiper74
+            - generic [ref=f28e1293] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1296]
+              - link "Team showcase scroll" [ref=f28e1301]:
+                - /url: /v1/skiper79
+              - generic [ref=f28e1303]:
+                - paragraph [ref=f28e1304]: Team showcase scroll
+                - generic [ref=f28e1305]: skiper79
+            - generic [ref=f28e1307] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1310]
+              - link "3D Rolling Text on scroll" [ref=f28e1315]:
+                - /url: /v1/skiper88
+              - generic [ref=f28e1317]:
+                - paragraph [ref=f28e1318]: 3D Rolling Text on scroll
+                - generic [ref=f28e1319]: skiper88
+            - generic [ref=f28e1321] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1324]
+              - link "Scroll progress 001" [ref=f28e1335]:
+                - /url: /v1/skiper89
+              - generic [ref=f28e1337]:
+                - paragraph [ref=f28e1338]: Scroll progress 001
+                - generic [ref=f28e1339]: skiper89
+            - generic [ref=f28e1341] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1344]
+              - link "Scroll progress 002" [ref=f28e1349]:
+                - /url: /v1/skiper94
+              - generic [ref=f28e1351]:
+                - paragraph [ref=f28e1352]: Scroll progress 002
+                - generic [ref=f28e1353]: skiper94
+            - generic [ref=f28e1355] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1358]
+              - link "Scroll progress 003" [ref=f28e1363]:
+                - /url: /v1/skiper95
+              - generic [ref=f28e1365]:
+                - paragraph [ref=f28e1366]: Scroll progress 003
+                - generic [ref=f28e1367]: skiper95
+            - generic [ref=f28e1369] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1372]
+              - link "Scroll reveal grid cards" [ref=f28e1377]:
+                - /url: /v1/skiper104
+              - generic [ref=f28e1379]:
+                - paragraph [ref=f28e1380]: Scroll reveal grid cards
+                - generic [ref=f28e1381]: skiper104
+        - generic [ref=f28e1383]:
+          - generic [ref=f28e1384]:
+            - heading "Web3 Unlocked [5]" [level=2] [ref=f28e1385]:
+              - generic [ref=f28e1386]: Web3
+              - generic [ref=f28e1387]: Unlocked
+              - generic [ref=f28e1388]: "[5]"
+            - paragraph [ref=f28e1389]:
+              - generic [ref=f28e1390]: Collection of web3 unlocked components [Hover to play video]
+          - generic [ref=f28e1391]:
+            - generic [ref=f28e1392] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1395]
+              - link "UniSwap Country Dialog" [ref=f28e1400]:
+                - /url: /v1/skiper20
+              - generic [ref=f28e1402]:
+                - paragraph [ref=f28e1403]: UniSwap Country Dialog
+                - generic [ref=f28e1404]: skiper20
+            - generic [ref=f28e1406] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1409]
+              - link "Family wallet" [ref=f28e1414]:
+                - /url: /v1/skiper21
+              - generic [ref=f28e1416]:
+                - paragraph [ref=f28e1417]: Family wallet
+                - generic [ref=f28e1418]: skiper21
+            - generic [ref=f28e1420] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1423]
+              - link "Aave token swap" [ref=f28e1428]:
+                - /url: /v1/skiper22
+              - generic [ref=f28e1430]:
+                - paragraph [ref=f28e1431]: Aave token swap
+                - generic [ref=f28e1432]: skiper22
+            - generic [ref=f28e1434] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1437]
+              - link "Minimal Card Expand" [ref=f28e1442]:
+                - /url: /v1/skiper23
+              - generic [ref=f28e1444]:
+                - paragraph [ref=f28e1445]: Minimal Card Expand
+                - generic [ref=f28e1446]: skiper23
+            - generic [ref=f28e1448] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1451]
+              - link "Family Receive button" [ref=f28e1456]:
+                - /url: /v1/skiper45
+              - generic [ref=f28e1458]:
+                - paragraph [ref=f28e1459]: Family Receive button
+                - generic [ref=f28e1460]: skiper45
+        - generic [ref=f28e1462]:
+          - generic [ref=f28e1463]:
+            - heading "Rauno [3]" [level=2] [ref=f28e1464]:
+              - generic [ref=f28e1465]: Rauno
+              - generic [ref=f28e1466]: "[3]"
+            - paragraph [ref=f28e1467]:
+              - generic [ref=f28e1468]: Collection of rauno components [Hover to play video]
+          - generic [ref=f28e1469]:
+            - generic [ref=f28e1470] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1473]
+              - link "Progressive Blur" [ref=f28e1484]:
+                - /url: /v1/skiper41
+              - generic [ref=f28e1486]:
+                - paragraph [ref=f28e1487]: Progressive Blur
+                - generic [ref=f28e1488]: skiper41
+            - generic [ref=f28e1490] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1493]
+              - link "Vercel scroll with blur" [ref=f28e1498]:
+                - /url: /v1/skiper44
+              - generic [ref=f28e1500]:
+                - paragraph [ref=f28e1501]: Vercel scroll with blur
+                - generic [ref=f28e1502]: skiper44
+            - generic [ref=f28e1504] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1507]
+              - link "Devouring details sign in" [ref=f28e1512]:
+                - /url: /v1/skiper56
+              - generic [ref=f28e1514]:
+                - paragraph [ref=f28e1515]: Devouring details sign in
+                - generic [ref=f28e1516]: skiper56
+        - generic [ref=f28e1518]:
+          - generic [ref=f28e1519]:
+            - heading "Vercel Unlocked [5]" [level=2] [ref=f28e1520]:
+              - generic [ref=f28e1521]: Vercel
+              - generic [ref=f28e1522]: Unlocked
+              - generic [ref=f28e1523]: "[5]"
+            - paragraph [ref=f28e1524]:
+              - generic [ref=f28e1525]: Collection of vercel unlocked components [Hover to play video]
+          - generic [ref=f28e1526]:
+            - generic [ref=f28e1527] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1530]
+              - link "Vercel Tooltip" [ref=f28e1535]:
+                - /url: /v1/skiper43
+              - generic [ref=f28e1537]:
+                - paragraph [ref=f28e1538]: Vercel Tooltip
+                - generic [ref=f28e1539]: skiper43
+            - generic [ref=f28e1541] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1544]
+              - link "Nextjs gooey menu" [ref=f28e1549]:
+                - /url: /v1/skiper46
+              - generic [ref=f28e1551]:
+                - paragraph [ref=f28e1552]: Nextjs gooey menu
+                - generic [ref=f28e1553]: skiper46
+            - generic [ref=f28e1555] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1558]
+              - link "Vercel Command Search" [ref=f28e1563]:
+                - /url: /v1/skiper92
+              - generic [ref=f28e1565]:
+                - paragraph [ref=f28e1566]: Vercel Command Search
+                - generic [ref=f28e1567]: skiper92
+            - generic [ref=f28e1569] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1572]
+              - link "Vertical tooltip menu" [ref=f28e1577]:
+                - /url: /v1/skiper98
+              - generic [ref=f28e1579]:
+                - paragraph [ref=f28e1580]: Vertical tooltip menu
+                - generic [ref=f28e1581]: skiper98
+            - generic [ref=f28e1583] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1586]
+              - link "Draggable snap button" [ref=f28e1591]:
+                - /url: /v1/skiper100
+              - generic [ref=f28e1593]:
+                - paragraph [ref=f28e1594]: Draggable snap button
+                - generic [ref=f28e1595]: skiper100
+        - generic [ref=f28e1597]:
+          - generic [ref=f28e1598]:
+            - heading "Carousals [8]" [level=2] [ref=f28e1599]:
+              - generic [ref=f28e1600]: Carousals
+              - generic [ref=f28e1601]: "[8]"
+            - paragraph [ref=f28e1602]:
+              - generic [ref=f28e1603]: Collection of carousals components [Hover to play video]
+          - generic [ref=f28e1604]:
+            - generic [ref=f28e1605] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1608]
+              - link "Perspective carousel" [ref=f28e1619]:
+                - /url: /v1/skiper47
+              - generic [ref=f28e1621]:
+                - paragraph [ref=f28e1622]: Perspective carousel
+                - generic [ref=f28e1623]: skiper47
+            - generic [ref=f28e1625] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1628]
+              - link "Card swipe carousel" [ref=f28e1639]:
+                - /url: /v1/skiper48
+              - generic [ref=f28e1641]:
+                - paragraph [ref=f28e1642]: Card swipe carousel
+                - generic [ref=f28e1643]: skiper48
+            - generic [ref=f28e1645] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1648]
+              - link "Inverted perspective carousel" [ref=f28e1659]:
+                - /url: /v1/skiper49
+              - generic [ref=f28e1661]:
+                - paragraph [ref=f28e1662]: Inverted perspective carousel
+                - generic [ref=f28e1663]: skiper49
+            - generic [ref=f28e1665] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1668]
+              - link "Creative carousel 001" [ref=f28e1679]:
+                - /url: /v1/skiper50
+              - generic [ref=f28e1681]:
+                - paragraph [ref=f28e1682]: Creative carousel 001
+                - generic [ref=f28e1683]: skiper50
+            - generic [ref=f28e1685] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1688]
+              - link "Creative carousel 002" [ref=f28e1699]:
+                - /url: /v1/skiper51
+              - generic [ref=f28e1701]:
+                - paragraph [ref=f28e1702]: Creative carousel 002
+                - generic [ref=f28e1703]: skiper51
+            - generic [ref=f28e1705] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1708]
+              - link "Shadcn clipPath Carousal" [ref=f28e1719]:
+                - /url: /v1/skiper54
+              - generic [ref=f28e1721]:
+                - paragraph [ref=f28e1722]: Shadcn clipPath Carousal
+                - generic [ref=f28e1723]: skiper54
+            - generic [ref=f28e1725] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1728]
+              - link "Apple carousel" [ref=f28e1733]:
+                - /url: /v1/skiper77
+              - generic [ref=f28e1735]:
+                - paragraph [ref=f28e1736]: Apple carousel
+                - generic [ref=f28e1737]: skiper77
+            - generic [ref=f28e1739] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1742]
+              - link "Dia Browser's Carousal" [ref=f28e1747]:
+                - /url: /v1/skiper78
+              - generic [ref=f28e1749]:
+                - paragraph [ref=f28e1750]: Dia Browser's Carousal
+                - generic [ref=f28e1751]: skiper78
+        - generic [ref=f28e1753]:
+          - generic [ref=f28e1754]:
+            - heading "Development tools [3]" [level=2] [ref=f28e1755]:
+              - generic [ref=f28e1756]: Development
+              - generic [ref=f28e1757]: tools
+              - generic [ref=f28e1758]: "[3]"
+            - paragraph [ref=f28e1759]:
+              - generic [ref=f28e1760]: Collection of development tools components [Hover to play video]
+          - generic [ref=f28e1761]:
+            - generic [ref=f28e1762] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1765]
+              - link "Loop animation hook" [ref=f28e1776]:
+                - /url: /v1/skiper62
+              - generic [ref=f28e1778]:
+                - paragraph [ref=f28e1779]: Loop animation hook
+                - generic [ref=f28e1780]: skiper62
+            - generic [ref=f28e1782] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1785]
+              - link "Breakpoint indicator" [ref=f28e1796]:
+                - /url: /v1/skiper65
+              - generic [ref=f28e1798]:
+                - paragraph [ref=f28e1799]: Breakpoint indicator
+                - generic [ref=f28e1800]: skiper65
+            - generic [ref=f28e1802] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1805]
+              - link "Debug Pannel" [ref=f28e1816]:
+                - /url: /v1/skiper102
+              - generic [ref=f28e1818]:
+                - paragraph [ref=f28e1819]: Debug Pannel
+                - generic [ref=f28e1820]: skiper102
+        - generic [ref=f28e1822]:
+          - generic [ref=f28e1823]:
+            - heading "Video Players [3]" [level=2] [ref=f28e1824]:
+              - generic [ref=f28e1825]: Video
+              - generic [ref=f28e1826]: Players
+              - generic [ref=f28e1827]: "[3]"
+            - paragraph [ref=f28e1828]:
+              - generic [ref=f28e1829]: Collection of video players components [Hover to play video]
+          - generic [ref=f28e1830]:
+            - generic [ref=f28e1831] [cursor=pointer]:
+              - button "Free Component" [ref=f28e1834]
+              - link "Video player 001" [ref=f28e1845]:
+                - /url: /v1/skiper67
+              - generic [ref=f28e1847]:
+                - paragraph [ref=f28e1848]: Video player 001
+                - generic [ref=f28e1849]: skiper67
+            - generic [ref=f28e1851] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1854]
+              - link "video player 002" [ref=f28e1859]:
+                - /url: /v1/skiper91
+              - generic [ref=f28e1861]:
+                - paragraph [ref=f28e1862]: video player 002
+                - generic [ref=f28e1863]: skiper91
+            - generic [ref=f28e1865] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1868]
+              - link "video player 003" [ref=f28e1873]:
+                - /url: /v1/skiper97
+              - generic [ref=f28e1875]:
+                - paragraph [ref=f28e1876]: video player 003
+                - generic [ref=f28e1877]: skiper97
+        - generic [ref=f28e1879]:
+          - generic [ref=f28e1880]:
+            - heading "Ai Input [5]" [level=2] [ref=f28e1881]:
+              - generic [ref=f28e1882]: Ai
+              - generic [ref=f28e1883]: Input
+              - generic [ref=f28e1884]: "[5]"
+            - paragraph [ref=f28e1885]:
+              - generic [ref=f28e1886]: Collection of ai input components [Hover to play video]
+          - generic [ref=f28e1887]:
+            - generic [ref=f28e1888] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1891]
+              - link "AI Input 001" [ref=f28e1896]:
+                - /url: /v1/skiper81
+              - generic [ref=f28e1898]:
+                - paragraph [ref=f28e1899]: AI Input 001
+                - generic [ref=f28e1900]: skiper81
+            - generic [ref=f28e1902] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1905]
+              - link "AI Input 002" [ref=f28e1910]:
+                - /url: /v1/skiper82
+              - generic [ref=f28e1912]:
+                - paragraph [ref=f28e1913]: AI Input 002
+                - generic [ref=f28e1914]: skiper82
+            - generic [ref=f28e1916] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1919]
+              - link "AI Input 003" [ref=f28e1924]:
+                - /url: /v1/skiper83
+              - generic [ref=f28e1926]:
+                - paragraph [ref=f28e1927]: AI Input 003
+                - generic [ref=f28e1928]: skiper83
+            - generic [ref=f28e1930] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1933]
+              - link "AI Input 004" [ref=f28e1938]:
+                - /url: /v1/skiper84
+              - generic [ref=f28e1940]:
+                - paragraph [ref=f28e1941]: AI Input 004
+                - generic [ref=f28e1942]: skiper84
+            - generic [ref=f28e1944] [cursor=pointer]:
+              - button "Premium Component" [ref=f28e1947]
+              - link "AI Input 005" [ref=f28e1952]:
+                - /url: /v1/skiper85
+              - generic [ref=f28e1954]:
+                - paragraph [ref=f28e1955]: AI Input 005
+                - generic [ref=f28e1956]: skiper85
+  - region "Notifications alt+T"
+  - alert [ref=f28e1958]

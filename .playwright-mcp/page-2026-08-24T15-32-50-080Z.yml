@@ -1,0 +1,105 @@
+- generic [ref=f17e2]:
+  - generic [ref=f17e3]:
+    - link "Skip to content" [ref=f17e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f17e9]:
+      - heading "Navigation Menu" [level=2] [ref=f17e10]
+      - generic [ref=f17e12]:
+        - button "Toggle navigation" [ref=f17e14] [cursor=pointer]
+        - link "Homepage" [ref=f17e18] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f17e21]:
+          - link "Sign in" [ref=f17e22] [cursor=pointer]:
+            - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FSarthakGagapalliwar%2FskipperUI-clone
+          - button "Appearance settings" [ref=f17e25] [cursor=pointer]
+  - main [ref=f17e32]:
+    - generic [ref=f17e33]:
+      - generic [ref=f17e34]:
+        - generic [ref=f17e36]:
+          - link "SarthakGagapalliwar" [ref=f17e40] [cursor=pointer]:
+            - /url: /SarthakGagapalliwar
+          - generic [ref=f17e41]: /
+          - strong [ref=f17e42]:
+            - link "skipperUI-clone" [ref=f17e43] [cursor=pointer]:
+              - /url: /SarthakGagapalliwar/skipperUI-clone
+          - generic [ref=f17e44]: Public
+        - generic [ref=f17e45]:
+          - list:
+            - listitem [ref=f17e46]:
+              - link "You must be signed in to change notification settings" [ref=f17e47] [cursor=pointer]:
+                - /url: /login?return_to=%2FSarthakGagapalliwar%2FskipperUI-clone
+                - text: Notifications
+            - listitem [ref=f17e50]:
+              - link "Fork 0" [ref=f17e51] [cursor=pointer]:
+                - /url: /login?return_to=%2FSarthakGagapalliwar%2FskipperUI-clone
+                - text: Fork
+                - generic "0" [ref=f17e54]
+            - listitem [ref=f17e55]:
+              - link "You must be signed in to star a repository" [ref=f17e57] [cursor=pointer]:
+                - /url: /login?return_to=%2FSarthakGagapalliwar%2FskipperUI-clone
+                - text: Star
+                - generic "0 users starred this repository" [ref=f17e60]: "0"
+      - navigation "Repository" [ref=f17e61]:
+        - list [ref=f17e62]:
+          - listitem [ref=f17e63]:
+            - link "Code" [ref=f17e64] [cursor=pointer]:
+              - /url: /SarthakGagapalliwar/skipperUI-clone
+          - listitem [ref=f17e68]:
+            - link "Issues" [ref=f17e69] [cursor=pointer]:
+              - /url: /SarthakGagapalliwar/skipperUI-clone/issues
+          - listitem [ref=f17e74]:
+            - link "Pull requests" [ref=f17e75] [cursor=pointer]:
+              - /url: /SarthakGagapalliwar/skipperUI-clone/pulls
+          - listitem [ref=f17e79]:
+            - link "Actions" [ref=f17e80] [cursor=pointer]:
+              - /url: /SarthakGagapalliwar/skipperUI-clone/actions
+          - listitem [ref=f17e84]:
+            - link "Projects" [ref=f17e85] [cursor=pointer]:
+              - /url: /SarthakGagapalliwar/skipperUI-clone/projects
+          - listitem [ref=f17e89]:
+            - link "Security and quality" [ref=f17e90] [cursor=pointer]:
+              - /url: /SarthakGagapalliwar/skipperUI-clone/security
+          - listitem [ref=f17e94]
+        - button "Additional navigation options" [ref=f17e98] [cursor=pointer]
+    - generic [ref=f17e102]:
+      - heading "This repository is empty." [level=3] [ref=f17e106]
+      - paragraph [ref=f17e107]:
+        - text: Care to check out the
+        - link "GitHub Channel on YouTube" [ref=f17e108] [cursor=pointer]:
+          - /url: https://youtube.com/GitHub
+        - text: while you wait?
+  - contentinfo [ref=f17e109]:
+    - heading "Footer" [level=2] [ref=f17e110]
+    - generic [ref=f17e111]:
+      - generic [ref=f17e112]:
+        - link "GitHub Homepage" [ref=f17e113] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f17e116]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f17e117]:
+        - heading "Footer navigation" [level=3] [ref=f17e118]
+        - list "Footer navigation" [ref=f17e119]:
+          - listitem [ref=f17e120]:
+            - link "Terms" [ref=f17e121] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f17e122]:
+            - link "Privacy" [ref=f17e123] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f17e124]:
+            - link "Security" [ref=f17e125] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f17e126]:
+            - link "Status" [ref=f17e127] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f17e128]:
+            - link "Community" [ref=f17e129] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f17e130]:
+            - link "Docs" [ref=f17e131] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f17e132]:
+            - link "Contact" [ref=f17e133] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f17e134]:
+            - button "Manage cookies" [ref=f17e136] [cursor=pointer]
+          - listitem [ref=f17e137]:
+            - button "Do not share my personal information" [ref=f17e139] [cursor=pointer]

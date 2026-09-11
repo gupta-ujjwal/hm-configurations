@@ -1,0 +1,192 @@
+- generic [ref=f23e1]:
+  - banner [ref=f23e2]:
+    - button "Skip to content" [ref=f23e3] [cursor=pointer]
+    - button "Accessibility Feedback" [ref=f23e6] [cursor=pointer]
+    - generic [ref=f23e9]:
+      - link [ref=f23e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=f23e11]
+      - search [ref=f23e12]:
+        - button "Search" [ref=f23e15] [cursor=pointer]
+        - searchbox "Enter your search here – Search suggestions will show as you type" [ref=f23e16]: skipper ui component library react
+        - button "Search using an image" [ref=f23e19] [cursor=pointer]
+    - complementary "Account Rewards and Preferences" [ref=f23e21]:
+      - button "Microsoft Rewards" [ref=f23e22] [cursor=pointer]
+      - link "Sign in" [ref=f23e23] [cursor=pointer]:
+        - /url: javascript:void(0)
+    - navigation "Search Filter" [ref=f23e25]:
+      - list [ref=f23e26]:
+        - listitem [ref=f23e27]:
+          - link "All" [ref=f23e28] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f23e29]:
+          - link "Search" [ref=f23e30] [cursor=pointer]:
+            - /url: /copilotsearch?q=skipper+ui+component+library+react&FORM=CSSCOP
+        - listitem [ref=f23e33]:
+          - link "Images" [ref=f23e34] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0631e75169dc5bc2b827f7306bed332b4d379532be83d2ca15b9805626a911d0JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1L2ltYWdlcy9zZWFyY2g_cT1za2lwcGVyK3VpK2NvbXBvbmVudCtsaWJyYXJ5K3JlYWN0JkZPUk09SERSU0My&ntb=1
+        - listitem [ref=f23e35]:
+          - link "Videos" [ref=f23e36] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=76398a64905a6e60ca795f529cc14dc1b896ad8026f2b6e19d0a11e6cad4c1e5JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1za2lwcGVyK3VpK2NvbXBvbmVudCtsaWJyYXJ5K3JlYWN0JkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=f23e37]:
+          - link "Maps" [ref=f23e38] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8c1a8caa9406502e0b5a553f883760e25e93f1e6f50d4c736b89899d2bec6622JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1L21hcHM_cT1za2lwcGVyK3VpK2NvbXBvbmVudCtsaWJyYXJ5K3JlYWN0JkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=f23e39]:
+          - link "News" [ref=f23e40] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a3d0ee8d88d03b9454641cf0793f01220f8753f681b1cc02655e274dbfa91464JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1L25ld3Mvc2VhcmNoP3E9c2tpcHBlcit1aStjb21wb25lbnQrbGlicmFyeStyZWFjdCZGT1JNPUhEUlNDNg&ntb=1
+  - generic [ref=f23e41]:
+    - main "Search Results" [ref=f23e42]:
+      - generic [ref=f23e43]: About 1,950,000 results
+      - list [ref=f23e45]:
+        - listitem [ref=f23e46]:
+          - link "youtube.com" [ref=f23e48] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b791b24bd11c174e6f14a0cb34c182e3fde45907714691f5ac40d2534a895645JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vP2dsPUlO&ntb=1
+            - generic [ref=f23e53]:
+              - generic [ref=f23e54]: youtube.com
+              - generic [ref=f23e55]: https://www.youtube.com
+          - heading [level=2] [ref=f23e58]:
+            - link [ref=f23e59] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=b791b24bd11c174e6f14a0cb34c182e3fde45907714691f5ac40d2534a895645JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vP2dsPUlO&ntb=1
+              - strong [ref=f23e60]: YouTube
+          - paragraph [ref=f23e62]: Enjoy the videos and music you love, upload original content and share it all with friends, family and the world on YouTube.
+        - listitem [ref=f23e63]:
+          - link "youtube.com" [ref=f23e65] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=79f099f74b220f742458942705ca23da3b1efc6f5f09e861972dece985e139b2JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20v&ntb=1
+            - generic [ref=f23e70]:
+              - generic [ref=f23e71]: youtube.com
+              - generic [ref=f23e72]: https://www.youtube.com
+          - heading [level=2] [ref=f23e75]:
+            - link [ref=f23e76] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=79f099f74b220f742458942705ca23da3b1efc6f5f09e861972dece985e139b2JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20v&ntb=1
+              - strong [ref=f23e77]: YouTube
+          - paragraph [ref=f23e79]: Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.
+        - listitem [ref=f23e80]:
+          - link "facebook.com" [ref=f23e82] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c8555d784d38786637a1a8863f4bfb6a28ce8db32b1d00703b637426142e7793JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3lvdXR1YmUv&ntb=1
+            - generic [ref=f23e87]:
+              - generic [ref=f23e88]: facebook.com
+              - generic [ref=f23e89]: https://www.facebook.com › youtube
+          - heading [level=2] [ref=f23e92]:
+            - link [ref=f23e93] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=c8555d784d38786637a1a8863f4bfb6a28ce8db32b1d00703b637426142e7793JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3lvdXR1YmUv&ntb=1
+              - strong [ref=f23e94]: YouTube
+              - text: "-"
+              - strong [ref=f23e95]: Facebook
+          - paragraph [ref=f23e97]: YouTube 󱢏 The latest and greatest music videos, trends and channels from YouTube.
+        - listitem [ref=f23e98]:
+          - link "blog.youtube" [ref=f23e100] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4ba86d5595a03c836b82dd1634b4804a750db5a957f93e1f4bf125e0831de281JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9ibG9nLnlvdXR1YmUv&ntb=1
+            - generic [ref=f23e105]:
+              - generic [ref=f23e106]: blog.youtube
+              - generic [ref=f23e107]: https://blog.youtube
+          - heading [level=2] [ref=f23e110]:
+            - link [ref=f23e111] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=4ba86d5595a03c836b82dd1634b4804a750db5a957f93e1f4bf125e0831de281JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9ibG9nLnlvdXR1YmUv&ntb=1
+              - text: Official
+              - strong [ref=f23e112]: YouTube
+              - text: Blog for Latest
+              - strong [ref=f23e113]: YouTube
+              - text: News & Insights
+          - paragraph [ref=f23e115]: 5 days ago · Explore our official blog for the latest news about YouTube, creator and artist profiles, culture and trends analyses, and …
+        - listitem [ref=f23e116]:
+          - link "wikipedia.org" [ref=f23e118] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=660724fd54be837bbd5285eda9c646accd9916cdb218a19b6219facc6b9c1930JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvWW91VHViZQ&ntb=1
+            - generic [ref=f23e123]:
+              - generic [ref=f23e124]: wikipedia.org
+              - generic [ref=f23e125]: https://en.wikipedia.org › wiki › YouTube
+          - heading [level=2] [ref=f23e128]:
+            - link [ref=f23e129] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=660724fd54be837bbd5285eda9c646accd9916cdb218a19b6219facc6b9c1930JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvWW91VHViZQ&ntb=1
+              - strong [ref=f23e130]: YouTube
+              - text: "-"
+              - strong [ref=f23e131]: Wikipedia
+          - paragraph [ref=f23e133]: It also offers YouTube Premium, a paid subscription option for watching videos without ads. YouTube incorporated the Google …
+        - listitem [ref=f23e134]:
+          - link "youtube.com" [ref=f23e136] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=5f439a44ac64e16acc35610566d23cb3ba58329875426472b9a670d750098dfbJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly95b3V0dWJlLmNvbS8lM0Mv&ntb=1
+            - generic [ref=f23e141]:
+              - generic [ref=f23e142]: youtube.com
+              - generic [ref=f23e143]: https://youtube.com
+          - heading [level=2] [ref=f23e146]:
+            - link [ref=f23e147] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=5f439a44ac64e16acc35610566d23cb3ba58329875426472b9a670d750098dfbJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly95b3V0dWJlLmNvbS8lM0Mv&ntb=1
+              - strong [ref=f23e148]: YouTube
+          - paragraph [ref=f23e150]: YouTube
+        - listitem [ref=f23e151]:
+          - link "youtube.com" [ref=f23e153] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7ea9ce69ffaf5c60218c57a581c413e9f54748bd6c211229b318e1373fd6653eJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vZmVlZC9ob21lcGFnZQ&ntb=1
+            - generic [ref=f23e158]:
+              - generic [ref=f23e159]: youtube.com
+              - generic [ref=f23e160]: https://www.youtube.com › feed › homepage
+          - heading [level=2] [ref=f23e163]:
+            - link [ref=f23e164] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=7ea9ce69ffaf5c60218c57a581c413e9f54748bd6c211229b318e1373fd6653eJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vZmVlZC9ob21lcGFnZQ&ntb=1
+              - strong [ref=f23e165]: YouTube
+          - paragraph [ref=f23e167]: AboutPressCopyrightContact usCreatorsAdvertiseDevelopersTermsPrivacyPolicy & SafetyHow YouTube worksTest new …
+        - listitem [ref=f23e168]:
+          - link "google.com" [ref=f23e170] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b9128c80ee2ca156900f6d2163e28009aab9918bcd71ef01db9441b1d91bcd30JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL0ludGVyYWN0aXZlTG9naW4_c2VydmljZT15b3V0dWJl&ntb=1
+            - generic [ref=f23e175]:
+              - generic [ref=f23e176]: google.com
+              - generic [ref=f23e177]: https://accounts.google.com › InteractiveLogin
+          - heading [level=2] [ref=f23e180]:
+            - link [ref=f23e181] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=b9128c80ee2ca156900f6d2163e28009aab9918bcd71ef01db9441b1d91bcd30JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL0ludGVyYWN0aXZlTG9naW4_c2VydmljZT15b3V0dWJl&ntb=1
+              - strong [ref=f23e182]: YouTube
+              - text: "- Google Accounts"
+          - paragraph [ref=f23e184]: Share your videos with friends, family, and the world.
+        - listitem [ref=f23e185]:
+          - link "google.com" [ref=f23e187] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=78d912df58e00c7ba51b751938d5c1c2970a17612a9b1311e751b68a1ce525f1JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZQ&ntb=1
+            - generic [ref=f23e192]:
+              - generic [ref=f23e193]: google.com
+              - generic [ref=f23e194]: https://developers.google.com › youtube
+          - heading [level=2] [ref=f23e197]:
+            - link "YouTube | Google for Developers":
+              - /url: https://www.bing.com/ck/a?!&&p=78d912df58e00c7ba51b751938d5c1c2970a17612a9b1311e751b68a1ce525f1JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZQ&ntb=1
+              - strong [ref=f23e198] [cursor=pointer]: YouTube
+              - text: "|"
+              - strong [ref=f23e199] [cursor=pointer]: Google for Developers
+          - paragraph [ref=f23e201]: Add YouTube Data Let users search YouTube content, upload videos, create and manage playlists, and more.
+        - listitem [ref=f23e202]:
+          - link "google.com" [ref=f23e204] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0789f45d7f265cebbd6cdea935665946265d2be12e8e7911f42d2cabcc4f0860JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5nb29nbGUuYW5kcm9pZC55b3V0dWJlJmhsPWVuLUlO&ntb=1
+            - generic [ref=f23e209]:
+              - generic [ref=f23e210]: google.com
+              - generic [ref=f23e211]: https://play.google.com › store › apps › details
+          - heading [level=2] [ref=f23e214]:
+            - link "YouTube - Apps on Google Play":
+              - /url: https://www.bing.com/ck/a?!&&p=0789f45d7f265cebbd6cdea935665946265d2be12e8e7911f42d2cabcc4f0860JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5nb29nbGUuYW5kcm9pZC55b3V0dWJlJmhsPWVuLUlO&ntb=1
+              - strong [ref=f23e215] [cursor=pointer]: YouTube
+              - text: "- Apps on Google Play"
+          - paragraph [ref=f23e217]: Get the official YouTube app on Android phones and tablets. See what the world is watching -- from the hottest music videos to …
+        - listitem [ref=f23e218]:
+          - link "Some results have been removed" [ref=f23e220] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c94af28e854f8f53ffeb420001d48f76e679d3826b22414750e9cd396cfa763eJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+        - listitem [ref=f23e221]:
+          - navigation "More results for skipper ui component library react":
+            - list:
+              - listitem [ref=f23e222]:
+                - generic "Page 1" [ref=f23e223]: "1"
+              - listitem [ref=f23e224]:
+                - link "Page 2" [ref=f23e225] [cursor=pointer]:
+                  - /url: /search?q=skipper+ui+component+library+react&FPIG=DB7D4515A7114660942794ECF2FFEFB3&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=f23e226]:
+                - link "Page 3" [ref=f23e227] [cursor=pointer]:
+                  - /url: /search?q=skipper+ui+component+library+react&FPIG=DB7D4515A7114660942794ECF2FFEFB3&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=f23e228]:
+                - link "Next page" [ref=f23e229] [cursor=pointer]:
+                  - /url: /search?q=skipper+ui+component+library+react&FPIG=DB7D4515A7114660942794ECF2FFEFB3&first=11&FORM=PORE
+    - complementary "Additional Results" [ref=f23e230]
+    - complementary "Explore More"
+  - contentinfo [ref=f23e231]:
+    - generic [ref=f23e232]:
+      - list:
+        - listitem [ref=f23e233]:
+          - link "Privacy" [ref=f23e234] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6cce92a41c535af8dcf5505affe06de143cc6147a9ea4d6b1bc8dd18794ea7f7JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f23e235]:
+          - link "Terms" [ref=f23e236] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=882394809e24d0cbfadd516b922b096ab359d07d9f68e4880cca99a4f9309d7fJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

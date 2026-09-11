@@ -1,0 +1,431 @@
+- generic [ref=f13e2]:
+  - generic [ref=f13e3]:
+    - link "Skip to content" [ref=f13e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f13e9]:
+      - heading "Navigation Menu" [level=2] [ref=f13e10]
+      - generic [ref=f13e12]:
+        - button "Toggle navigation" [ref=f13e14] [cursor=pointer]
+        - link "Homepage" [ref=f13e18] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f13e21]:
+          - link "Sign in" [ref=f13e22] [cursor=pointer]:
+            - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+          - button "Appearance settings" [ref=f13e25] [cursor=pointer]
+  - main [ref=f13e31]:
+    - generic [ref=f13e34]:
+      - heading "repositories Search Results · skipper-ui" [level=1] [ref=f13e35]
+      - generic [ref=f13e38]:
+        - generic [ref=f13e39]:
+          - region [ref=f13e40]:
+            - heading "Filter by" [level=2] [ref=f13e41]
+            - list "Filter by" [ref=f13e46]:
+              - listitem [ref=f13e47]:
+                - list [ref=f13e48]:
+                  - listitem [ref=f13e49]:
+                    - link "Code (...) results" [ref=f13e50] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui&type=code
+                      - generic [ref=f13e51]:
+                        - generic [ref=f13e52]: Code
+                        - generic:
+                          - generic: ...
+                          - generic: (...)
+                          - generic: results
+                  - listitem [ref=f13e53]:
+                    - link "Repositories (24) results" [ref=f13e54] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui&type=repositories
+                      - generic [ref=f13e55]:
+                        - generic [ref=f13e56]: Repositories
+                        - generic:
+                          - generic: "24"
+                          - generic: (24)
+                          - generic: results
+                  - listitem [ref=f13e57]:
+                    - link "Issues (640) results" [ref=f13e58] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui&type=issues
+                      - generic [ref=f13e59]:
+                        - generic [ref=f13e60]: Issues
+                        - generic:
+                          - generic: "640"
+                          - generic: (640)
+                          - generic: results
+                  - listitem [ref=f13e61]:
+                    - link "Pull requests (1.2k) results" [ref=f13e62] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui&type=pullrequests
+                      - generic [ref=f13e63]:
+                        - generic [ref=f13e64]: Pull requests
+                        - generic:
+                          - generic: 1.2k
+                          - generic: (1.2k)
+                          - generic: results
+                  - listitem [ref=f13e65]:
+                    - link "Discussions (25) results" [ref=f13e66] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui&type=discussions
+                      - generic [ref=f13e67]:
+                        - generic [ref=f13e68]: Discussions
+                        - generic:
+                          - generic: "25"
+                          - generic: (25)
+                          - generic: results
+                  - listitem [ref=f13e69]:
+                    - link "Users (0) results" [ref=f13e70] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui&type=users
+                      - generic [ref=f13e71]:
+                        - generic [ref=f13e72]: Users
+                        - generic:
+                          - generic: "0"
+                          - generic: (0)
+                          - generic: results
+                  - listitem [ref=f13e73]:
+                    - button "More" [ref=f13e74] [cursor=pointer]
+              - listitem [ref=f13e77]:
+                - heading "Languages" [level=3] [ref=f13e79]
+                - list "Languages" [ref=f13e80]:
+                  - listitem [ref=f13e81]:
+                    - link "TypeScript" [ref=f13e82] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui+language%3ATypeScript&type=repositories
+                      - generic "TypeScript" [ref=f13e86]
+                  - listitem [ref=f13e87]:
+                    - link "JavaScript" [ref=f13e88] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui+language%3AJavaScript&type=repositories
+                      - generic "JavaScript" [ref=f13e92]
+                  - listitem [ref=f13e93]:
+                    - link "HTML" [ref=f13e94] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui+language%3AHTML&type=repositories
+                      - generic "HTML" [ref=f13e98]
+                  - listitem [ref=f13e99]:
+                    - link "Blade" [ref=f13e100] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui+language%3ABlade&type=repositories
+                      - generic "Blade" [ref=f13e104]
+                  - listitem [ref=f13e105]:
+                    - link "Python" [ref=f13e106] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui+language%3APython&type=repositories
+                      - generic "Python" [ref=f13e110]
+                  - listitem [ref=f13e111]:
+                    - button "More languages..." [ref=f13e112] [cursor=pointer]:
+                      - generic "More languages..." [ref=f13e115]
+                  - listitem [ref=f13e116]
+              - listitem [ref=f13e117]:
+                - heading "Advanced" [level=3] [ref=f13e119]
+                - list "Advanced" [ref=f13e120]:
+                  - listitem [ref=f13e121]:
+                    - button "Owner" [ref=f13e122] [cursor=pointer]:
+                      - generic "Owner" [ref=f13e126]
+                  - listitem [ref=f13e127]:
+                    - button "Size" [ref=f13e128] [cursor=pointer]:
+                      - generic "Size" [ref=f13e132]
+                  - listitem [ref=f13e133]:
+                    - button "Number of followers" [ref=f13e134] [cursor=pointer]:
+                      - generic "Number of followers" [ref=f13e138]
+                  - listitem [ref=f13e139]:
+                    - button "Number of forks" [ref=f13e140] [cursor=pointer]:
+                      - generic "Number of forks" [ref=f13e144]
+                  - listitem [ref=f13e145]:
+                    - button "Number of stars" [ref=f13e146] [cursor=pointer]:
+                      - generic "Number of stars" [ref=f13e150]
+                  - listitem [ref=f13e151]:
+                    - button "Date created" [ref=f13e152] [cursor=pointer]:
+                      - generic "Date created" [ref=f13e156]
+                  - listitem [ref=f13e157]:
+                    - button "Date pushed" [ref=f13e158] [cursor=pointer]:
+                      - generic "Date pushed" [ref=f13e162]
+                  - listitem [ref=f13e163]:
+                    - button "Topic" [ref=f13e164] [cursor=pointer]:
+                      - generic "Topic" [ref=f13e168]
+                  - listitem [ref=f13e169]:
+                    - button "License" [ref=f13e170] [cursor=pointer]:
+                      - generic "License" [ref=f13e174]
+                  - listitem [ref=f13e175]:
+                    - button "Archived" [ref=f13e176] [cursor=pointer]:
+                      - generic "Archived" [ref=f13e180]
+                  - listitem [ref=f13e181]:
+                    - link "Public" [ref=f13e182] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui+is%3Apublic&type=repositories
+                      - generic "Public" [ref=f13e186]
+                  - listitem [ref=f13e187]:
+                    - link "Private" [ref=f13e188] [cursor=pointer]:
+                      - /url: https://github.com/search?q=skipper-ui+is%3Aprivate&type=repositories
+                      - generic "Private" [ref=f13e192]
+              - listitem [ref=f13e193]
+              - listitem [ref=f13e194]:
+                - link "Advanced search" [ref=f13e195] [cursor=pointer]:
+                  - /url: /search/advanced
+          - slider "Draggable pane splitter" [ref=f13e199]
+        - generic [ref=f13e203]:
+          - generic [ref=f13e205]:
+            - generic [ref=f13e206]:
+              - generic [ref=f13e207]:
+                - generic [ref=f13e208]: 24 results
+                - generic [ref=f13e209]: (121 ms)
+              - heading "24 results" [level=2] [ref=f13e210]
+            - generic [ref=f13e211]:
+              - 'button "Sort by: Best match" [ref=f13e213] [cursor=pointer]'
+              - button "Open column options" [ref=f13e217] [cursor=pointer]
+          - generic [ref=f13e222]:
+            - generic [ref=f13e224]:
+              - generic [ref=f13e225]:
+                - heading "spring-attic/spring-cloud-skipper-ui Public archive" [level=3] [ref=f13e226]:
+                  - generic [ref=f13e227]:
+                    - link [ref=f13e230] [cursor=pointer]:
+                      - /url: /spring-attic/spring-cloud-skipper-ui
+                      - generic [ref=f13e231]:
+                        - text: spring-attic/spring-cloud-
+                        - emphasis [ref=f13e232]: skipper
+                        - text: "-"
+                        - emphasis [ref=f13e233]: ui
+                    - generic [ref=f13e234]: Public archive
+                - list [ref=f13e235]:
+                  - listitem [ref=f13e236]:
+                    - generic "TypeScript language" [ref=f13e239]: TypeScript
+                  - generic [ref=f13e240]: ·
+                  - listitem [ref=f13e241]:
+                    - link "4 stars" [ref=f13e242] [cursor=pointer]:
+                      - /url: /spring-attic/spring-cloud-skipper-ui/stargazers
+                      - generic [ref=f13e245]: "4"
+                  - generic [ref=f13e246]: ·
+                  - listitem [ref=f13e247]:
+                    - generic [ref=f13e248]:
+                      - text: Updated
+                      - generic "9 Jul 2022, 03:23 GMT+5:30" [ref=f13e249]: on 9 Jul 2022
+              - link "Star" [ref=f13e252] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e256]:
+              - generic [ref=f13e257]:
+                - heading "Skipper-Hospitality/organisms" [level=3] [ref=f13e258]:
+                  - link "Skipper-Hospitality/organisms" [ref=f13e262] [cursor=pointer]:
+                    - /url: /Skipper-Hospitality/organisms
+                - generic [ref=f13e264]:
+                  - text: for
+                  - emphasis [ref=f13e265]: skipper
+                  - text: developed open source
+                  - emphasis [ref=f13e266]: UI
+                  - text: elements
+                - list [ref=f13e267]:
+                  - listitem [ref=f13e268]:
+                    - generic "HTML language" [ref=f13e271]: HTML
+                  - generic [ref=f13e272]: ·
+                  - listitem [ref=f13e273]:
+                    - link "3 stars" [ref=f13e274] [cursor=pointer]:
+                      - /url: /Skipper-Hospitality/organisms/stargazers
+                      - generic [ref=f13e277]: "3"
+                  - generic [ref=f13e278]: ·
+                  - listitem [ref=f13e279]:
+                    - generic [ref=f13e280]:
+                      - text: Updated
+                      - generic "6 Jun 2023, 08:09 GMT+5:30" [ref=f13e281]: on 6 Jun 2023
+              - link "Star" [ref=f13e284] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e288]:
+              - generic [ref=f13e289]:
+                - heading "sikandarpureharsh/SkipperUI" [level=3] [ref=f13e290]:
+                  - link [ref=f13e294] [cursor=pointer]:
+                    - /url: /sikandarpureharsh/SkipperUI
+                    - generic [ref=f13e295]:
+                      - text: sikandarpureharsh/
+                      - emphasis [ref=f13e296]: SkipperUI
+                - generic [ref=f13e297]: A lightweight Node.js library with a sleek frontend for building fast, responsive, and customizable user interfaces.
+                - list [ref=f13e298]:
+                  - listitem [ref=f13e299]:
+                    - generic "TypeScript language" [ref=f13e302]: TypeScript
+                  - generic [ref=f13e303]: ·
+                  - listitem [ref=f13e304]:
+                    - link "0 stars" [ref=f13e305] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/stargazers
+                      - generic [ref=f13e308]: "0"
+                  - generic [ref=f13e309]: ·
+                  - listitem [ref=f13e310]:
+                    - generic [ref=f13e311]:
+                      - text: Updated
+                      - generic "9 Aug 2025, 04:19 GMT+5:30" [ref=f13e312]: on 9 Aug 2025
+              - link "Star" [ref=f13e315] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e319]:
+              - generic [ref=f13e320]:
+                - heading "ARJ-U-N/skipperUi" [level=3] [ref=f13e321]:
+                  - link [ref=f13e325] [cursor=pointer]:
+                    - /url: /ARJ-U-N/skipperUi
+                    - generic [ref=f13e326]:
+                      - text: ARJ-U-N/
+                      - emphasis [ref=f13e327]: skipperUi
+                - list [ref=f13e328]:
+                  - listitem [ref=f13e329]:
+                    - generic "TypeScript language" [ref=f13e332]: TypeScript
+                  - generic [ref=f13e333]: ·
+                  - listitem [ref=f13e334]:
+                    - link "0 stars" [ref=f13e335] [cursor=pointer]:
+                      - /url: /ARJ-U-N/skipperUi/stargazers
+                      - generic [ref=f13e338]: "0"
+                  - generic [ref=f13e339]: ·
+                  - listitem [ref=f13e340]:
+                    - generic [ref=f13e341]:
+                      - text: Updated
+                      - generic "29 Aug 2025, 13:19 GMT+5:30" [ref=f13e342]: on 29 Aug 2025
+              - link "Star" [ref=f13e345] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e349]:
+              - generic [ref=f13e350]:
+                - heading "SarthakGagapalliwar/skipperUI-clone" [level=3] [ref=f13e351]:
+                  - link [ref=f13e355] [cursor=pointer]:
+                    - /url: /SarthakGagapalliwar/skipperUI-clone
+                    - generic [ref=f13e356]:
+                      - text: SarthakGagapalliwar/
+                      - emphasis [ref=f13e357]: skipperUI
+                      - text: "-clone"
+                - list [ref=f13e358]:
+                  - listitem [ref=f13e359]:
+                    - link "0 stars" [ref=f13e360] [cursor=pointer]:
+                      - /url: /SarthakGagapalliwar/skipperUI-clone/stargazers
+                      - generic [ref=f13e363]: "0"
+                  - generic [ref=f13e364]: ·
+                  - listitem [ref=f13e365]:
+                    - generic [ref=f13e366]:
+                      - text: Updated
+                      - generic "26 Aug 2025, 02:33 GMT+5:30" [ref=f13e367]: on 26 Aug 2025
+              - link "Star" [ref=f13e370] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e374]:
+              - generic [ref=f13e375]:
+                - heading "Xkipper/ComfyUI_SkipperNodes" [level=3] [ref=f13e376]:
+                  - link [ref=f13e380] [cursor=pointer]:
+                    - /url: /Xkipper/ComfyUI_SkipperNodes
+                    - generic [ref=f13e381]:
+                      - text: Xkipper/Comfy
+                      - emphasis [ref=f13e382]: UI
+                      - text: _
+                      - emphasis [ref=f13e383]: Skipper
+                      - text: Nodes
+                - generic [ref=f13e384]: ComfyUI Custom Nodes
+                - list [ref=f13e385]:
+                  - listitem [ref=f13e386]:
+                    - generic "Python language" [ref=f13e389]: Python
+                  - generic [ref=f13e390]: ·
+                  - listitem [ref=f13e391]:
+                    - link "0 stars" [ref=f13e392] [cursor=pointer]:
+                      - /url: /Xkipper/ComfyUI_SkipperNodes/stargazers
+                      - generic [ref=f13e395]: "0"
+                  - generic [ref=f13e396]: ·
+                  - listitem [ref=f13e397]:
+                    - generic [ref=f13e398]:
+                      - text: Updated
+                      - generic "27 Apr 2025, 01:43 GMT+5:30" [ref=f13e399]: on 27 Apr 2025
+              - link "Star" [ref=f13e402] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e406]:
+              - generic [ref=f13e407]:
+                - heading "rushikesh-2104/skipper-ui" [level=3] [ref=f13e408]:
+                  - link [ref=f13e412] [cursor=pointer]:
+                    - /url: /rushikesh-2104/skipper-ui
+                    - generic [ref=f13e413]:
+                      - text: rushikesh-2104/
+                      - emphasis [ref=f13e414]: skipper-ui
+                - list [ref=f13e415]:
+                  - listitem [ref=f13e416]:
+                    - generic "JavaScript language" [ref=f13e419]: JavaScript
+                  - generic [ref=f13e420]: ·
+                  - listitem [ref=f13e421]:
+                    - link "1 stars" [ref=f13e422] [cursor=pointer]:
+                      - /url: /rushikesh-2104/skipper-ui/stargazers
+                      - generic [ref=f13e425]: "1"
+                  - generic [ref=f13e426]: ·
+                  - listitem [ref=f13e427]:
+                    - generic [ref=f13e428]:
+                      - text: Updated
+                      - generic "24 Oct 2025, 18:10 GMT+5:30" [ref=f13e429]: on 24 Oct 2025
+              - link "Star" [ref=f13e432] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e436]:
+              - generic [ref=f13e437]:
+                - heading "ScriptiveMen/Skipper-UI" [level=3] [ref=f13e438]:
+                  - link [ref=f13e442] [cursor=pointer]:
+                    - /url: /ScriptiveMen/Skipper-UI
+                    - generic [ref=f13e443]:
+                      - text: ScriptiveMen/
+                      - emphasis [ref=f13e444]: Skipper-UI
+                - list [ref=f13e445]:
+                  - listitem [ref=f13e446]:
+                    - generic "TypeScript language" [ref=f13e449]: TypeScript
+                  - generic [ref=f13e450]: ·
+                  - listitem [ref=f13e451]:
+                    - link "0 stars" [ref=f13e452] [cursor=pointer]:
+                      - /url: /ScriptiveMen/Skipper-UI/stargazers
+                      - generic [ref=f13e455]: "0"
+                  - generic [ref=f13e456]: ·
+                  - listitem [ref=f13e457]:
+                    - generic [ref=f13e458]:
+                      - text: Updated
+                      - generic "29 Oct 2025, 23:12 GMT+5:30" [ref=f13e459]: on 29 Oct 2025
+              - link "Star" [ref=f13e462] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e466]:
+              - generic [ref=f13e467]:
+                - heading "Dimss/skipper_ui" [level=3] [ref=f13e468]:
+                  - link [ref=f13e472] [cursor=pointer]:
+                    - /url: /Dimss/skipper_ui
+                    - generic [ref=f13e473]:
+                      - text: Dimss/
+                      - emphasis [ref=f13e474]: skipper
+                      - text: _
+                      - emphasis [ref=f13e475]: ui
+                - list [ref=f13e476]:
+                  - listitem [ref=f13e477]:
+                    - generic "JavaScript language" [ref=f13e480]: JavaScript
+                  - generic [ref=f13e481]: ·
+                  - listitem [ref=f13e482]:
+                    - link "0 stars" [ref=f13e483] [cursor=pointer]:
+                      - /url: /Dimss/skipper_ui/stargazers
+                      - generic [ref=f13e486]: "0"
+                  - generic [ref=f13e487]: ·
+                  - listitem [ref=f13e488]:
+                    - generic [ref=f13e489]:
+                      - text: Updated
+                      - generic "5 Jan 2021, 13:29 GMT+5:30" [ref=f13e490]: on 5 Jan 2021
+              - link "Star" [ref=f13e493] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+            - generic [ref=f13e497]:
+              - generic [ref=f13e498]:
+                - heading "omeiregman/skipper-ui" [level=3] [ref=f13e499]:
+                  - link [ref=f13e503] [cursor=pointer]:
+                    - /url: /omeiregman/skipper-ui
+                    - generic [ref=f13e504]:
+                      - text: omeiregman/
+                      - emphasis [ref=f13e505]: skipper-ui
+                - list [ref=f13e506]:
+                  - listitem [ref=f13e507]:
+                    - link "0 stars" [ref=f13e508] [cursor=pointer]:
+                      - /url: /omeiregman/skipper-ui/stargazers
+                      - generic [ref=f13e511]: "0"
+                  - generic [ref=f13e512]: ·
+                  - listitem [ref=f13e513]:
+                    - generic [ref=f13e514]:
+                      - text: Updated
+                      - generic "5 Apr 2021, 21:55 GMT+5:30" [ref=f13e515]: on 5 Apr 2021
+              - link "Star" [ref=f13e518] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dskipper-ui%26type%3Drepositories
+          - navigation "Pagination" [ref=f13e523]:
+            - generic [ref=f13e524]:
+              - generic [ref=f13e525]: Previous
+              - link "Page 1" [ref=f13e528] [cursor=pointer]:
+                - /url: https://github.com/search?q=skipper-ui&type=repositories&p=1
+                - text: "1"
+              - link "Page 2" [ref=f13e529] [cursor=pointer]:
+                - /url: https://github.com/search?q=skipper-ui&type=repositories&p=2
+                - text: "2"
+              - link "Page 3" [ref=f13e530] [cursor=pointer]:
+                - /url: https://github.com/search?q=skipper-ui&type=repositories&p=3
+                - text: "3"
+              - link "Next Page" [ref=f13e531] [cursor=pointer]:
+                - /url: https://github.com/search?q=skipper-ui&type=repositories&p=2
+                - text: Next
+          - generic [ref=f13e535]:
+            - generic [ref=f13e536]:
+              - img "Package icon" [ref=f13e538]
+              - heading "Sponsor open source projects you depend on" [level=2] [ref=f13e539]
+              - generic [ref=f13e540]: Contributors are working behind the scenes to make open source better for everyone—give them the help and recognition they deserve.
+              - link "Explore sponsorable projects" [ref=f13e541] [cursor=pointer]:
+                - /url: https://github.com/sponsors/explore
+            - generic [ref=f13e544]:
+              - generic [ref=f13e545]: ProTip!
+              - generic [ref=f13e548]:
+                - text: Press the
+                - generic [ref=f13e549]: /
+                - text: key to activate the search input again and adjust your query.

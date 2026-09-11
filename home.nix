@@ -41,6 +41,14 @@
 
     envExtra = ''
       export LANG="en_IN.UTF-8"
+
+      # Ensure Nix is on PATH for non-interactive shells too (e.g. `ssh host cmd`,
+      # which sourced only .zshenv, not .zshrc — kolu needs nix-instantiate there).
+      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+      elif [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
+        . "$HOME/.nix-profile/etc/profile.d/nix.sh"
+      fi
     '';
 
     initContent = ''

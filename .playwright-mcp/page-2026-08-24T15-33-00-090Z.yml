@@ -1,0 +1,45 @@
+- generic [ref=f18e1]:
+  - banner [ref=f18e2]:
+    - button "Skip to content" [ref=f18e3] [cursor=pointer]
+    - button "Accessibility Feedback" [ref=f18e6] [cursor=pointer]
+    - generic [ref=f18e9]:
+      - link [ref=f18e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=f18e11]
+      - search [ref=f18e12]:
+        - button "Search" [ref=f18e15] [cursor=pointer]
+        - searchbox "Enter your search here – Search suggestions will show as you type" [ref=f18e16]: skipper-ui.com
+        - button "Search using an image" [ref=f18e19] [cursor=pointer]
+    - complementary "Account Rewards and Preferences" [ref=f18e21]:
+      - button "Microsoft Rewards" [ref=f18e22] [cursor=pointer]
+      - link "Sign in" [ref=f18e23] [cursor=pointer]:
+        - /url: javascript:void(0)
+    - navigation "Search Filter" [ref=f18e25]:
+      - list [ref=f18e26]:
+        - listitem [ref=f18e27]:
+          - link "All" [ref=f18e28] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f18e29]:
+          - link "Search" [ref=f18e30] [cursor=pointer]:
+            - /url: /copilotsearch?q=skipper-ui.com&FORM=CSSCOP
+        - listitem [ref=f18e33]:
+          - link "Images" [ref=f18e34] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=32dc3a94e5d50e615d83020f829875c0ba70d9e7c90b8316eb46ab6cb6c45a30JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1L2ltYWdlcy9zZWFyY2g_cT1za2lwcGVyLXVpLmNvbSZGT1JNPUhEUlNDMg&ntb=1
+        - listitem [ref=f18e35]:
+          - link "Videos" [ref=f18e36] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7c924706e7cec5a24551aa5bdc6b88d2d8804cd5aff49de9ff5820ab0d111a20JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1za2lwcGVyLXVpLmNvbSZGT1JNPUhEUlNDMw&ntb=1
+        - listitem [ref=f18e37]:
+          - link "Maps" [ref=f18e38] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7a3e528cea4ae9ebbd70c8e3f6bddc48807a6000a49089ae35d38b2a9f2efb0cJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1L21hcHM_cT1za2lwcGVyLXVpLmNvbSZGT1JNPUhEUlNDNA&ntb=1
+        - listitem [ref=f18e39]:
+          - link "News" [ref=f18e40] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a8ec296858d3241dc8ef12ef726b9db413ba2b51bb3550dcbb5825058d792b7eJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1L25ld3Mvc2VhcmNoP3E9c2tpcHBlci11aS5jb20mRk9STT1IRFJTQzY&ntb=1
+  - contentinfo [ref=f18e41]:
+    - generic [ref=f18e42]:
+      - list:
+        - listitem [ref=f18e43]:
+          - link "Privacy" [ref=f18e44] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6cce92a41c535af8dcf5505affe06de143cc6147a9ea4d6b1bc8dd18794ea7f7JmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f18e45]:
+          - link "Terms" [ref=f18e46] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=882394809e24d0cbfadd516b922b096ab359d07d9f68e4880cca99a4f9309d7fJmltdHM9MTc4NzUyOTYwMA&ptn=3&ver=2&hsh=4&fclid=3b2cbab6-03c1-63a2-2353-ad09026f621f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

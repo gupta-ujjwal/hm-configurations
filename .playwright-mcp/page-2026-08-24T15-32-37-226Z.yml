@@ -1,0 +1,318 @@
+- generic [ref=f16e2]:
+  - generic [ref=f16e3]:
+    - link "Skip to content" [ref=f16e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f16e9]:
+      - heading "Navigation Menu" [level=2] [ref=f16e10]
+      - generic [ref=f16e12]:
+        - button "Toggle navigation" [ref=f16e14] [cursor=pointer]
+        - link "Homepage" [ref=f16e18] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f16e21]:
+          - link "Sign in" [ref=f16e22] [cursor=pointer]:
+            - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsikandarpureharsh%2FSkipperUI
+          - button "Appearance settings" [ref=f16e25] [cursor=pointer]
+  - main [ref=f16e32]:
+    - generic [ref=f16e33]:
+      - generic [ref=f16e34]:
+        - generic [ref=f16e36]:
+          - link "sikandarpureharsh" [ref=f16e40] [cursor=pointer]:
+            - /url: /sikandarpureharsh
+          - generic [ref=f16e41]: /
+          - strong [ref=f16e42]:
+            - link "SkipperUI" [ref=f16e43] [cursor=pointer]:
+              - /url: /sikandarpureharsh/SkipperUI
+          - generic [ref=f16e44]: Public
+        - generic [ref=f16e45]:
+          - list:
+            - listitem [ref=f16e46]:
+              - link "You must be signed in to change notification settings" [ref=f16e47] [cursor=pointer]:
+                - /url: /login?return_to=%2Fsikandarpureharsh%2FSkipperUI
+                - text: Notifications
+            - listitem [ref=f16e50]:
+              - link "Fork 0" [ref=f16e51] [cursor=pointer]:
+                - /url: /login?return_to=%2Fsikandarpureharsh%2FSkipperUI
+                - text: Fork
+                - generic "0" [ref=f16e54]
+            - listitem [ref=f16e55]:
+              - link "You must be signed in to star a repository" [ref=f16e57] [cursor=pointer]:
+                - /url: /login?return_to=%2Fsikandarpureharsh%2FSkipperUI
+                - text: Star
+                - generic "0 users starred this repository" [ref=f16e60]: "0"
+      - navigation "Repository" [ref=f16e61]:
+        - list [ref=f16e62]:
+          - listitem [ref=f16e63]:
+            - link "Code" [ref=f16e64] [cursor=pointer]:
+              - /url: /sikandarpureharsh/SkipperUI
+          - listitem [ref=f16e68]:
+            - link "Issues" [ref=f16e69] [cursor=pointer]:
+              - /url: /sikandarpureharsh/SkipperUI/issues
+          - listitem [ref=f16e74]:
+            - link "Pull requests" [ref=f16e75] [cursor=pointer]:
+              - /url: /sikandarpureharsh/SkipperUI/pulls
+          - listitem [ref=f16e79]:
+            - link "Actions" [ref=f16e80] [cursor=pointer]:
+              - /url: /sikandarpureharsh/SkipperUI/actions
+          - listitem [ref=f16e84]:
+            - link "Projects" [ref=f16e85] [cursor=pointer]:
+              - /url: /sikandarpureharsh/SkipperUI/projects
+          - listitem [ref=f16e89]:
+            - link "Security and quality" [ref=f16e90] [cursor=pointer]:
+              - /url: /sikandarpureharsh/SkipperUI/security
+          - listitem [ref=f16e94]
+        - button "Additional navigation options" [ref=f16e98] [cursor=pointer]
+    - generic [ref=f16e112]:
+      - generic [ref=f16e115]:
+        - generic [ref=f16e116]:
+          - generic [ref=f16e117]:
+            - button "main branch" [ref=f16e119] [cursor=pointer]:
+              - generic [ref=f16e120]: main
+            - generic [ref=f16e124]:
+              - link "Go to Branches page" [ref=f16e125] [cursor=pointer]:
+                - /url: /sikandarpureharsh/SkipperUI/branches
+              - link "Go to Tags page" [ref=f16e128] [cursor=pointer]:
+                - /url: /sikandarpureharsh/SkipperUI/tags
+          - generic [ref=f16e131]:
+            - button "Go to file" [ref=f16e134] [cursor=pointer]
+            - button "Code" [ref=f16e137] [cursor=pointer]
+        - generic [ref=f16e140]:
+          - generic [ref=f16e141]:
+            - generic [ref=f16e143]:
+              - heading "Latest commit" [level=2] [ref=f16e144]
+              - generic [ref=f16e147]:
+                - heading "History" [level=2] [ref=f16e148]
+                - link "View commit history for this file." [ref=f16e150] [cursor=pointer]:
+                  - /url: /sikandarpureharsh/SkipperUI/commits/main/
+            - heading "Folders and files" [level=2] [ref=f16e152]
+            - table "Folders and files" [ref=f16e153]:
+              - rowgroup:
+                - row "Name Last commit message Last commit date":
+                  - columnheader "Name"
+                  - columnheader "Last commit message"
+                  - columnheader "Last commit date"
+              - rowgroup [ref=f16e154]:
+                - row "public, (Directory)" [ref=f16e155]:
+                  - cell [ref=f16e156]:
+                    - link "public, (Directory)" [ref=f16e163] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/tree/main/public
+                      - text: public
+                  - cell [ref=f16e164]
+                  - cell [ref=f16e166]
+                - row "src, (Directory)" [ref=f16e169]:
+                  - cell [ref=f16e170]:
+                    - link "src, (Directory)" [ref=f16e177] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/tree/main/src
+                      - text: src
+                  - cell [ref=f16e178]
+                  - cell [ref=f16e180]
+                - row ".gitignore, (File)" [ref=f16e183]:
+                  - cell [ref=f16e184]:
+                    - link ".gitignore, (File)" [ref=f16e191] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/.gitignore
+                      - text: .gitignore
+                  - cell [ref=f16e192]
+                  - cell [ref=f16e194]
+                - row "README.md, (File)" [ref=f16e197]:
+                  - cell [ref=f16e198]:
+                    - link "README.md, (File)" [ref=f16e205] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/README.md
+                      - text: README.md
+                  - cell [ref=f16e206]
+                  - cell [ref=f16e208]
+                - row "components.json, (File)" [ref=f16e211]:
+                  - cell [ref=f16e212]:
+                    - link "components.json, (File)" [ref=f16e219] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/components.json
+                      - text: components.json
+                  - cell [ref=f16e220]
+                  - cell [ref=f16e222]
+                - row "eslint.config.mjs, (File)" [ref=f16e225]:
+                  - cell [ref=f16e226]:
+                    - link "eslint.config.mjs, (File)" [ref=f16e233] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/eslint.config.mjs
+                      - text: eslint.config.mjs
+                  - cell [ref=f16e234]
+                  - cell [ref=f16e236]
+                - row "next.config.ts, (File)" [ref=f16e239]:
+                  - cell [ref=f16e240]:
+                    - link "next.config.ts, (File)" [ref=f16e247] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/next.config.ts
+                      - text: next.config.ts
+                  - cell [ref=f16e248]
+                  - cell [ref=f16e250]
+                - row "package-lock.json, (File)" [ref=f16e253]:
+                  - cell [ref=f16e254]:
+                    - link "package-lock.json, (File)" [ref=f16e261] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/package-lock.json
+                      - text: package-lock.json
+                  - cell [ref=f16e262]
+                  - cell [ref=f16e264]
+                - row "package.json, (File)" [ref=f16e267]:
+                  - cell [ref=f16e268]:
+                    - link "package.json, (File)" [ref=f16e275] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/package.json
+                      - text: package.json
+                  - cell [ref=f16e276]
+                  - cell [ref=f16e278]
+                - row "postcss.config.mjs, (File)" [ref=f16e281]:
+                  - cell [ref=f16e282]:
+                    - link "postcss.config.mjs, (File)" [ref=f16e289] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/postcss.config.mjs
+                      - text: postcss.config.mjs
+                  - cell [ref=f16e290]
+                  - cell [ref=f16e292]
+                - row "tsconfig.json, (File)" [ref=f16e295]:
+                  - cell [ref=f16e296]:
+                    - link "tsconfig.json, (File)" [ref=f16e303] [cursor=pointer]:
+                      - /url: /sikandarpureharsh/SkipperUI/blob/main/tsconfig.json
+                      - text: tsconfig.json
+                  - cell [ref=f16e304]
+                  - cell [ref=f16e306]
+          - generic [ref=f16e310]:
+            - generic [ref=f16e311]:
+              - heading "Repository files navigation" [level=2] [ref=f16e312]
+              - navigation "Repository files" [ref=f16e313]:
+                - list [ref=f16e314]:
+                  - listitem [ref=f16e315]:
+                    - link "README" [ref=f16e316] [cursor=pointer]:
+                      - /url: "#"
+              - button "Outline" [ref=f16e318] [cursor=pointer]
+            - article [ref=f16e322]:
+              - paragraph [ref=f16e323]:
+                - text: This is a
+                - link "Next.js" [ref=f16e324] [cursor=pointer]:
+                  - /url: https://nextjs.org
+                - text: project bootstrapped with
+                - link [ref=f16e325] [cursor=pointer]:
+                  - /url: https://nextjs.org/docs/app/api-reference/cli/create-next-app
+                  - code [ref=f16e326]: create-next-app
+                - text: .
+              - generic [ref=f16e327]:
+                - heading "Getting Started" [level=2] [ref=f16e328]
+                - 'link "Permalink: Getting Started" [ref=f16e329] [cursor=pointer]':
+                  - /url: "#getting-started"
+              - paragraph [ref=f16e332]: "First, run the development server:"
+              - generic [ref=f16e333]:
+                - generic [ref=f16e334]:
+                  - text: npm run dev
+                  - generic [ref=f16e335]: "# or"
+                  - text: yarn dev
+                  - generic [ref=f16e336]: "# or"
+                  - text: pnpm dev
+                  - generic [ref=f16e337]: "# or"
+                  - text: bun dev
+                - button "Copy code to clipboard" [ref=f16e339] [cursor=pointer]
+              - paragraph [ref=f16e343]:
+                - text: Open
+                - link "http://localhost:3000" [ref=f16e344] [cursor=pointer]:
+                  - /url: http://localhost:3000
+                - text: with your browser to see the result.
+              - paragraph [ref=f16e345]:
+                - text: You can start editing the page by modifying
+                - code [ref=f16e346]: app/page.tsx
+                - text: . The page auto-updates as you edit the file.
+              - paragraph [ref=f16e347]:
+                - text: This project uses
+                - link [ref=f16e348] [cursor=pointer]:
+                  - /url: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
+                  - code [ref=f16e349]: next/font
+                - text: to automatically optimize and load
+                - link "Geist" [ref=f16e350] [cursor=pointer]:
+                  - /url: https://vercel.com/font
+                - text: ", a new font family for Vercel."
+              - generic [ref=f16e351]:
+                - heading "Learn More" [level=2] [ref=f16e352]
+                - 'link "Permalink: Learn More" [ref=f16e353] [cursor=pointer]':
+                  - /url: "#learn-more"
+              - paragraph [ref=f16e356]: "To learn more about Next.js, take a look at the following resources:"
+              - list [ref=f16e357]:
+                - listitem [ref=f16e358]:
+                  - link "Next.js Documentation" [ref=f16e359] [cursor=pointer]:
+                    - /url: https://nextjs.org/docs
+                  - text: "- learn about Next.js features and API."
+                - listitem [ref=f16e360]:
+                  - link "Learn Next.js" [ref=f16e361] [cursor=pointer]:
+                    - /url: https://nextjs.org/learn
+                  - text: "- an interactive Next.js tutorial."
+              - paragraph [ref=f16e362]:
+                - text: You can check out
+                - link "the Next.js GitHub repository" [ref=f16e363] [cursor=pointer]:
+                  - /url: https://github.com/vercel/next.js
+                - text: "- your feedback and contributions are welcome!"
+              - generic [ref=f16e364]:
+                - heading "Deploy on Vercel" [level=2] [ref=f16e365]
+                - 'link "Permalink: Deploy on Vercel" [ref=f16e366] [cursor=pointer]':
+                  - /url: "#deploy-on-vercel"
+              - paragraph [ref=f16e369]:
+                - text: The easiest way to deploy your Next.js app is to use the
+                - link "Vercel Platform" [ref=f16e370] [cursor=pointer]:
+                  - /url: https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme
+                - text: from the creators of Next.js.
+              - paragraph [ref=f16e371]:
+                - text: Check out our
+                - link "Next.js deployment documentation" [ref=f16e372] [cursor=pointer]:
+                  - /url: https://nextjs.org/docs/app/building-your-application/deploying
+                - text: for more details.
+      - generic [ref=f16e375]:
+        - generic [ref=f16e376]:
+          - heading "About" [level=2] [ref=f16e377]
+          - paragraph [ref=f16e378]: A lightweight Node.js library with a sleek frontend for building fast, responsive, and customizable user interfaces.
+          - heading "Resources" [level=3] [ref=f16e379]
+          - link "Readme" [ref=f16e381] [cursor=pointer]:
+            - /url: "#readme-ov-file"
+          - link "Activity" [ref=f16e385] [cursor=pointer]:
+            - /url: /sikandarpureharsh/SkipperUI/activity
+          - heading "Stars" [level=3] [ref=f16e388]
+          - generic [ref=f16e390]:
+            - strong [ref=f16e393]: "0"
+            - text: stars
+          - heading "Watchers" [level=3] [ref=f16e394]
+          - generic [ref=f16e396]:
+            - strong [ref=f16e399]: "0"
+            - text: watching
+          - heading "Forks" [level=3] [ref=f16e400]
+          - link [ref=f16e402] [cursor=pointer]:
+            - /url: /sikandarpureharsh/SkipperUI/forks
+            - strong [ref=f16e406]: "0"
+            - text: forks
+          - link "Report repository" [ref=f16e408] [cursor=pointer]:
+            - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fsikandarpureharsh%2FSkipperUI&report=sikandarpureharsh+%28user%29
+        - heading "Releases" [level=2] [ref=f16e410]
+        - heading "Packages" [level=2] [ref=f16e414]
+        - heading "Contributors" [level=2] [ref=f16e417]
+        - heading "Languages" [level=2] [ref=f16e420]
+  - contentinfo [ref=f16e423]:
+    - heading "Footer" [level=2] [ref=f16e424]
+    - generic [ref=f16e425]:
+      - generic [ref=f16e426]:
+        - link "GitHub Homepage" [ref=f16e427] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f16e430]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f16e431]:
+        - heading "Footer navigation" [level=3] [ref=f16e432]
+        - list "Footer navigation" [ref=f16e433]:
+          - listitem [ref=f16e434]:
+            - link "Terms" [ref=f16e435] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f16e436]:
+            - link "Privacy" [ref=f16e437] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f16e438]:
+            - link "Security" [ref=f16e439] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f16e440]:
+            - link "Status" [ref=f16e441] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f16e442]:
+            - link "Community" [ref=f16e443] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f16e444]:
+            - link "Docs" [ref=f16e445] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f16e446]:
+            - link "Contact" [ref=f16e447] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f16e448]:
+            - button "Manage cookies" [ref=f16e450] [cursor=pointer]
+          - listitem [ref=f16e451]:
+            - button "Do not share my personal information" [ref=f16e453] [cursor=pointer]
