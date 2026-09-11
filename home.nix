@@ -92,7 +92,10 @@
       redis-restart = if pkgs.stdenv.isDarwin
         then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
         else "systemctl --user restart redis";
-      hms = "home-manager switch --flake ${config.home.homeDirectory}/.config/home-manager --impure";
+      # --option sandbox false works around a nix-agent-wire bug: readSkills (nix/autowire-lib.nix)
+      # uses `toString dir`, which strips store-path context, so autowired skill paths aren't
+      # registered as build inputs and are invisible inside the sandboxed opencode-skill build.
+      hms = "home-manager switch --flake ${config.home.homeDirectory}/.config/home-manager --impure --option sandbox false";
       # Obsidian
       os = "obs sync";
       on = "obs new";
@@ -151,8 +154,6 @@
     autoWire.dirs = [ (juspay-AI + "/.opencode") (euler-workspace + "/skills") ./agents ];
     settings = import ./modules/opencode-config.nix;
     tui.theme = "one-dark";
-    # Single skill pulled from the kolu repo (github:juspay/kolu .agents/skills/kolu).
-    skills.kolu = kolu + "/.agents/skills/kolu";
   };
 
   programs.claude-code = {
@@ -169,11 +170,6 @@
     # (this is a non-NixOS host, so /lib/x86_64-linux-gnu/libasound.so.2 exists).
     package = pkgs.claude-code.override { alsa-lib = pkgs.emptyDirectory; };
   };
-
-  # Single skill pulled from the kolu repo (github:juspay/kolu .agents/skills/kolu).
-  # autoWire on a whole dir would wire all ~40 skills, so wire just this one as a
-  # directory symlink (same mechanism nix-agent-wire uses for autoWired skills).
-  home.file.".claude/skills/kolu".source = kolu + "/.agents/skills/kolu";
 
   systemd.user.services.netbird = {
     Unit = {
