@@ -9,8 +9,9 @@ Declarative Home Manager configuration using Nix flakes. Manages dev tools, shel
 ## Key Commands
 
 ```bash
-# Apply configuration changes
-home-manager switch --flake ~/.config/home-manager
+# Apply configuration changes (--option sandbox false works around a nix-agent-wire
+# bug — see note below; the `hms` zsh alias already wraps this)
+home-manager switch --flake ~/.config/home-manager --option sandbox false
 
 # Update all flake inputs
 nix flake update
@@ -22,7 +23,15 @@ nix flake update nix-agent-wire juspay-AI
 nix search nixpkgs#<name>
 ```
 
-After any `.nix` file change, the user must run `home-manager switch` to apply.
+After any `.nix` file change, the user must run `home-manager switch` (or `hms`) to apply.
+
+**Known issue:** `nix-agent-wire`'s `readSkills` (in `nix/autowire-lib.nix`) builds skill
+paths via `toString dir`, which strips Nix's store-path context. Autowired skill
+directories (from `agents/skills/*`) then aren't registered as derivation inputs, so
+whichever `opencode-skill` derivation Nix happens to realize fresh on a given run can
+fail inside the build sandbox with "OpenCode skill source must be a file or directory" —
+non-deterministically, not tied to any specific skill. `--option sandbox false` avoids it
+because the build no longer needs the (missing) explicit input to see the source.
 
 ## Architecture
 

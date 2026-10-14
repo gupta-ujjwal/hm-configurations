@@ -124,7 +124,6 @@
     stack
     redis
     tmux
-    tmate
     python313
     postgresql_17
     pnpm
