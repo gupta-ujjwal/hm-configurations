@@ -1,5 +1,11 @@
-{ config, pkgs, system, username, nix-agent-wire, juspay-AI, kolu, euler-workspace, ... }:
+{ config, pkgs, lib, system, username, nix-agent-wire, juspay-AI, kolu, euler-workspace, ... }:
 
+let
+  # Uses the same ~/.config/google-chrome profile the old apt install did.
+  # Pin the password store to GNOME keyring so saved passwords (encrypted with
+  # the "Chrome Safe Storage" keyring secret) stay readable.
+  google-chrome = pkgs.google-chrome.override { commandLineArgs = "--password-store=gnome-libsecret"; };
+in
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -139,7 +145,16 @@
     gh
     nerd-fonts.jetbrains-mono
     kolu.packages.${system}.default  # kolu CLI on PATH (service is wired separately in modules/kolu.nix)
+  ] ++ lib.optionals pkgs.stdenv.isLinux [
+    google-chrome
   ];
+
+  # GNOME doesn't notice when ~/.nix-profile/share/applications is repointed on
+  # switch, so Chrome wouldn't show in app search. ~/.local/share/applications
+  # is a real directory GNOME watches.
+  home.file.".local/share/applications/google-chrome.desktop" = lib.mkIf pkgs.stdenv.isLinux {
+    source = "${google-chrome}/share/applications/google-chrome.desktop";
+  };
 
   # Optional: ensure Colima is on PATH
   home.sessionPath = [
@@ -168,6 +183,12 @@
     # Voice still works: audio-capture.node falls back to the system libasound.so.2
     # (this is a non-NixOS host, so /lib/x86_64-linux-gnu/libasound.so.2 exists).
     package = pkgs.claude-code.override { alsa-lib = pkgs.emptyDirectory; };
+  };
+
+  # Playwright MCP defaults to /opt/google/chrome/chrome (the old apt install);
+  # point it at the home-manager Chrome instead.
+  programs.claude-code.settings.env = lib.mkIf pkgs.stdenv.isLinux {
+    PLAYWRIGHT_MCP_EXECUTABLE_PATH = "${config.home.profileDirectory}/bin/google-chrome-stable";
   };
 
   systemd.user.services.netbird = {
