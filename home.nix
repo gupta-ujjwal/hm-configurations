@@ -1,4 +1,4 @@
-{ config, pkgs, lib, system, username, nix-agent-wire, juspay-AI, kolu, euler-workspace, ... }:
+{ config, pkgs, lib, system, username, nix-agent-wire, juspay-AI, kolu, ... }:
 
 let
   # Uses the same ~/.config/google-chrome profile the old apt install did.
@@ -165,14 +165,14 @@ in
 
   programs.opencode = {
     enable = true;
-    autoWire.dirs = [ (juspay-AI + "/.opencode") (euler-workspace + "/skills") ./agents ];
+    autoWire.dirs = [ (juspay-AI + "/.opencode") ./agents ];
     settings = import ./modules/opencode-config.nix;
     tui.theme = "one-dark";
   };
 
   programs.claude-code = {
     enable = true;
-    autoWire.dirs = [ (juspay-AI + "/.claude") (euler-workspace + "/skills") ./agents ];
+    autoWire.dirs = [ (juspay-AI + "/.claude") ./agents ];
     # The nixpkgs claude-code wrapper prepends a Nix alsa-lib to LD_LIBRARY_PATH
     # (for the voice feature's audio-capture.node). That var is exported, so every
     # child of `claude` — the Bash tool, MCP servers, and ultimately system Chrome
