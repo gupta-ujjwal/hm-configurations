@@ -10,10 +10,9 @@
     nix-agent-wire.url = "github:srid/nix-agent-wire";
     juspay-AI.url = "github:juspay/AI";
     kolu.url = "github:juspay/kolu";  # pinned to stable; master is switching to effect-ts
-    euler-workspace.url = "git+ssh://git@ssh.bitbucket.juspay.net/~ujjwal.gupta_juspay.in/euler-workspace.git?ref=euler-skills";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-agent-wire, juspay-AI, kolu, euler-workspace, ... }:
+  outputs = { self, nixpkgs, home-manager, nix-agent-wire, juspay-AI, kolu, ... }:
     let
       supportedSystems = [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" "aarch64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems f;
@@ -28,7 +27,7 @@
         in
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit system username nix-agent-wire juspay-AI kolu euler-workspace; };
+          extraSpecialArgs = { inherit system username nix-agent-wire juspay-AI kolu; };
           modules = [ ./home.nix ./modules/neovim.nix ./modules/tmux.nix ./modules/tmate.nix ./modules/redis.nix ./modules/obsidian.nix ./modules/apm.nix ./modules/kolu.nix ./modules/daily-brief.nix ./modules/dia.nix ];
         };
     in {
