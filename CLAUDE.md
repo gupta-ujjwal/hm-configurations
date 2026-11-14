@@ -9,15 +9,14 @@ Declarative Home Manager configuration using Nix flakes. Manages dev tools, shel
 ## Key Commands
 
 ```bash
-# Apply configuration changes (--option sandbox false works around a nix-agent-wire
-# bug — see note below; the `hms` zsh alias already wraps this)
-home-manager switch --flake ~/.config/home-manager --option sandbox false
+# Apply configuration changes (the `hms` zsh alias wraps this)
+home-manager switch --flake ~/.config/home-manager --impure
 
 # Update all flake inputs
 nix flake update
 
 # Update only AI-related inputs
-nix flake update nix-agent-wire juspay-AI
+nix flake update juspay-AI
 
 # Search for a package name
 nix search nixpkgs#<name>
@@ -25,17 +24,13 @@ nix search nixpkgs#<name>
 
 After any `.nix` file change, the user must run `home-manager switch` (or `hms`) to apply.
 
-**Known issue:** `nix-agent-wire`'s `readSkills` (in `nix/autowire-lib.nix`) builds skill
-paths via `toString dir`, which strips Nix's store-path context. Autowired skill
-directories (from `agents/skills/*`) then aren't registered as derivation inputs, so
-whichever `opencode-skill` derivation Nix happens to realize fresh on a given run can
-fail inside the build sandbox with "OpenCode skill source must be a file or directory" —
-non-deterministically, not tied to any specific skill. `--option sandbox false` avoids it
-because the build no longer needs the (missing) explicit input to see the source.
+**autoWire modules are vendored** in `modules/autowire/` (originally from upstream, see file
+headers). They're patched so `readSkills` returns path values rather than `toString`'d strings,
+which makes skill dirs real store inputs — no `--option sandbox false` needed.
 
 ## Architecture
 
-**Entry point:** `flake.nix` defines inputs (nixpkgs unstable, home-manager, nix-agent-wire, juspay-AI) and wires modules together in `homeConfigurations`.
+**Entry point:** `flake.nix` defines inputs (nixpkgs unstable, home-manager, juspay-AI, kolu) and wires modules together in `homeConfigurations`.
 
 **Main config:** `home.nix` is the central file — imports AI agent home modules, defines packages, zsh config, shell aliases, and agent wiring (`programs.opencode`, `programs.claude-code`).
 

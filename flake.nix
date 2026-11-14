@@ -7,12 +7,11 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-agent-wire.url = "github:srid/nix-agent-wire";
     juspay-AI.url = "github:juspay/AI";
     kolu.url = "github:juspay/kolu";  # pinned to stable; master is switching to effect-ts
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-agent-wire, juspay-AI, kolu, ... }:
+  outputs = { self, nixpkgs, home-manager, juspay-AI, kolu, ... }:
     let
       supportedSystems = [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" "aarch64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems f;
@@ -27,7 +26,7 @@
         in
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit system username nix-agent-wire juspay-AI kolu; };
+          extraSpecialArgs = { inherit system username juspay-AI kolu; };
           modules = [ ./home.nix ./modules/neovim.nix ./modules/tmux.nix ./modules/tmate.nix ./modules/redis.nix ./modules/obsidian.nix ./modules/apm.nix ./modules/kolu.nix ./modules/daily-brief.nix ./modules/dia.nix ];
         };
     in {
