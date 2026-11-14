@@ -1,6 +1,6 @@
 # Vendored from srid/nix-agent-wire @ 69e550ac2a922b72f781c165d68a3f549582dc45
 # (nix/autowire-lib.nix). MIT License, Copyright (c) 2025 Sridhar Ratnakumar.
-# Patched: readSkills returns path values (not toString'd strings) so skill dirs are real store inputs.
+# Patched: readSkills keeps path dirs as path values (not toString'd strings) so skill dirs are real store inputs.
 { lib }:
 
 {
@@ -24,7 +24,10 @@
         (skillName: _:
           lib.nameValuePair
             skillName
-            (/. + (path + "/" + skillName))
+            # Path dirs (e.g. ./agents): stay a path so Nix copies the skill into
+            # the store as a real input. String dirs (e.g. juspay-AI + "/.opencode")
+            # already carry store context; `/. +` would reject them, so keep the string.
+            (if builtins.isPath dir then dir + "/skills/${skillName}" else path + "/" + skillName)
         )
         (lib.filterAttrs (_: type: type == "directory") (builtins.readDir path)));
 
