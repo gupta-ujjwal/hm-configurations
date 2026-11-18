@@ -59,7 +59,6 @@
             ./modules/dia.nix
             ./modules/hm-docs.nix
             ./modules/system-setup.nix
-            ./modules/netbird.nix
             ./modules/podman.nix
             ./modules/home-server.nix
           ] ++ hostModules;

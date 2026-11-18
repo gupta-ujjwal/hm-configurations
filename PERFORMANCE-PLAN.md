@@ -1,7 +1,7 @@
 # Home Server + Daily Driver — Performance Plan
 
 **Machine:** Asus X510UNR (`ujjwal-gupta-X510UNR`) · i7-8550U (4C/8T) · 7 GB RAM · 447 GB SSD · MX150 (on-demand) · Ubuntu 26.04 · always on AC
-**Goal:** reliable 24/7 home server (kolu, redis, VPN, timers) that stays fast for browsing.
+**Goal:** reliable 24/7 home server (kolu, redis, timers) that stays fast for browsing.
 **Main constraint:** RAM (~3 GB used + 1.1 GB in swap at idle).
 
 ## Principles
@@ -21,7 +21,6 @@
 | `hosts/x510unr.nix` | host | `my.homeServer` on, battery limit 80 %, zram 50 % |
 | `modules/system-setup.nix` | generic | framework that generates `hm-system-setup` |
 | `modules/home-server.nix` | host flag | stay-awake inhibitor, no AC idle-suspend, linger, zram, battery limit, disable/mask services |
-| `modules/netbird.nix` | generic | NetBird CLI + **root** system daemon |
 | `modules/podman.nix` | generic (Linux) | rootless Podman + Docker-API socket + setuid `newuidmap` wrappers |
 | `modules/hm-docs.nix` | generic | help-guide HTTP server as a service |
 
@@ -29,7 +28,7 @@
 
 ## Phase 1 — Generic HM fixes (every machine) ✅ implemented
 
-- [x] **1.1** NetBird: dropped the crash-looping *user* service (17,572 restarts); daemon is now a root unit via `hm-system-setup`.
+- [x] **1.1** NetBird removed entirely (its user service crash-looped 17,572× and there's no current use case).
 - [x] **1.2** `python3 -m http.server 9999` no longer restarted on every zsh start → `hm-docs` user service / launchd agent.
 - [x] **1.3** `nix.gc` weekly (`--delete-older-than 14d`) + `services.home-manager.autoExpire` (store is 32 GB).
 - [x] **1.4** `targets.genericLinux.enable` on non-NixOS Linux → GPU drivers for Nix Chrome/Obsidian (setup folded into `hm-system-setup`).
@@ -64,7 +63,7 @@ sudo ~/.nix-profile/bin/hm-system-setup   # use the exact store path hms prints
 
 # verify
 systemctl --user --failed             # empty
-systemctl status netbird hm-zram hm-wrappers
+systemctl status hm-zram hm-wrappers
 swapon --show                         # /dev/zram0 prio 100, /swap.img prio -1
 systemd-inhibit --list | grep home-server
 loginctl show-user $USER -p Linger    # yes
@@ -81,5 +80,5 @@ Then **reboot** (needed for the crashkernel change; check `cat /sys/kernel/kexec
 - [ ] Browser: pick one. Drop snap Firefox (+ snapd: ~860 MB RAM, 17 loop mounts) or Chrome. Chrome: enable *Memory Saver*.
       (snap removal is a distro change — could be added as an `extraSteps` entry if wanted.)
 - [ ] evolution-data-server services: mask via `maskedUserServices` if GNOME Calendar/Contacts unused.
-- [ ] Kolu: if LAN exposure becomes a concern, bind to the NetBird IP instead.
+- [ ] Kolu: if LAN exposure becomes a concern, bind to 127.0.0.1 and use an SSH tunnel (or add a VPN later).
 - [ ] Measure after a week: `du -sh /nix/store`, `free -h`, `systemd-analyze`.
