@@ -34,7 +34,7 @@ This single command will:
 - **MariaDB**, **PostgreSQL**
 
 ### AI Coding Agents
-- **Claude Code** — Anthropic's CLI agent, configured via [nix-agent-wire](https://github.com/srid/nix-agent-wire)
+- **Claude Code** — Anthropic's CLI agent, configured via the vendored autowire modules in `modules/autowire/`
 - **OpenCode** — configured via [juspay/AI](https://github.com/juspay/AI) with Juspay LiteLLM provider
 - **Shared skills** — 9 skills from juspay/AI + custom skills in `agents/`, wired into both tools via `autoWire.dirs`
 - **OpenCode plugins** — superpowers, playwright MCP server
@@ -64,7 +64,7 @@ The `--impure` flag allows auto-detection of your `$USER` and `$HOME`. No manual
 
 ```
 .
-├── flake.nix              # Flake inputs: nixpkgs, home-manager, nix-agent-wire, juspay/AI
+├── flake.nix              # Flake inputs: nixpkgs, home-manager, juspay/AI, kolu
 ├── flake.lock
 ├── home.nix               # Main config: packages, zsh, aliases, agent wiring
 ├── bootstrap.sh           # Bootstrap script for single-command setup
@@ -73,6 +73,7 @@ The `--impure` flag allows auto-detection of your `$USER` and `$HOME`. No manual
 │   ├── tmux.nix           # Tmux config
 │   ├── tmate.nix          # Tmate config
 │   ├── redis.nix          # Redis service (systemd/launchd) + config
+│   ├── autowire/          # Vendored autoWire modules (opencode, claude-code)
 │   └── opencode-config.nix # OpenCode settings: providers, models, MCP, plugins
 ├── agents/
 │   └── skills/
@@ -86,9 +87,9 @@ The `--impure` flag allows auto-detection of your `$USER` and `$HOME`. No manual
 
 ## AI Agent Setup
 
-Both Claude Code and OpenCode are configured via the [nix-agent-wire](https://github.com/srid/nix-agent-wire) convention:
+Both Claude Code and OpenCode use an `autoWire.dirs` layer (vendored in `modules/autowire/`, originally from srid's autowire modules, with a fix so skill dirs are real store inputs):
 
-- **`nix-agent-wire`** — provides `programs.claude-code` home-manager module
+- **`modules/autowire/`** — adds `autoWire` on top of home-manager's native `programs.opencode` / `programs.claude-code`
 - **`juspay/AI`** — provides `programs.opencode` module + shared skills in `.agents/`
 - **`./agents/`** — local custom skills, wired into both tools
 
@@ -110,7 +111,7 @@ hms
 
 To update only AI-related inputs:
 ```bash
-nix flake update nix-agent-wire juspay-AI
+nix flake update juspay-AI
 ```
 
 Detailed setup guide with AI agent configuration walkthrough

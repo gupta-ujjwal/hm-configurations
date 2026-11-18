@@ -1,4 +1,4 @@
-{ config, pkgs, lib, system, username, nix-agent-wire, juspay-AI, kolu, ... }:
+{ config, pkgs, lib, system, username, juspay-AI, kolu, ... }:
 
 let
   # Uses the same ~/.config/google-chrome profile the old apt install did.
@@ -10,8 +10,8 @@ in
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    nix-agent-wire.homeModules.opencode
-    nix-agent-wire.homeModules.claude-code
+    ./modules/autowire/opencode.nix
+    ./modules/autowire/claude-code.nix
   ];
 
   home = {
@@ -98,10 +98,7 @@ in
       redis-restart = if pkgs.stdenv.isDarwin
         then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
         else "systemctl --user restart redis";
-      # --option sandbox false works around a nix-agent-wire bug: readSkills (nix/autowire-lib.nix)
-      # uses `toString dir`, which strips store-path context, so autowired skill paths aren't
-      # registered as build inputs and are invisible inside the sandboxed opencode-skill build.
-      hms = "home-manager switch --flake ${config.home.homeDirectory}/.config/home-manager --impure --option sandbox false";
+      hms = "home-manager switch --flake ${config.home.homeDirectory}/.config/home-manager --impure";
       # Obsidian
       os = "obs sync";
       on = "obs new";
