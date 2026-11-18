@@ -7,8 +7,6 @@ let
   google-chrome = pkgs.google-chrome.override { commandLineArgs = "--password-store=gnome-libsecret"; };
 in
 {
-  nixpkgs.config.allowUnfree = true;
-
   imports = [
     ./modules/autowire/opencode.nix
     ./modules/autowire/claude-code.nix
@@ -16,11 +14,30 @@ in
 
   home = {
     username = username;
-    homeDirectory = if pkgs.stdenv.isDarwin then "/Users/${username}" else "/home/${username}";
+    homeDirectory = if pkgs.stdenv.hostPlatform.isDarwin then "/Users/${username}" else "/home/${username}";
     stateVersion = "22.11";
   };
 
   programs.home-manager.enable = true;
+
+  # Non-NixOS Linux (Ubuntu): session/XDG fixes + GPU drivers for Nix GUI apps
+  # (Chrome, Obsidian), which otherwise can't find system GL and software-render.
+  # One-time root step is folded into `sudo hm-system-setup`.
+  targets.genericLinux.enable = lib.mkDefault (pkgs.stdenv.hostPlatform.isLinux && !builtins.pathExists "/etc/NIXOS");
+  my.systemSetup.extraSteps."00-gpu-drivers" = lib.mkIf config.targets.genericLinux.gpu.enable
+    (lib.getExe config.targets.genericLinux.gpu.setupPackage);
+
+  # Keep the store and HM generations from growing forever.
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+  services.home-manager.autoExpire = {
+    enable = true;
+    frequency = "weekly";
+    timestamp = "-14 days";
+  };
 
   programs.direnv = {
     enable = true;
@@ -63,21 +80,14 @@ in
       
       # Load ANTHROPIC_AUTH_TOKEN from local file if it exists
       if [[ -f ~/.config/secrets/anthropic_token ]]; then
-        export ANTHROPIC_AUTH_TOKEN=$(cat ~/.config/secrets/anthropic_token)
+        export ANTHROPIC_AUTH_TOKEN=$(<~/.config/secrets/anthropic_token)
       fi
 
       # Load JUSPAY_API_KEY from local file if it exists
       if [[ -f ~/.config/secrets/juspay_api_key ]]; then
-        export JUSPAY_API_KEY=$(cat ~/.config/secrets/juspay_api_key)
+        export JUSPAY_API_KEY=$(<~/.config/secrets/juspay_api_key)
       fi
-
-      # Start HTTP server for home-manager documentation on port 9999
-      # Kill any existing server on port 9999 first
-      pkill -f "python3 -m http.server 9999" > /dev/null 2>&1
-      # Start new server
-      (cd ~/.config/home-manager && python3 -m http.server 9999 > /dev/null 2>&1 &)
-      # Display message to user
-      echo "📚 Home Manager Help Guide running at http://localhost:9999"
+      # HM help guide (http://localhost:9999) is now a service: modules/hm-docs.nix
     '';
 
     shellAliases = {
@@ -89,13 +99,13 @@ in
       xyne = "npx @xyne/xyne-cli";
       redis-cli = "${pkgs.redis}/bin/redis-cli";
       redis-server = "${pkgs.redis}/bin/redis-server";
-      redis-start = if pkgs.stdenv.isDarwin
+      redis-start = if pkgs.stdenv.hostPlatform.isDarwin
         then "launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
         else "systemctl --user start redis";
-      redis-stop = if pkgs.stdenv.isDarwin
+      redis-stop = if pkgs.stdenv.hostPlatform.isDarwin
         then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist"
         else "systemctl --user stop redis";
-      redis-restart = if pkgs.stdenv.isDarwin
+      redis-restart = if pkgs.stdenv.hostPlatform.isDarwin
         then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
         else "systemctl --user restart redis";
       hms = "home-manager switch --flake ${config.home.homeDirectory}/.config/home-manager --impure";
@@ -131,31 +141,29 @@ in
     postgresql_17
     pnpm
     uv
-    docker   # docker client
-    colima   # docker daemon via VM
+    docker   # docker client (Linux: talks to rootless podman, modules/podman.nix)
     lazygit
     ripgrep
     nodejs_24
     netlify-cli
     opencode
-    netbird
     gh
     nerd-fonts.jetbrains-mono
     kolu.packages.${system}.default  # kolu CLI on PATH (service is wired separately in modules/kolu.nix)
-  ] ++ lib.optionals pkgs.stdenv.isLinux [
+  ] ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
     google-chrome
+  ] ++ lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
+    colima   # docker daemon via VM (Linux runs containers natively)
   ];
 
   # GNOME doesn't notice when ~/.nix-profile/share/applications is repointed on
   # switch, so Chrome wouldn't show in app search. ~/.local/share/applications
   # is a real directory GNOME watches.
-  home.file.".local/share/applications/google-chrome.desktop" = lib.mkIf pkgs.stdenv.isLinux {
+  home.file.".local/share/applications/google-chrome.desktop" = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
     source = "${google-chrome}/share/applications/google-chrome.desktop";
   };
 
-  # Optional: ensure Colima is on PATH
   home.sessionPath = [
-    "${pkgs.colima}/bin"
     "${config.home.homeDirectory}/Downloads/google-cloud-sdk/bin"
   ];
 
@@ -164,7 +172,6 @@ in
     enable = true;
     autoWire.dirs = [ (juspay-AI + "/.opencode") ./agents ];
     settings = import ./modules/opencode-config.nix;
-    tui.theme = "one-dark";
   };
 
   programs.claude-code = {
@@ -184,23 +191,8 @@ in
 
   # Playwright MCP defaults to /opt/google/chrome/chrome (the old apt install);
   # point it at the home-manager Chrome instead.
-  programs.claude-code.settings.env = lib.mkIf pkgs.stdenv.isLinux {
+  programs.claude-code.settings.env = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
     PLAYWRIGHT_MCP_EXECUTABLE_PATH = "${config.home.profileDirectory}/bin/google-chrome-stable";
-  };
-
-  systemd.user.services.netbird = {
-    Unit = {
-      Description = "Netbird VPN daemon";
-      After = [ "network.target" ];
-    };
-    Service = {
-      ExecStart = "${pkgs.netbird}/bin/netbird service run";
-      Restart = "on-failure";
-      RestartSec = 5;
-    };
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
   };
 
 }

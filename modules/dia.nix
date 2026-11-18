@@ -8,7 +8,7 @@ let
 in
 {
   # Dia is macOS-only (Apple Silicon, macOS 14+); no-op elsewhere.
-  home.activation.installDia = lib.mkIf pkgs.stdenv.isDarwin (lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+  home.activation.installDia = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin (lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     if [ -d "/Applications/Dia.app" ] || [ -d "${appsDir}/Dia.app" ]; then
       :
     elif [ "$(/usr/bin/uname -m)" != "arm64" ]; then

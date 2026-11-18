@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792000010,
-        "narHash": "sha256-4jtkwQlReQdXsKJJfB9yT7nIf0TlwgZOk2XtxjUgDS8=",
+        "lastModified": 1794897420,
+        "narHash": "sha256-hMI9Xg+lxS8kbnxIxL/jPQn688dstoxQAcMEbCb1ax0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5a9d300bd619c03857521b50c8877a19dbad7078",
+        "rev": "5b76c5b8eec25fdbce4f43309b3ee10584374a26",
         "type": "github"
       },
       "original": {
@@ -38,11 +38,11 @@
     },
     "kolu": {
       "locked": {
-        "lastModified": 1792007316,
-        "narHash": "sha256-8CLcfRbNeBDTekDwyekYE9CE79eyJZyEqMqzjkMa7zI=",
+        "lastModified": 1794886719,
+        "narHash": "sha256-eJ289Pqa1gbRc3LVhaxSMxRgYqrlsWqiybKddVefkhA=",
         "owner": "juspay",
         "repo": "kolu",
-        "rev": "3c31ad76d4471bdd5bbf52e744c8d26d2a741fa8",
+        "rev": "d3f418542a8db4821cad5f2a7042b2036a9bd2da",
         "type": "github"
       },
       "original": {
@@ -51,13 +51,33 @@
         "type": "github"
       }
     },
+    "nix-index-database": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794739050,
+        "narHash": "sha256-PCGNIyAydZcdUXCxEXTjrS1+wWS+k9E+ENqBkUK2Mpg=",
+        "owner": "nix-community",
+        "repo": "nix-index-database",
+        "rev": "9bd074026d6db75b59aae8cd6071b5f2fe27a36c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-index-database",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1791734076,
-        "narHash": "sha256-i5qk1kLiit98rRbh1AXmWBNT9QXC/y4l5Wk/u5EdpDQ=",
+        "lastModified": 1794537146,
+        "narHash": "sha256-Wpz/7x/YWnDIBu7yj6ixe8j6fIMsidd9Y+o1PqPF3iM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
+        "rev": "d5cc6833999746cffdfe0598f7bc801a57b887a9",
         "type": "github"
       },
       "original": {
@@ -72,6 +92,7 @@
         "home-manager": "home-manager",
         "juspay-AI": "juspay-AI",
         "kolu": "kolu",
+        "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs"
       }
     }

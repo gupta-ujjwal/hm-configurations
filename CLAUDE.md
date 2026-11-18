@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-Declarative Home Manager configuration using Nix flakes. Manages dev tools, shell, AI agents, and services for macOS (aarch64-darwin).
+Declarative Home Manager configuration using Nix flakes. Manages dev tools, shell, AI agents, and services across machines (macOS and non-NixOS Linux). The current main machine is an Ubuntu x86_64 laptop (`ujjwal-gupta-X510UNR`) that doubles as a home server.
 
 ## Key Commands
 
@@ -47,6 +47,13 @@ which makes skill dirs real store inputs — no `--option sandbox false` needed.
 - **Never install packages imperatively** (no brew, apt, npm -g, pip install). Everything goes through home-manager declaratively.
 - **Simple CLI tools** go in `home.packages` in `home.nix`. Tools with configuration use `programs.<name>` modules when available.
 - **Config files** for tools without HM modules use `home.file."path".text` or `.source`.
-- The system is currently `aarch64-darwin` with username `Ujjwal.gupta` — these are set in `flake.nix`.
+- System and username come from the environment (`--impure`); fallbacks are in `flake.nix`.
+- **Host-specific config** lives in `hosts/<name>.nix`, mapped by hostname in `flake.nix` (`hosts = { ... }`).
+  `home-manager switch --flake .` picks `"$USER@$(hostname)"` automatically. Keep generic modules
+  host-agnostic and gate host behaviour behind options (e.g. `my.homeServer.enable`).
+- **Root-level config (non-NixOS Linux)** is also declared in HM: add to `my.systemSetup.{units,etcFiles,disabledServices,extraSteps}`
+  (`modules/system-setup.nix`). HM builds an idempotent `hm-system-setup` script; after `hms`, run the
+  `sudo .../hm-system-setup` command it prints. Never hand-edit `/etc` or use `apt`/`systemctl enable` directly.
+- `nixpkgs` config (e.g. `allowUnfree`) is set in `flake.nix`'s `import nixpkgs`, not via `nixpkgs.config` in modules.
 - nixpkgs tracks `nixos-unstable`.
 - Secrets are loaded from `~/.config/secrets/` at shell init — never commit secrets.

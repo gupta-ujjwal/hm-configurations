@@ -34,8 +34,8 @@ let
       inherit (src) sha256;
     };
 
-    nativeBuildInputs = lib.optionals pkgs.stdenv.isLinux [ pkgs.autoPatchelfHook ];
-    buildInputs = lib.optionals pkgs.stdenv.isLinux [
+    nativeBuildInputs = lib.optionals pkgs.stdenv.hostPlatform.isLinux [ pkgs.autoPatchelfHook ];
+    buildInputs = lib.optionals pkgs.stdenv.hostPlatform.isLinux [
       pkgs.stdenv.cc.cc.lib
       pkgs.zlib
       pkgs.openssl
