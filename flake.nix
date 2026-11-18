@@ -57,7 +57,6 @@
             ./modules/kolu.nix
             ./modules/daily-brief.nix
             ./modules/dia.nix
-            ./modules/hm-docs.nix
             ./modules/system-setup.nix
             ./modules/podman.nix
             ./modules/home-server.nix

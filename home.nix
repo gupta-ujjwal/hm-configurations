@@ -87,7 +87,6 @@ in
       if [[ -f ~/.config/secrets/juspay_api_key ]]; then
         export JUSPAY_API_KEY=$(<~/.config/secrets/juspay_api_key)
       fi
-      # HM help guide (http://localhost:9999) is now a service: modules/hm-docs.nix
     '';
 
     shellAliases = {

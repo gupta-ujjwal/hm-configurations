@@ -22,14 +22,13 @@
 | `modules/system-setup.nix` | generic | framework that generates `hm-system-setup` |
 | `modules/home-server.nix` | host flag | stay-awake inhibitor, no AC idle-suspend, linger, zram, battery limit, disable/mask services |
 | `modules/podman.nix` | generic (Linux) | rootless Podman + Docker-API socket + setuid `newuidmap` wrappers |
-| `modules/hm-docs.nix` | generic | help-guide HTTP server as a service |
 
 ---
 
 ## Phase 1 — Generic HM fixes (every machine) ✅ implemented
 
 - [x] **1.1** NetBird removed entirely (its user service crash-looped 17,572× and there's no current use case).
-- [x] **1.2** `python3 -m http.server 9999` no longer restarted on every zsh start → `hm-docs` user service / launchd agent.
+- [x] **1.2** Removed the help guide (`index.html`) and the `python3 -m http.server 9999` that zsh restarted on every new shell.
 - [x] **1.3** `nix.gc` weekly (`--delete-older-than 14d`) + `services.home-manager.autoExpire` (store is 32 GB).
 - [x] **1.4** `targets.genericLinux.enable` on non-NixOS Linux → GPU drivers for Nix Chrome/Obsidian (setup folded into `hm-system-setup`).
 - [x] **1.5** Redis: `maxmemory 256mb` (makes `allkeys-lru` work), AOF only.
