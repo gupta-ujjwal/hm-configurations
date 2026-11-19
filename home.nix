@@ -89,30 +89,32 @@ in
       fi
     '';
 
-    shellAliases = {
-      g = "git";
-      lg = "lazygit";
-      d = "docker";
-      dc = "docker compose";
-      col = "colima";
-      xyne = "npx @xyne/xyne-cli";
-      redis-cli = "${pkgs.redis}/bin/redis-cli";
-      redis-server = "${pkgs.redis}/bin/redis-server";
-      redis-start = if pkgs.stdenv.hostPlatform.isDarwin
-        then "launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
-        else "systemctl --user start redis";
-      redis-stop = if pkgs.stdenv.hostPlatform.isDarwin
-        then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist"
-        else "systemctl --user stop redis";
-      redis-restart = if pkgs.stdenv.hostPlatform.isDarwin
-        then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
-        else "systemctl --user restart redis";
-      hms = "home-manager switch --flake ${config.home.homeDirectory}/.config/home-manager --impure";
-      # Obsidian
-      os = "obs sync";
-      on = "obs new";
-      od = "obs daily";
-    };
+  };
+
+  # Shared by bash (the login shell here) and zsh.
+  home.shellAliases = {
+    g = "git";
+    lg = "lazygit";
+    d = "docker";
+    dc = "docker compose";
+    col = "colima";
+    xyne = "npx @xyne/xyne-cli";
+    redis-cli = "${pkgs.redis}/bin/redis-cli";
+    redis-server = "${pkgs.redis}/bin/redis-server";
+    redis-start = if pkgs.stdenv.hostPlatform.isDarwin
+      then "launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
+      else "systemctl --user start redis";
+    redis-stop = if pkgs.stdenv.hostPlatform.isDarwin
+      then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist"
+      else "systemctl --user stop redis";
+    redis-restart = if pkgs.stdenv.hostPlatform.isDarwin
+      then "launchctl unload ~/Library/LaunchAgents/org.redis.redis-server.plist && launchctl load ~/Library/LaunchAgents/org.redis.redis-server.plist"
+      else "systemctl --user restart redis";
+    hms = "home-manager switch --flake ${config.home.homeDirectory}/.config/home-manager --impure";
+    # Obsidian
+    os = "obs sync";
+    on = "obs new";
+    od = "obs daily";
   };
 
   programs.fzf = {
