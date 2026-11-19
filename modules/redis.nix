@@ -9,6 +9,8 @@ in
   systemd.user.services.redis = lib.mkIf isLinux {
     Unit = {
       Description = "Redis in-memory data store";
+      # Restart redis whenever redis.conf changes (the unit itself would not change).
+      X-Restart-Triggers = [ "${config.home.file.".config/redis/redis.conf".source}" ];
       After = [ "network.target" ];
     };
     Service = {
