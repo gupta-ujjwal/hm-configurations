@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
 let
-  isDarwin = pkgs.stdenv.isDarwin;
-  isLinux = pkgs.stdenv.isLinux;
+  isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
+  isLinux = pkgs.stdenv.hostPlatform.isLinux;
   homeDir = config.home.homeDirectory;
   vaultDir = "${homeDir}/obsidian-vault";
   repoUrl = "git@github.com:gupta-ujjwal/obsidian.git";

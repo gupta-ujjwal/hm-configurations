@@ -41,7 +41,6 @@ This single command will:
 
 ### Infrastructure
 - **Docker** + **Colima** — container runtime
-- **Netbird** — VPN daemon (systemd service)
 - **direnv** + **nix-direnv** — per-project environments
 - **fzf**, **ripgrep**, **htop**, **btop**, **nix-index**
 

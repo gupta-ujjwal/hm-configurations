@@ -1,14 +1,16 @@
 { config, pkgs, lib, ... }:
 
 let
-  isDarwin = pkgs.stdenv.isDarwin;
-  isLinux = pkgs.stdenv.isLinux;
+  isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
+  isLinux = pkgs.stdenv.hostPlatform.isLinux;
 in
 {
   # Linux: systemd service
   systemd.user.services.redis = lib.mkIf isLinux {
     Unit = {
       Description = "Redis in-memory data store";
+      # Restart redis whenever redis.conf changes (the unit itself would not change).
+      X-Restart-Triggers = [ "${config.home.file.".config/redis/redis.conf".source}" ];
       After = [ "network.target" ];
     };
     Service = {
@@ -52,14 +54,16 @@ in
     loglevel notice
     logfile ${config.home.homeDirectory}/.local/share/redis/redis.log
     databases 16
-    save 900 1
-    save 300 10
-    save 60 10000
+    # Persistence: AOF only (RDB snapshots off) — one fsync path, not two.
+    save ""
     stop-writes-on-bgsave-error yes
     rdbcompression yes
     rdbchecksum yes
     dbfilename dump.rdb
     dir ${config.home.homeDirectory}/.local/share/redis
+    # Without maxmemory the eviction policy never kicks in and redis can push
+    # the 7 GB box into swap.
+    maxmemory 256mb
     maxmemory-policy allkeys-lru
     appendonly yes
     appendfilename "appendonly.aof"
