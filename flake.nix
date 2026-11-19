@@ -30,13 +30,19 @@
         let env = builtins.getEnv "NIX_SYSTEM";
         in if env != "" then env else builtins.currentSystem or "aarch64-darwin";
 
-      # Per-machine modules, keyed by hostname. `home-manager switch --flake .`
-      # picks "$USER@$(hostname)" automatically and falls back to "$USER".
+      # Per-machine configs, exposed as "<user>@<hostname>". `home-manager switch
+      # --flake .` picks "$USER@$(hostname)" automatically and falls back to "$USER".
+      # user/system are spelled out (not read from env) because home-manager probes
+      # the attribute names with a *pure* `nix eval`, where getEnv returns "".
       hosts = {
-        "ujjwal-gupta-X510UNR" = ./hosts/x510unr.nix;  # Linux laptop doubling as home server
+        "ujjwal-gupta-X510UNR" = {  # Linux laptop doubling as home server
+          user = "ujjwal-gupta";
+          system = "x86_64-linux";
+          module = ./hosts/x510unr.nix;
+        };
       };
 
-      mkHome = { system, hostModules ? [ ] }:
+      mkHome = { system, username, hostModules ? [ ] }:
         home-manager.lib.homeManagerConfiguration {
           # Import nixpkgs once with our config. Setting `nixpkgs.config` inside a
           # HM module instead makes HM import nixpkgs a second time.
@@ -78,10 +84,14 @@
       });
 
       homeConfigurations = {
-        ${username} = mkHome { system = currentSystem; };
+        ${username} = mkHome { inherit username; system = currentSystem; };
         default = self.homeConfigurations.${username};
-      } // lib.mapAttrs' (host: module:
-        lib.nameValuePair "${username}@${host}" (mkHome { system = currentSystem; hostModules = [ module ]; })
+      } // lib.mapAttrs' (host: h:
+        lib.nameValuePair "${h.user}@${host}" (mkHome {
+          inherit (h) system;
+          username = h.user;
+          hostModules = [ h.module ];
+        })
       ) hosts;
     };
 }
