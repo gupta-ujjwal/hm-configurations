@@ -105,18 +105,26 @@ in
           ExecStart=${pkgs.writeShellScript "hm-zram-start" ''
             set -eu
             PATH=${lib.makeBinPath [ pkgs.coreutils pkgs.gawk pkgs.gnugrep pkgs.util-linux ]}:/usr/sbin:/sbin
-            [ -e /dev/zram0 ] && swapon --show=NAME --noheadings | grep -q zram0 && exit 0
+            # Already set up by us (e.g. re-run of hm-system-setup)?
+            if [ -f /run/hm-zram.dev ] && swapon --show=NAME --noheadings | grep -qxF "$(cat /run/hm-zram.dev)"; then
+              exit 0
+            fi
             modprobe zram
             kb=$(awk '/MemTotal/ { print int($2 * ${toString cfg.zram.percent} / 100) }' /proc/meminfo)
-            zramctl --reset /dev/zram0 2>/dev/null || true
-            zramctl /dev/zram0 --algorithm zstd --size "''${kb}K"
-            mkswap -L zram0 /dev/zram0
-            swapon --priority 100 /dev/zram0
+            # --find hot-adds a free device; don't assume /dev/zram0 exists
+            # (the module may already be loaded with num_devices=0).
+            dev=$(zramctl --find --algorithm zstd --size "''${kb}K")
+            echo "$dev" > /run/hm-zram.dev
+            mkswap -L hm-zram "$dev"
+            swapon --priority 100 "$dev"
           ''}
           ExecStop=${pkgs.writeShellScript "hm-zram-stop" ''
-            PATH=${lib.makeBinPath [ pkgs.util-linux ]}
-            swapoff /dev/zram0 || true
-            zramctl --reset /dev/zram0 || true
+            PATH=${lib.makeBinPath [ pkgs.coreutils pkgs.util-linux ]}
+            [ -f /run/hm-zram.dev ] || exit 0
+            dev=$(cat /run/hm-zram.dev)
+            swapoff "$dev" || true
+            zramctl --reset "$dev" || true
+            rm -f /run/hm-zram.dev
           ''}
 
           [Install]

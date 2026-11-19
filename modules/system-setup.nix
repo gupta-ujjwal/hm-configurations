@@ -65,8 +65,10 @@ let
     ${lib.concatMapStrings (u: ''
       systemctl enable ${u}
     '') unitNames}
+    failed=()
     for u in "''${changed[@]}"; do
-      echo "(re)starting $u"; systemctl restart "$u"
+      echo "(re)starting $u"
+      systemctl restart "$u" || failed+=("$u")
     done
 
     # --- distro services we don't want ------------------------------------
@@ -86,6 +88,11 @@ let
     # Keep the applied version (and every store path its units reference)
     # alive across `nix-collect-garbage`, even if HM moves on before re-running.
     ln -sfn "$(readlink -f "$0" | xargs dirname | xargs dirname)" /nix/var/nix/gcroots/hm-system-setup
+    if [ ''${#failed[@]} -gt 0 ]; then
+      echo "System setup finished with failing units: ''${failed[*]}" >&2
+      echo "Inspect with: systemctl status ''${failed[*]}" >&2
+      exit 1
+    fi
     echo "$(readlink -f "$0")" > ${stateDir}/applied
     echo "System setup applied."
   '';
